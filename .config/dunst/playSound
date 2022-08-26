@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#echo $HOME >> "/home/master/sound.log"
+ 
+RINGTONES_DIR="$HOME/.local/share/ringtones"
+LOW_URGENCY_SOUND_PATH=""
+NORMAL_URGENCY_SOUND_PATH="$RINGTONES_DIR/drop_in_ocean.wav"
+CRITICAL_URGENCY_SOUND_PATH="$RINGTONES_DIR/just_a_little_error.wav"
+
+case $DUNST_CATEGORY in
+
+	audio_device)
+		exit 0
+		;;
+
+	bat_low)
+		/usr/local/bin/play-on-pedestal $RINGTONES_DIR/sounds_a_bit_like_error.wav
+		exit 0
+		;;
+
+	volume_brightness)
+		exit 0
+		;;
+
+esac
+
+if [ "$DUNST_URGENCY" = "LOW" ]; then
+	/usr/local/bin/play-on-pedestal $LOW_URGENCY_SOUND_PATH
+elif [ "$DUNST_URGENCY" = "NORMAL" ]; then
+	/usr/local/bin/play-on-pedestal $NORMAL_URGENCY_SOUND_PATH
+elif [ "$DUNST_URGENCY" = "CRITICAL" ]; then
+	/usr/local/bin/play-on-pedestal $CRITICAL_URGENCY_SOUND_PATH
+fi	

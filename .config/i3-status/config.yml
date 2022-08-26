@@ -1,0 +1,30 @@
+variables:
+  - &color1 '#00AAFF'
+main:
+  color: '#FFFFFF'
+blocks:
+  - name: kblayout
+    module: i3-status-kblayout
+    text: "HIIIIiiii"
+    interval: 1
+  - name: battery
+    module: i3-status-bat
+    chargingColor: '#a6cc33' 
+    chargingChar: '🔌'        
+    dischargingColor: '#c38418' 
+    dischargingChar: '🔋'     
+    criticalChargeChar: '⚠️'   
+    criticalThreshold: 30 
+    interval: 3  
+  - name: date    # show the current date/time e.g. Dec 19 12:34:56
+    type: date   
+    label: 📆     
+    interval: 1   
+    format: MMM DD HH:mm:ss  # format string, see http://momentjs.com/docs/#/parsing/string-format/
+    click: gnome-calendar 
+  - name: user    
+    type: username  
+    label: 👤      
+    interval: 600    
+    color: *color1 
+

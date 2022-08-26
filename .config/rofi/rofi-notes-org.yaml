@@ -1,0 +1,6 @@
+notes-file: "~/Notes/Scratch.org"
+# Path to the text file where the data (notes) will be stored.
+
+plain-text-format: false
+# If set to true the specified `notes-file` will be in
+# plain text format rather than using Emacs Org-mode format.
