@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/usr/bin/xsettingsd & pid=$!
+sleep 3
+kill "$pid"

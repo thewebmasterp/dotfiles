@@ -1,0 +1,55 @@
+#!/bin/bash
+# changeVolume
+
+# Arbitrary but unique message tag
+msgTag="myvolume"
+
+if [ "$1" == "sink-mute" ]; then
+  # mute speaker
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
+  mute=$(pamixer --get-mute)
+  if [[ "$mute" == "false" ]]; then
+    notify-send -i sound_umuted --urgency "normal" -c "volume_brightness" -h string:x-dunst-stack-tag:$msgTag "Volume umuted"
+    sleep 1;
+  fi
+fi
+
+if [ ${1::1} == "+" ]; then
+  # echo "true"
+  mute=$(pamixer --get-mute)
+  if [[ "$mute" == "true" ]]; then
+    pactl set-sink-mute @DEFAULT_SINK@ toggle 
+    notify-send -i sound_umuted --urgency "normal" -c "volume_brightness" -h string:x-dunst-stack-tag:$msgTag "Volume umuted"
+    sleep 1;
+  fi
+fi
+
+#I don't have a mute mic button, but if I had it would be something like:
+#elif [ "$1" == "source-mute" ]; then
+  #mute mic
+  #pactl set-source-mute @DEFAULT_SOURCE@ toggle
+  #notify-send "ha"
+#fi
+
+# Change the volume using alsa(might differ if you use pulseaudio)
+# amixer -c 0 set Master "$@" > /dev/null
+pactl set-sink-volume @DEFAULT_SINK@ "$@"
+
+# Query amixer for the current volume and whether or not the speaker is muted
+# volume="$(amixer -c 0 get Master | tail -1 | awk '{print $4}' | sed 's/[^0-9]*//g')"
+volume=$(pamixer --get-volume)
+mute=$(pamixer --get-mute)
+#mute="$(amixer -c 0 get Master | tail -1 | awk '{print $6}' | sed 's/[^a-z]*//g')"
+if [[ $volume == 0 || "$mute" == "true" ]]; then
+    # Show the sound muted notification
+    # dunstify -a "changeVolume" -u low -i audio-volume-muted -h string:x-dunst-stack-tag:$msgTag "Volume muted"
+    notify-send -i sound_muted --urgency "normal" -c "volume_brightness" -h string:x-dunst-stack-tag:$msgTag "Volume muted"
+else
+    # Show the volume notification
+    # dunstify -a "changeVolume" -u low -i audio-volume-high -h string:x-dunst-stack-tag:$msgTag \
+    # -h int:value:"$volume" "Volume: ${volume}%"
+    notify-send -i sound_control --urgency "normal" -c "volume_brightness" -h string:x-dunst-stack-tag:$msgTag -h int:value:"$volume" "Volume: ${volume}%"
+fi
+
+# Play the volume changed sound
+# canberra-gtk-play -i audio-volume-change -d "changeVolume"

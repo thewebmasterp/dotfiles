@@ -1,0 +1,11 @@
+#!/bin/bash
+# changeBrightness
+
+msgTag="mybrightness"
+
+xbacklight "$@"
+
+brightnessRaw=$(xbacklight -get)
+brightness=$(printf "%.0f" "$brightnessRaw")
+
+notify-send -i brightness_control --urgency "normal" -c "volume_brightness" -h string:x-dunst-stack-tag:$msgTag -h int:value:"$brightness" "Brightness: ${brightness}%"

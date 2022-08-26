@@ -1,0 +1,11 @@
+#!/bin/sh
+# best-split
+
+var1=$(xwininfo -id `xdotool getwindowfocus` | grep -E '(Width)' | awk '{print $2}')
+var2=$(xwininfo -id `xdotool getwindowfocus` | grep -E '(Height)' | awk '{print $2}')
+
+if [[ $var1 -gt $var2 ]]; then
+    i3-msg "split h"
+else
+    i3-msg "split v"
+fi
