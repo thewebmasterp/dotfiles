@@ -21,7 +21,6 @@ chromium
 cifs-utils
 clang
 clipster
-cmatrix
 code
 conky-lua-archers
 cryptomator
