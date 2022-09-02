@@ -238,3 +238,12 @@ xorg-xsetroot
 xorg-xvinfo
 xorg-xwayland
 xorg-xwd
+xorg-xwininfo
+xorg-xwud
+xpub
+xscreensaver
+xsettingsd
+xterm
+yay
+youtube-dl
+zoom
