@@ -1,31 +1,30 @@
 colors:
-  name: Bluescreen
-  author: Zdravko Dimov
+  name: Hyper
+  author: unknown
   primary:
-    background: "#001a18"
-    foreground: "#00d1c0" 
+    background: "#000000"
+    foreground: "#ffffff"
   cursor:
-    text: "#001a18"
-    cursor: "#9efff7"
+    text: "#F81CE5"
+    cursor: "#ffffff"
   normal:
-    black: "#001a18"
-    red: "#00dbc9"
-    green: "#00ad9f"
-    yellow: "#1affec"
-    blue: "#00d6c4"
-    magenta: "#00ad9f"
-    cyan: "#00c2b2"
-    white: "#99fff6"
+    black: "#000000"
+    red: "#fe0100"
+    green: "#33ff00"
+    yellow: "#feff00"
+    blue: "#0066ff"
+    magenta: "#cc00ff"
+    cyan: "#00ffff"
+    white: "#d0d0d0"
   bright:
-    black: "#00ebd7"
-    red: "#3dffef"
-    green: "#00d1c0" 
-    yellow: "#38ffee"
-    blue: "#2effee"
-    magenta: "#00b2a3"
-    cyan: "#9efff7"  
-    white: "#e5fffd"
-
+    black: "#808080"
+    red: "#fe0100"
+    green: "#33ff00"
+    yellow: "#feff00"
+    blue: "#0066ff"
+    magenta: "#cc00ff"
+    cyan: "#00ffff"
+    white: "#FFFFFF"
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 # Import additional configuration files
