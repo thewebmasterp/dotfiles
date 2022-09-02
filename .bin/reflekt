@@ -7,6 +7,12 @@
 # |_|  \___|_| |_|\___|_|\_\\__|
 # Author: Kwest Ambani                             
 # Created: 02.07.19
+# Modified by thewebmasterp*
+
+if ! [ -x "$(command -v reflector)" ]; then
+	  echo 'Error: reflector is not installed.' >&2
+		exit 1
+fi
 
 # download latest pacman mirrorlist
 sudo curl -o /etc/pacman.d/mirrorlist https://www.archlinux.org/mirrorlist/all/
