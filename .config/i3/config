@@ -294,7 +294,7 @@ set $color-urgent        #ff3d3d
  default_border pixel 5
 
  # Background setter
- # picom called earlier; no need to call it again.
+ # picom called earlier. No need to call it again.
  # exec_always --no-startup-id picom
  # exec_always --no-startup-id feh --bg-fill ~/Desktop/BgImg/done.png
 
