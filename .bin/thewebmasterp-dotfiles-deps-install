@@ -1,3 +1,8 @@
 #!/bin/bash
 
-pacman -S alacritty
+toplevel="/home/$(logname)"
+pkglist="$toplevel/.config/pkglist.txt"
+
+installable_packages=$(comm -12 <(pacman -Slq | sort) <(sort $pkglist))
+
+pacman -S --needed $installable_packages
