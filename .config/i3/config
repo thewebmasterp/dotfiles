@@ -1,10 +1,11 @@
-set $color-focused-dark  #00dbc9
-set $color-focused-light #1affec
-set $color-black         #001a18
-set $color-black-light   #00ad9f
-set $color-black-lighter #00c2b2
-set $color-white   		 #e5fffd
-set $color-urgent        #ff3d3d
+set $color-focused-dark  #285577
+set $color-focused-light #2E9EF4
+set $color-black         #0C0C0C
+set $color-black-light   #292D2E
+set $color-black-lighter #5F676A
+set $color-white         #FFFFFF
+set $color-urgent        #900000
+
  # -*- mode: i3wm-config -*-
  # vim: filetype=i3config
 
@@ -294,7 +295,7 @@ set $color-urgent        #ff3d3d
  default_border pixel 5
 
  # Background setter
- # picom called earlier. No need to call it again.
+ # picom called earlier; no need to call it again.
  # exec_always --no-startup-id picom
  # exec_always --no-startup-id feh --bg-fill ~/Desktop/BgImg/done.png
 

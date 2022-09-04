@@ -5,4 +5,26 @@ pkglist="$toplevel/.config/pkglist.txt"
 
 installable_packages=$(comm -12 <(pacman -Slq | sort) <(sort $pkglist))
 
-pacman -S --needed $installable_packages
+sleep 2
+echo ""
+echo "--- PACMAN INSTALL START ---"
+echo ""
+sleep 3
+/usr/bin/pacman -S --needed $installable_packages
+sleep 3
+echo ""
+echo "--- PACMAN INSTALL END ---"
+echo ""
+
+sleep 4
+
+echo ""
+echo "--- NPM INSTALL START ---"
+echo ""
+sleep 3
+/usr/bin/npm --prefix $toplevel install $toplevel
+sleep 3
+echo ""
+echo "--- NPM INSTALL END ---"
+echo ""
+sleep 2

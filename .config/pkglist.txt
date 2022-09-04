@@ -117,6 +117,7 @@ net-tools
 network-manager-applet
 networkmanager
 nmap
+nodejs
 noto-fonts
 noto-fonts-emoji
 npm

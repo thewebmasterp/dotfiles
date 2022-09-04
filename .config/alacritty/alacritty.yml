@@ -1,30 +1,30 @@
 colors:
-  name: Hyper
+  name: Gotham
   author: unknown
   primary:
-    background: "#000000"
-    foreground: "#ffffff"
+    background: "#0a0f14"
+    foreground: "#98d1ce"
   cursor:
-    text: "#F81CE5"
-    cursor: "#ffffff"
+    text: "#0a0f14"
+    cursor: "#d3ebe9"
   normal:
-    black: "#000000"
-    red: "#fe0100"
-    green: "#33ff00"
-    yellow: "#feff00"
-    blue: "#0066ff"
-    magenta: "#cc00ff"
-    cyan: "#00ffff"
-    white: "#d0d0d0"
+    black: "#0a0f14"
+    red: "#c33027"
+    green: "#26a98b"
+    yellow: "#edb54b"
+    blue: "#195465"
+    magenta: "#4e5165"
+    cyan: "#33859d"
+    white: "#98d1ce"
   bright:
-    black: "#808080"
-    red: "#fe0100"
-    green: "#33ff00"
-    yellow: "#feff00"
-    blue: "#0066ff"
-    magenta: "#cc00ff"
-    cyan: "#00ffff"
-    white: "#FFFFFF"
+    black: "#10151b"
+    red: "#d26939"
+    green: "#081f2d"
+    yellow: "#245361"
+    blue: "#093748"
+    magenta: "#888ba5"
+    cyan: "#599caa"
+    white: "#d3ebe9"
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 # Import additional configuration files
