@@ -359,6 +359,8 @@
  bindsym XF86MonBrightnessDown exec ~/.bin/changeBrightness -dec 10
  #
 
+ # Touchpad toggle
+ bindsym XF86TouchpadToggle exec ~/.bin/touchpadToggle
 
  #
  # Unclassified

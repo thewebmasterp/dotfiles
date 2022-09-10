@@ -1,6 +1,7 @@
 #!/bin/bash
 # changeBrightness
 
+# Arbitrary but unique message tag
 msgTag="mybrightness"
 
 xbacklight "$@"

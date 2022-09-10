@@ -7,8 +7,8 @@
    viewBox="0 0 420 594"
    version="1.1"
    id="svg1823"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
-   sodipodi:docname="MyIcons.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   sodipodi:docname="officialList.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -36,202 +36,251 @@
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-midpoints="true"
      inkscape:zoom="0.088388348"
-     inkscape:cx="3422.3968"
-     inkscape:cy="3020.7602"
-     inkscape:window-width="1920"
-     inkscape:window-height="1054"
-     inkscape:window-x="1920"
-     inkscape:window-y="26"
+     inkscape:cx="5973.6381"
+     inkscape:cy="2257.0848"
+     inkscape:window-width="925"
+     inkscape:window-height="1004"
+     inkscape:window-x="965"
+     inkscape:window-y="46"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1">
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#000000">
     <sodipodi:guide
        position="134.77213,-56.709639"
        orientation="0,-1"
-       id="guide1884" />
+       id="guide1884"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="-121.482,-56.709656"
        orientation="1,0"
-       id="guide2008" />
+       id="guide2008"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="-42.107001,-136.08466"
        orientation="0,-1"
-       id="guide2010" />
+       id="guide2010"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="-42.107001,-77.380212"
        orientation="1,0"
-       id="guide2012" />
+       id="guide2012"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="37.267997,-175.77216"
        orientation="1,0"
-       id="guide2014" />
+       id="guide2014"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="37.267996,-215.45966"
        orientation="0,-1"
-       id="guide2016" />
+       id="guide2016"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="-81.7945,-294.83466"
        orientation="0,-1"
-       id="guide2018" />
+       id="guide2018"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="116.643,-96.397158"
        orientation="1,0"
-       id="guide2020" />
+       id="guide2020"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="196.01799,-136.08466"
        orientation="1,0"
-       id="guide2022" />
+       id="guide2022"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="275.393,-136.08466"
        orientation="1,0"
-       id="guide2024" />
+       id="guide2024"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="434.143,-96.397158"
        orientation="1,0"
-       id="guide2028" />
+       id="guide2028"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="513.51799,-96.397158"
        orientation="1,0"
-       id="guide2030" />
+       id="guide2030"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="592.89299,-96.397158"
        orientation="1,0"
-       id="guide2032" />
+       id="guide2032"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="672.26801,-96.397156"
        orientation="1,0"
-       id="guide2034" />
+       id="guide2034"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="751.64299,-96.397158"
        orientation="1,0"
-       id="guide2036" />
+       id="guide2036"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="831.01799,-96.397158"
        orientation="1,0"
-       id="guide2038" />
+       id="guide2038"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="989.76798,-136.08466"
        orientation="1,0"
-       id="guide2040" />
+       id="guide2040"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1069.143,-136.08466"
        orientation="1,0"
-       id="guide2042" />
+       id="guide2042"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1148.5179,-96.397158"
        orientation="1,0"
-       id="guide2046" />
+       id="guide2046"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1227.8929,-96.397158"
        orientation="1,0"
-       id="guide2048" />
+       id="guide2048"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1307.2679,-96.397158"
        orientation="1,0"
-       id="guide2050" />
+       id="guide2050"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1386.6429,-96.397158"
        orientation="1,0"
-       id="guide2052" />
+       id="guide2052"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1426.3304,-374.20967"
        orientation="0,-1"
-       id="guide2134" />
+       id="guide2134"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1466.0179,-453.58473"
        orientation="0,-1"
-       id="guide3261" />
+       id="guide3261"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1505.7054,-532.95973"
        orientation="0,-1"
-       id="guide3263" />
+       id="guide3263"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1466.0179,-612.33473"
        orientation="0,-1"
-       id="guide3265" />
+       id="guide3265"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1915.0192,-691.74914"
        orientation="0,-1"
-       id="guide3267" />
+       id="guide3267"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1472.1038,-771.08472"
        orientation="0,-1"
-       id="guide3269" />
+       id="guide3269"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1545.3929,-255.14716"
        orientation="1,0"
-       id="guide25301" />
+       id="guide25301"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1624.7679,-215.45967"
        orientation="1,0"
-       id="guide25303" />
+       id="guide25303"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1704.1429,-215.45967"
        orientation="1,0"
-       id="guide25305" />
+       id="guide25305"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1783.5179,-255.14716"
        orientation="1,0"
-       id="guide25307" />
+       id="guide25307"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1862.8929,-255.14716"
        orientation="1,0"
-       id="guide25309" />
+       id="guide25309"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1942.2679,-255.14716"
        orientation="1,0"
-       id="guide25311" />
+       id="guide25311"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2101.018,-255.14716"
        orientation="1,0"
-       id="guide25313" />
+       id="guide25313"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2180.393,-255.14716"
        orientation="1,0"
-       id="guide25441" />
+       id="guide25441"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2259.768,-215.45967"
        orientation="1,0"
-       id="guide25443" />
+       id="guide25443"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2339.143,-294.83466"
        orientation="1,0"
-       id="guide25445" />
+       id="guide25445"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2418.518,-255.14716"
        orientation="1,0"
-       id="guide25447" />
+       id="guide25447"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2497.893,-255.14716"
        orientation="1,0"
-       id="guide25449" />
+       id="guide25449"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2656.643,-215.45967"
        orientation="1,0"
-       id="guide25451" />
+       id="guide25451"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2736.018,-255.14716"
        orientation="1,0"
-       id="guide25453" />
+       id="guide25453"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2815.393,-255.14716"
        orientation="1,0"
-       id="guide25455" />
+       id="guide25455"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2894.768,-255.14716"
        orientation="1,0"
-       id="guide25457" />
+       id="guide25457"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2974.143,-255.14716"
        orientation="1,0"
-       id="guide25459" />
+       id="guide25459"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="3053.518,-255.14716"
        orientation="1,0"
-       id="guide25461" />
+       id="guide25461"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="-121.48199,62.352844"
        orientation="0,-1"
-       id="guide33193" />
+       id="guide33193"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <defs
      id="defs1820" />
@@ -1621,23 +1670,26 @@
        inkscape:export-filename="/home/master/.local/share/icons/Bluescreen/300x300/bat_25_charging.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
-      <rect
-         style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
-         id="rect8569"
-         width="132.29166"
-         height="132.29167"
-         x="189.97083"
-         y="1190.625"
-         inkscape:export-filename="/home/master/.local/share/icons/Bluescreen/300x300/bat_25_charging.png"
-         inkscape:export-xdpi="57.599998"
-         inkscape:export-ydpi="57.599998" />
-      <path
-         id="path8571"
-         style="color:#000000;fill:#1affec;fill-opacity:1;stroke-width:1.66667;stroke-linecap:round;-inkscape-stroke:none"
-         d="m 242.88783,1196.5509 v 11.8504 h -20.18429 v 2.6464 105.9455 h 66.82641 v -108.5919 h -20.18378 v -11.8504 z m -14.89109,17.1411 h 56.24206 v 98.008 h -56.24206 z m 28.03241,5.4151 -8.88473,41.4843 0.65991,0.6388 9.44748,10.1564 -1.16892,17.1354 h -18.82572 c -2.1919,0 -3.96878,1.7769 -3.96875,3.9688 v 9.9503 c 3e-5,2.1919 1.77689,3.9687 3.96875,3.9687 h 37.72121 c 2.19186,0 3.96872,-1.7768 3.96875,-3.9687 v -7.2182 l -15.95458,-6.7009 h -3.00188 c 1.68057,-7.8562 3.34956,-15.7144 5.02294,-23.5711 l 0.076,-0.3592 -0.65991,-0.6387 -3.38119,-3.637 -6.06629,-6.5216 2.35334,-34.5038 z m -0.64285,9.3183 -1.74615,25.5763 v 0.295 l 6.43992,6.9216 3.40392,3.6602 0.15813,0.1524 c -2.25302,10.5795 -4.51603,21.155 -6.79493,31.7268 l 1.76216,-25.8517 -9.85986,-10.6014 -0.15813,-0.1545 z"
-         inkscape:export-filename="/home/master/.local/share/icons/Bluescreen/300x300/bat_25_charging.png"
-         inkscape:export-xdpi="57.599998"
-         inkscape:export-ydpi="57.599998" />
+      <g
+         id="g31339">
+        <rect
+           style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+           id="rect8569"
+           width="132.29166"
+           height="132.29167"
+           x="189.97083"
+           y="1190.625"
+           inkscape:export-filename="/home/master/.local/share/icons/Bluescreen/300x300/bat_25_charging.png"
+           inkscape:export-xdpi="57.599998"
+           inkscape:export-ydpi="57.599998" />
+        <path
+           id="path8571"
+           style="color:#000000;fill:#1affec;fill-opacity:1;stroke-width:1.66667;stroke-linecap:round"
+           d="m 242.88783,1196.5509 v 11.8504 h -20.18429 v 2.6464 105.9455 h 66.82641 v -108.5919 h -20.18378 v -11.8504 z m -14.89109,17.1411 h 56.24206 v 98.008 h -56.24206 z m 28.03241,5.4151 -8.88473,41.4843 0.65991,0.6388 9.44748,10.1564 -1.16892,17.1354 h -18.82572 c -2.1919,0 -3.96878,1.7769 -3.96875,3.9688 v 9.9503 c 3e-5,2.1919 1.77689,3.9687 3.96875,3.9687 h 37.72121 c 2.19186,0 3.96872,-1.7768 3.96875,-3.9687 v -7.2182 l -15.95458,-6.7009 h -3.00188 c 1.68057,-7.8562 3.34956,-15.7144 5.02294,-23.5711 l 0.076,-0.3592 -0.65991,-0.6387 -3.38119,-3.637 -6.06629,-6.5216 2.35334,-34.5038 z m -0.64285,9.3183 -1.74615,25.5763 v 0.295 l 6.43992,6.9216 3.40392,3.6602 0.15813,0.1524 c -2.25302,10.5795 -4.51603,21.155 -6.79493,31.7268 l 1.76216,-25.8517 -9.85986,-10.6014 -0.15813,-0.1545 z"
+           inkscape:export-filename="/home/master/.local/share/icons/Bluescreen/300x300/bat_25_charging.png"
+           inkscape:export-xdpi="57.599998"
+           inkscape:export-ydpi="57.599998" />
+      </g>
     </g>
     <g
        id="g3985"
@@ -6115,10 +6167,7 @@
          inkscape:export-ydpi="57.599998" />
     </g>
     <g
-       id="g54165"
-       inkscape:export-filename="/home/master/.local/share/icons/Redscreen/300x300/bat_25_charging.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       id="g31327">
       <rect
          style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
          id="rect53919"
@@ -6131,7 +6180,7 @@
          inkscape:export-ydpi="57.599998" />
       <path
          id="path53921"
-         style="color:#000000;fill:#ff3d3d;fill-opacity:1;stroke-width:1;stroke-linecap:round;-inkscape-stroke:none"
+         style="color:#000000;fill:#ff3d3d;fill-opacity:1;stroke-width:1;stroke-linecap:round"
          d="m 783.39304,1051.1404 v 7.1102 h -12.11057 v 1.5879 63.5673 h 40.09584 v -65.1552 h -12.11026 v -7.1102 z m -8.93465,10.2846 h 33.74523 v 58.8048 h -33.74523 z m 16.81944,3.2491 -5.33084,24.8906 0.39595,0.3833 5.66849,6.0938 -0.70135,10.2812 h -11.29544 c -1.31514,0 -2.38126,1.0662 -2.38125,2.3813 v 5.9702 c 2e-5,1.3151 1.06614,2.3812 2.38125,2.3812 h 22.63273 c 1.31512,0 2.38123,-1.0661 2.38125,-2.3812 v -4.3309 l -9.57275,-4.0206 h -1.80113 c 1.00835,-4.7137 2.00974,-9.4286 3.01377,-14.1426 l 0.0456,-0.2155 -0.39595,-0.3833 -2.02871,-2.1822 -3.63978,-3.9129 1.41201,-20.7023 z m -0.38571,5.591 -1.04769,15.3458 v 0.177 l 3.86396,4.1529 2.04235,2.1961 0.0949,0.091 c -1.35182,6.3477 -2.70962,12.693 -4.07696,19.0361 l 1.05729,-15.5111 -5.91591,-6.3608 -0.0949,-0.093 z"
          inkscape:export-filename="/home/master/.local/share/icons/Bluescreen/300x300/bat_25_charging.png"
          inkscape:export-xdpi="57.599998"
@@ -6364,10 +6413,7 @@
          inkscape:export-ydpi="57.599998" />
     </g>
     <g
-       id="g54245"
-       inkscape:export-filename="/home/master/.local/share/icons/Standard/300x300/bat_25_charging.png"
-       inkscape:export-xdpi="95.999535"
-       inkscape:export-ydpi="95.999535">
+       id="g31315">
       <rect
          style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
          id="rect53996"
@@ -6380,7 +6426,7 @@
          inkscape:export-ydpi="57.599998" />
       <path
          id="path53998"
-         style="color:#000000;fill:#2e9ef4;fill-opacity:1;stroke-width:1;stroke-linecap:round;-inkscape-stroke:none"
+         style="color:#000000;fill:#2e9ef4;fill-opacity:1;stroke-width:1;stroke-linecap:round"
          d="m 1339.018,1051.14 v 7.1102 h -12.1105 v 1.5879 63.5673 h 40.0958 v -65.1552 h -12.1102 v -7.1102 z m -8.9346,10.2846 h 33.7452 v 58.8048 h -33.7452 z m 16.8194,3.2491 -5.3308,24.8906 0.3959,0.3833 5.6685,6.0938 -0.7013,10.2812 h -11.2955 c -1.3151,0 -2.3812,1.0662 -2.3812,2.3813 v 5.9702 c 0,1.3151 1.0661,2.3812 2.3812,2.3812 h 22.6328 c 1.3151,0 2.3812,-1.0661 2.3812,-2.3812 v -4.3309 l -9.5727,-4.0206 h -1.8012 c 1.0084,-4.7137 2.0098,-9.4286 3.0138,-14.1426 l 0.046,-0.2155 -0.3959,-0.3833 -2.0287,-2.1822 -3.6398,-3.9129 1.412,-20.7023 z m -0.3857,5.591 -1.0477,15.3458 v 0.177 l 3.864,4.1529 2.0423,2.1961 0.095,0.091 c -1.3518,6.3477 -2.7096,12.693 -4.0769,19.0361 l 1.0573,-15.5111 -5.9159,-6.3608 -0.095,-0.093 z"
          inkscape:export-filename="/home/master/.local/share/icons/Bluescreen/300x300/bat_25_charging.png"
          inkscape:export-xdpi="57.599998"
@@ -6613,10 +6659,7 @@
          inkscape:export-ydpi="57.599998" />
     </g>
     <g
-       id="g54320"
-       inkscape:export-filename="/home/master/.local/share/icons/Gotham/300x300/bat_25_charging.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       id="g31303">
       <rect
          style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
          id="rect54046"
@@ -6629,7 +6672,7 @@
          inkscape:export-ydpi="57.599998" />
       <path
          id="path54048"
-         style="color:#000000;fill:#edb54b;fill-opacity:1;stroke-width:1;stroke-linecap:round;-inkscape-stroke:none"
+         style="color:#000000;fill:#edb54b;fill-opacity:1;stroke-width:1;stroke-linecap:round"
          d="m 1894.6429,1051.14 v 7.1102 h -12.1105 v 1.5879 63.5673 h 40.0958 v -65.1552 h -12.1102 v -7.1102 z m -8.9346,10.2846 h 33.7452 v 58.8048 h -33.7452 z m 16.8194,3.2491 -5.3308,24.8906 0.3959,0.3833 5.6685,6.0938 -0.7013,10.2812 h -11.2955 c -1.3151,0 -2.3812,1.0662 -2.3812,2.3813 v 5.9702 c 0,1.3151 1.0661,2.3812 2.3812,2.3812 h 22.6328 c 1.3151,0 2.3812,-1.0661 2.3812,-2.3812 v -4.3309 l -9.5727,-4.0206 h -1.8012 c 1.0084,-4.7137 2.0098,-9.4286 3.0138,-14.1426 l 0.046,-0.2155 -0.3959,-0.3833 -2.0287,-2.1822 -3.6398,-3.9129 1.412,-20.7023 z m -0.3857,5.591 -1.0477,15.3458 v 0.177 l 3.864,4.1529 2.0423,2.1961 0.095,0.091 c -1.3518,6.3477 -2.7096,12.693 -4.0769,19.0361 l 1.0573,-15.5111 -5.9159,-6.3608 -0.095,-0.093 z"
          inkscape:export-filename="/home/master/.local/share/icons/Bluescreen/300x300/bat_25_charging.png"
          inkscape:export-xdpi="57.599998"
@@ -6868,31 +6911,24 @@
          inkscape:export-ydpi="57.599998" />
     </g>
     <g
-       id="g54580"
-       inkscape:export-filename="/home/master/.local/share/icons/Thewebmasterp/300x300/bat_25_charging.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
-      <g
-         id="g54463"
-         transform="translate(-7.2610379e-5,-2.4414062e-4)">
-        <rect
-           style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
-           id="rect54096"
-           width="79.375"
-           height="79.375008"
-           x="2418.5181"
-           y="1047.5847"
-           inkscape:export-filename="/home/master/.local/share/icons/Bluescreen/300x300/bat_25_charging.png"
-           inkscape:export-xdpi="57.599998"
-           inkscape:export-ydpi="57.599998" />
-        <path
-           id="path54098"
-           style="color:#000000;fill:#ffe987;fill-opacity:1;stroke-width:1;stroke-linecap:round;-inkscape-stroke:none"
-           d="m 2450.2684,1051.1402 v 7.1102 h -12.1105 v 1.5879 63.5673 h 40.0958 v -65.1552 h -12.1102 v -7.1102 z m -8.9346,10.2846 h 33.7452 v 58.8048 h -33.7452 z m 16.8194,3.2491 -5.3308,24.8906 0.3959,0.3833 5.6685,6.0938 -0.7013,10.2812 H 2446.89 c -1.3151,0 -2.3812,1.0662 -2.3812,2.3813 v 5.9702 c 0,1.3151 1.0661,2.3812 2.3812,2.3812 h 22.6328 c 1.3151,0 2.3812,-1.0661 2.3812,-2.3812 v -4.3309 l -9.5727,-4.0206 h -1.8012 c 1.0084,-4.7137 2.0098,-9.4286 3.0138,-14.1426 l 0.046,-0.2155 -0.3959,-0.3833 -2.0287,-2.1822 -3.6398,-3.9129 1.412,-20.7023 z m -0.3857,5.591 -1.0477,15.3458 v 0.177 l 3.864,4.1529 2.0423,2.1961 0.095,0.091 c -1.3518,6.3477 -2.7096,12.693 -4.0769,19.0361 l 1.0573,-15.5111 -5.9159,-6.3608 -0.095,-0.093 z"
-           inkscape:export-filename="/home/master/.local/share/icons/Bluescreen/300x300/bat_25_charging.png"
-           inkscape:export-xdpi="57.599998"
-           inkscape:export-ydpi="57.599998" />
-      </g>
+       id="g31272">
+      <rect
+         style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect54096"
+         width="79.375"
+         height="79.375008"
+         x="2418.5181"
+         y="1047.5845"
+         inkscape:export-filename="/home/master/.local/share/icons/Bluescreen/300x300/bat_25_charging.png"
+         inkscape:export-xdpi="57.599998"
+         inkscape:export-ydpi="57.599998" />
+      <path
+         id="path54098"
+         style="color:#000000;fill:#ffe987;fill-opacity:1;stroke-width:1;stroke-linecap:round"
+         d="m 2450.2683,1051.14 v 7.1102 h -12.1105 v 1.5879 63.5673 h 40.0958 v -65.1552 h -12.1102 v -7.1102 z m -8.9346,10.2846 h 33.7452 v 58.8048 h -33.7452 z m 16.8194,3.2491 -5.3308,24.8906 0.3959,0.3833 5.6685,6.0938 -0.7013,10.2812 h -11.2955 c -1.3151,0 -2.3812,1.0662 -2.3812,2.3813 v 5.9702 c 0,1.3151 1.0661,2.3812 2.3812,2.3812 h 22.6328 c 1.3151,0 2.3812,-1.0661 2.3812,-2.3812 v -4.3309 l -9.5727,-4.0206 h -1.8012 c 1.0084,-4.7137 2.0098,-9.4286 3.0138,-14.1426 l 0.046,-0.2155 -0.3959,-0.3833 -2.0287,-2.1822 -3.6398,-3.9129 1.412,-20.7023 z m -0.3857,5.591 -1.0477,15.3458 v 0.177 l 3.864,4.1529 2.0423,2.1961 0.095,0.091 c -1.3518,6.3477 -2.7096,12.693 -4.0769,19.0361 l 1.0573,-15.5111 -5.9159,-6.3608 -0.095,-0.093 z"
+         inkscape:export-filename="/home/master/.local/share/icons/Bluescreen/300x300/bat_25_charging.png"
+         inkscape:export-xdpi="57.599998"
+         inkscape:export-ydpi="57.599998" />
     </g>
     <g
        id="g54546"
@@ -7121,10 +7157,7 @@
          inkscape:export-ydpi="57.599998" />
     </g>
     <g
-       id="g54511"
-       inkscape:export-filename="/home/master/.local/share/icons/Hyper/300x300/bat_25_charging.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       id="g31264">
       <rect
          style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
          id="rect54430"
@@ -7137,7 +7170,7 @@
          inkscape:export-ydpi="57.599998" />
       <path
          id="path54432"
-         style="color:#000000;fill:#00ffff;fill-opacity:1;stroke-width:1;stroke-linecap:round;-inkscape-stroke:none"
+         style="color:#000000;fill:#00ffff;fill-opacity:1;stroke-width:1;stroke-linecap:round"
          d="m 3005.8935,1051.1405 v 7.1102 h -12.1105 v 1.5879 63.5673 h 40.0958 v -65.1552 h -12.1102 v -7.1102 z m -8.9346,10.2846 h 33.7452 v 58.8048 h -33.7452 z m 16.8194,3.2491 -5.3308,24.8906 0.3959,0.3833 5.6685,6.0938 -0.7013,10.2812 h -11.2955 c -1.3151,0 -2.3812,1.0662 -2.3812,2.3813 v 5.9702 c 0,1.3151 1.0661,2.3812 2.3812,2.3812 h 22.6328 c 1.3151,0 2.3812,-1.0661 2.3812,-2.3812 v -4.3309 l -9.5727,-4.0206 h -1.8012 c 1.0084,-4.7137 2.0098,-9.4286 3.0138,-14.1426 l 0.046,-0.2155 -0.3959,-0.3833 -2.0287,-2.1822 -3.6398,-3.9129 1.412,-20.7023 z m -0.3857,5.591 -1.0477,15.3458 v 0.177 l 3.864,4.1529 2.0423,2.1961 0.095,0.091 c -1.3518,6.3477 -2.7096,12.693 -4.0769,19.0361 l 1.0573,-15.5111 -5.9159,-6.3608 -0.095,-0.093 z"
          inkscape:export-filename="/home/master/.local/share/icons/Bluescreen/300x300/bat_25_charging.png"
          inkscape:export-xdpi="57.599998"
@@ -8276,6 +8309,211 @@
          inkscape:export-filename="/home/master/.local/share/icons/Bluescreen/300x300/second_monitor_out.png"
          inkscape:export-xdpi="57.599998"
          inkscape:export-ydpi="57.599998" />
+    </g>
+    <g
+       id="g31331"
+       inkscape:export-filename="../../.local/share/icons/Bluescreen/300x300/touchpad_on.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect2781"
+         width="79.335564"
+         height="79.335571"
+         x="116.66272"
+         y="1126.9595" />
+      <path
+         id="rect5729"
+         style="color:#000000;fill:#1affec;fill-opacity:1;stroke-width:1;stroke-linecap:round"
+         d="m 128.34517,1141.0636 c -2.91562,0 -5.31176,2.3961 -5.31176,5.3117 v 40.1472 c 0,2.9157 2.39614,5.3118 5.31176,5.3118 h 56.37443 c 2.91561,0 5.313,-2.3961 5.313,-5.3118 v -40.1472 c 0,-2.9156 -2.39739,-5.3117 -5.313,-5.3117 z m 0,3.1728 h 56.37443 c 1.21244,0 2.13865,0.9265 2.13865,2.1389 v 30.7134 h -60.65173 v -30.7134 c 0,-1.2124 0.92622,-2.1389 2.13865,-2.1389 z m -2.13865,36.0254 h 28.73993 v 8.3994 h -26.60128 c -1.21243,0 -2.13865,-0.9262 -2.13865,-2.1387 z m 31.91304,0 h 28.73869 v 6.2607 c 0,1.2125 -0.92621,2.1387 -2.13865,2.1387 h -26.60004 z" />
+    </g>
+    <g
+       id="g31335"
+       inkscape:export-filename="../../.local/share/icons/Bluescreen/300x300/touchpad_off.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect18092"
+         width="79.335564"
+         height="79.335571"
+         x="196.03772"
+         y="1126.9596" />
+      <path
+         id="rect5729-6"
+         style="color:#000000;fill:#1affec;fill-opacity:1;stroke-width:1;stroke-linecap:round"
+         d="m 266.31817,1133.7719 -7.29175,7.2917 h -51.30625 c -2.91561,0 -5.31176,2.3962 -5.31176,5.3118 v 40.1472 c 0,2.9156 2.39615,5.3118 5.31176,5.3118 h 0.53428 l -5.10537,5.1053 2.24433,2.244 63.16785,-63.1691 z m 0.70875,8.1845 -2.3559,2.356 c 0.91713,0.2418 1.56223,1.0519 1.56223,2.063 v 30.7134 h -34.33866 l -3.17311,3.1731 h 5.59997 v 8.3993 h -13.99932 l -3.17311,3.1732 h 46.94558 c 2.91561,0 5.31301,-2.3962 5.31301,-5.3118 v -40.1472 c 0,-1.8349 -0.95002,-3.4633 -2.38069,-4.419 z m -59.30675,2.28 h 48.13314 l -32.85298,32.8524 h -17.41881 v -30.7134 c 0,-1.2124 0.92621,-2.139 2.13865,-2.139 z m -2.13865,36.0255 h 14.2457 l -8.39935,8.3993 h -3.7077 c -1.21244,0 -2.13865,-0.9262 -2.13865,-2.1386 z m 31.91305,0 h 28.73868 v 6.2607 c 0,1.2124 -0.92621,2.1386 -2.13865,2.1386 h -26.60003 z" />
+    </g>
+    <g
+       id="g31319"
+       inkscape:export-filename="../../.local/share/icons/Redscreen/300x300/touchpad_on.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect2781-7"
+         width="79.335564"
+         height="79.335571"
+         x="672.28754"
+         y="1126.9596" />
+      <path
+         id="rect5729-5"
+         style="color:#000000;fill:#ff3d3d;fill-opacity:1;stroke-width:1;stroke-linecap:round"
+         d="m 683.97002,1141.0638 c -2.91563,0 -5.31176,2.3961 -5.31176,5.3117 v 40.1472 c 0,2.9157 2.39614,5.3118 5.31176,5.3118 h 56.37442 c 2.91561,0 5.313,-2.3961 5.313,-5.3118 v -40.1472 c 0,-2.9156 -2.39739,-5.3117 -5.313,-5.3117 z m 0,3.1728 h 56.37442 c 1.21244,0 2.13866,0.9265 2.13866,2.1389 v 30.7134 h -60.65174 v -30.7134 c 0,-1.2124 0.92622,-2.1389 2.13866,-2.1389 z m -2.13866,36.0254 h 28.73993 v 8.3994 h -26.60127 c -1.21244,0 -2.13866,-0.9262 -2.13866,-2.1387 z m 31.91304,0 h 28.7387 v 6.2607 c 0,1.2125 -0.92622,2.1387 -2.13866,2.1387 H 713.7444 Z" />
+    </g>
+    <g
+       id="g31323"
+       inkscape:export-filename="../../.local/share/icons/Redscreen/300x300/touchpad_off.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect18092-3"
+         width="79.335564"
+         height="79.335571"
+         x="751.6626"
+         y="1126.9597" />
+      <path
+         id="rect5729-6-5"
+         style="color:#000000;fill:#ff3d3d;fill-opacity:1;stroke-width:1;stroke-linecap:round"
+         d="m 821.94302,1133.7721 -7.29175,7.2917 h -51.30625 c -2.91561,0 -5.31176,2.3962 -5.31176,5.3118 v 40.1472 c 0,2.9156 2.39615,5.3118 5.31176,5.3118 h 0.53428 l -5.10537,5.1053 2.24433,2.244 63.16785,-63.1691 z m 0.70875,8.1845 -2.3559,2.356 c 0.91712,0.2418 1.56223,1.0519 1.56223,2.063 v 30.7134 h -34.33866 l -3.17312,3.1731 h 5.59997 v 8.3993 h -13.99932 l -3.17311,3.1732 h 46.94558 c 2.91561,0 5.31301,-2.3962 5.31301,-5.3118 v -40.1472 c 0,-1.8349 -0.95002,-3.4633 -2.38068,-4.419 z m -59.30675,2.28 h 48.13314 l -32.85298,32.8524 h -17.41881 v -30.7134 c 0,-1.2124 0.9262,-2.139 2.13865,-2.139 z m -2.13865,36.0255 h 14.2457 l -8.39936,8.3993 h -3.70769 c -1.21244,0 -2.13865,-0.9262 -2.13865,-2.1386 z m 31.91305,0 h 28.73868 v 6.2607 c 0,1.2124 -0.92622,2.1386 -2.13865,2.1386 h -26.60003 z" />
+    </g>
+    <g
+       id="g31307"
+       inkscape:export-filename="../../.local/share/icons/Standard/300x300/touchpad_on.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect2781-7-6"
+         width="79.335564"
+         height="79.335571"
+         x="1227.9126"
+         y="1126.9592" />
+      <path
+         id="rect5729-5-2"
+         style="color:#000000;fill:#2e9ef4;fill-opacity:1;stroke-width:1;stroke-linecap:round"
+         d="m 1239.595,1141.0635 c -2.9156,0 -5.3117,2.3961 -5.3117,5.3117 v 40.1472 c 0,2.9157 2.3961,5.3118 5.3117,5.3118 h 56.3745 c 2.9156,0 5.313,-2.3961 5.313,-5.3118 v -40.1472 c 0,-2.9156 -2.3974,-5.3117 -5.313,-5.3117 z m 0,3.1728 h 56.3745 c 1.2124,0 2.1386,0.9265 2.1386,2.1389 v 30.7134 h -60.6517 v -30.7134 c 0,-1.2124 0.9262,-2.1389 2.1386,-2.1389 z m -2.1386,36.0254 h 28.7399 v 8.3994 h -26.6013 c -1.2124,0 -2.1386,-0.9262 -2.1386,-2.1387 z m 31.913,0 h 28.7387 v 6.2607 c 0,1.2125 -0.9262,2.1387 -2.1386,2.1387 h -26.6001 z" />
+    </g>
+    <g
+       id="g31311"
+       inkscape:export-filename="../../.local/share/icons/Standard/300x300/touchpad_off.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect18092-3-9"
+         width="79.335564"
+         height="79.335571"
+         x="1307.2876"
+         y="1126.9594" />
+      <path
+         id="rect5729-6-5-1"
+         style="color:#000000;fill:#2e9ef4;fill-opacity:1;stroke-width:1;stroke-linecap:round"
+         d="m 1377.568,1133.7718 -7.2917,7.2917 H 1318.97 c -2.9156,0 -5.3117,2.3962 -5.3117,5.3118 v 40.1472 c 0,2.9156 2.3961,5.3118 5.3117,5.3118 h 0.5343 l -5.1053,5.1053 2.2443,2.244 63.1678,-63.1691 z m 0.7088,8.1845 -2.3559,2.356 c 0.9171,0.2418 1.5622,1.0519 1.5622,2.063 v 30.7134 h -34.3386 l -3.1732,3.1731 h 5.6 v 8.3993 h -13.9993 l -3.1731,3.1732 h 46.9456 c 2.9156,0 5.313,-2.3962 5.313,-5.3118 v -40.1472 c 0,-1.8349 -0.9501,-3.4633 -2.3807,-4.419 z m -59.3068,2.28 h 48.1332 l -32.853,32.8524 h -17.4188 v -30.7134 c 0,-1.2124 0.9262,-2.139 2.1386,-2.139 z m -2.1386,36.0255 h 14.2457 l -8.3994,8.3993 h -3.7077 c -1.2124,0 -2.1386,-0.9262 -2.1386,-2.1386 z m 31.913,0 h 28.7387 v 6.2607 c 0,1.2124 -0.9262,2.1386 -2.1386,2.1386 h -26.6001 z" />
+    </g>
+    <g
+       id="g31299"
+       inkscape:export-filename="../../.local/share/icons/Gotham/300x300/touchpad_on.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect2781-7-6-2"
+         width="79.335564"
+         height="79.335571"
+         x="1783.5374"
+         y="1126.9594" />
+      <path
+         id="rect5729-5-2-7"
+         style="color:#000000;fill:#edb54b;fill-opacity:1;stroke-width:1;stroke-linecap:round"
+         d="m 1795.2199,1141.0637 c -2.9156,0 -5.3117,2.3961 -5.3117,5.3117 v 40.1472 c 0,2.9157 2.3961,5.3118 5.3117,5.3118 h 56.3744 c 2.9157,0 5.3131,-2.3961 5.3131,-5.3118 v -40.1472 c 0,-2.9156 -2.3974,-5.3117 -5.3131,-5.3117 z m 0,3.1728 h 56.3744 c 1.2124,0 2.1386,0.9265 2.1386,2.1389 v 30.7134 h -60.6516 v -30.7134 c 0,-1.2124 0.9262,-2.1389 2.1386,-2.1389 z m -2.1386,36.0254 h 28.7399 v 8.3994 h -26.6013 c -1.2124,0 -2.1386,-0.9262 -2.1386,-2.1387 z m 31.913,0 h 28.7387 v 6.2607 c 0,1.2125 -0.9262,2.1387 -2.1386,2.1387 h -26.6001 z" />
+    </g>
+    <g
+       id="g31295"
+       inkscape:export-filename="../../.local/share/icons/Gotham/300x300/touchpad_off.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect18092-3-9-0"
+         width="79.335564"
+         height="79.335571"
+         x="1862.9124"
+         y="1126.9595" />
+      <path
+         id="rect5729-6-5-1-9"
+         style="color:#000000;fill:#edb54b;fill-opacity:1;stroke-width:1;stroke-linecap:round"
+         d="m 1933.1929,1133.772 -7.2917,7.2917 h -51.3063 c -2.9156,0 -5.3117,2.3962 -5.3117,5.3118 v 40.1472 c 0,2.9156 2.3961,5.3118 5.3117,5.3118 h 0.5343 l -5.1053,5.1053 2.2443,2.244 63.1678,-63.1691 z m 0.7088,8.1845 -2.3559,2.356 c 0.9171,0.2418 1.5622,1.0519 1.5622,2.063 v 30.7134 h -34.3386 l -3.1732,3.1731 h 5.6 v 8.3993 h -13.9993 l -3.1731,3.1732 h 46.9456 c 2.9156,0 5.313,-2.3962 5.313,-5.3118 v -40.1472 c 0,-1.8349 -0.9501,-3.4633 -2.3807,-4.419 z m -59.3068,2.28 h 48.1332 l -32.853,32.8524 h -17.4188 v -30.7134 c 0,-1.2124 0.9262,-2.139 2.1386,-2.139 z m -2.1386,36.0255 h 14.2457 l -8.3994,8.3993 h -3.7077 c -1.2124,0 -2.1386,-0.9262 -2.1386,-2.1386 z m 31.913,0 h 28.7387 v 6.2607 c 0,1.2124 -0.9262,2.1386 -2.1386,2.1386 h -26.6001 z" />
+    </g>
+    <g
+       id="g31291"
+       transform="translate(0.01977539,2.4414062e-4)"
+       inkscape:export-filename="../../.local/share/icons/Thewebmasterp/300x300/touchpad_on.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect2781-7-6-3"
+         width="79.335564"
+         height="79.335571"
+         x="2339.1628"
+         y="1126.9595" />
+      <path
+         id="rect5729-5-2-6"
+         style="color:#000000;fill:#ffe987;fill-opacity:1;stroke-width:1;stroke-linecap:round"
+         d="m 2350.8452,1141.0637 c -2.9156,0 -5.3117,2.3961 -5.3117,5.3117 v 40.1472 c 0,2.9157 2.3961,5.3118 5.3117,5.3118 h 56.3745 c 2.9156,0 5.313,-2.3961 5.313,-5.3118 v -40.1472 c 0,-2.9156 -2.3974,-5.3117 -5.313,-5.3117 z m 0,3.1728 h 56.3745 c 1.2124,0 2.1386,0.9265 2.1386,2.1389 v 30.7134 h -60.6517 v -30.7134 c 0,-1.2124 0.9262,-2.1389 2.1386,-2.1389 z m -2.1386,36.0254 h 28.7399 v 8.3994 h -26.6013 c -1.2124,0 -2.1386,-0.9262 -2.1386,-2.1387 z m 31.913,0 h 28.7387 v 6.2607 c 0,1.2125 -0.9262,2.1387 -2.1386,2.1387 h -26.6001 z" />
+    </g>
+    <g
+       id="g31287"
+       inkscape:export-filename="../../.local/share/icons/Thewebmasterp/300x300/touchpad_off.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect18092-3-9-06"
+         width="79.335564"
+         height="79.335571"
+         x="2418.5181"
+         y="1126.9597" />
+      <path
+         id="rect5729-6-5-1-2"
+         style="color:#000000;fill:#ffe987;fill-opacity:1;stroke-width:1;stroke-linecap:round"
+         d="m 2488.7984,1133.7721 -7.2917,7.2917 h -51.3063 c -2.9156,0 -5.3117,2.3962 -5.3117,5.3118 v 40.1472 c 0,2.9156 2.3961,5.3118 5.3117,5.3118 h 0.5343 l -5.1053,5.1053 2.2443,2.244 63.1678,-63.1691 z m 0.7088,8.1845 -2.3559,2.356 c 0.9171,0.2418 1.5622,1.0519 1.5622,2.063 v 30.7134 h -34.3386 l -3.1732,3.1731 h 5.6 v 8.3993 h -13.9993 l -3.1731,3.1732 h 46.9456 c 2.9156,0 5.313,-2.3962 5.313,-5.3118 v -40.1472 c 0,-1.8349 -0.9501,-3.4633 -2.3807,-4.419 z m -59.3068,2.28 h 48.1332 l -32.853,32.8524 h -17.4188 v -30.7134 c 0,-1.2124 0.9262,-2.139 2.1386,-2.139 z m -2.1386,36.0255 h 14.2457 l -8.3994,8.3993 h -3.7077 c -1.2124,0 -2.1386,-0.9262 -2.1386,-2.1386 z m 31.913,0 h 28.7387 v 6.2607 c 0,1.2124 -0.9262,2.1386 -2.1386,2.1386 h -26.6001 z" />
+    </g>
+    <g
+       id="g31260"
+       inkscape:export-filename="../../.local/share/icons/Hyper/300x300/touchpad_on.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect2781-7-6-6"
+         width="79.335564"
+         height="79.335571"
+         x="2894.8076"
+         y="1126.9991" />
+      <path
+         id="rect5729-5-2-1"
+         style="color:#000000;fill:#00ffff;fill-opacity:1;stroke-width:1;stroke-linecap:round"
+         d="m 2906.49,1141.1034 c -2.9156,0 -5.3117,2.3961 -5.3117,5.3117 v 40.1472 c 0,2.9157 2.3961,5.3118 5.3117,5.3118 h 56.3745 c 2.9156,0 5.313,-2.3961 5.313,-5.3118 v -40.1472 c 0,-2.9156 -2.3974,-5.3117 -5.313,-5.3117 z m 0,3.1728 h 56.3745 c 1.2124,0 2.1386,0.9265 2.1386,2.1389 v 30.7134 h -60.6517 v -30.7134 c 0,-1.2124 0.9262,-2.1389 2.1386,-2.1389 z m -2.1386,36.0254 h 28.7399 v 8.3994 H 2906.49 c -1.2124,0 -2.1386,-0.9262 -2.1386,-2.1387 z m 31.913,0 h 28.7387 v 6.2607 c 0,1.2125 -0.9262,2.1387 -2.1386,2.1387 h -26.6001 z" />
+    </g>
+    <g
+       id="g31256"
+       inkscape:export-filename="../../.local/share/icons/Hyper/300x300/touchpad_off.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:none;stroke:none;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect18092-3-9-8"
+         width="79.335564"
+         height="79.335571"
+         x="2974.1826"
+         y="1126.9993" />
+      <path
+         id="rect5729-6-5-1-7"
+         style="color:#000000;fill:#00ffff;fill-opacity:1;stroke-width:1;stroke-linecap:round"
+         d="m 3044.463,1133.8117 -7.2917,7.2917 h -51.3063 c -2.9156,0 -5.3117,2.3962 -5.3117,5.3118 v 40.1472 c 0,2.9156 2.3961,5.3118 5.3117,5.3118 h 0.5343 l -5.1053,5.1053 2.2443,2.244 63.1678,-63.1691 z m 0.7088,8.1845 -2.3559,2.356 c 0.9171,0.2418 1.5622,1.0519 1.5622,2.063 v 30.7134 h -34.3386 l -3.1732,3.1731 h 5.6 v 8.3993 h -13.9993 l -3.1731,3.1732 h 46.9456 c 2.9156,0 5.313,-2.3962 5.313,-5.3118 v -40.1472 c 0,-1.8349 -0.9501,-3.4633 -2.3807,-4.419 z m -59.3068,2.28 h 48.1332 l -32.853,32.8524 h -17.4188 v -30.7134 c 0,-1.2124 0.9262,-2.139 2.1386,-2.139 z m -2.1386,36.0255 h 14.2457 l -8.3994,8.3993 h -3.7077 c -1.2124,0 -2.1386,-0.9262 -2.1386,-2.1386 z m 31.913,0 h 28.7387 v 6.2607 c 0,1.2124 -0.9262,2.1386 -2.1386,2.1386 h -26.6001 z" />
     </g>
   </g>
 </svg>

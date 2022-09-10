@@ -1,0 +1,13 @@
+#!/bin/bash
+# touchpadToggle
+
+# Arbitrary but unique message tag
+msgTag="mytouchpad"
+
+if [ $(xinput list-props "DLL075B:01 06CB:76AF Touchpad" | grep 'Device Enabled' | gawk -F ': ' '{ print $2 }') -eq 0 ]; then
+	xinput enable "DLL075B:01 06CB:76AF Touchpad"
+	notify-send -i touchpad_on --urgency "normal" -h string:x-dunst-stack-tag:$msgTag "Enabled" "Your computer's touchpad is enabled."
+else
+	xinput disable "DLL075B:01 06CB:76AF Touchpad"
+	notify-send -i touchpad_off --urgency "normal" -h string:x-dunst-stack-tag:$msgTag "Disabled" "Your computer's touchpad is disabled."
+fi
