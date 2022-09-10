@@ -360,7 +360,7 @@
  #
 
  # Touchpad toggle
- bindsym XF86TouchpadToggle exec ~/.bin/touchpadToggle
+ bindcode 75 exec ~/.bin/touchpadToggle
 
  #
  # Unclassified
