@@ -1,3 +1,0 @@
-#!/bin/bash
-
-/usr/bin/ncmpcpp-lyrics -a ~/Kumquats/geniusLyricsApiKey.txt ~/music ~/music/.lyrics

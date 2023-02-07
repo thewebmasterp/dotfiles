@@ -1,5 +1,5 @@
-#!/bin/bash
-# touchpadToggle
+#!/usr/bin/env bash
+# touchpad-toggle
 
 # Arbitrary but unique message tag
 msgTag="mytouchpad"

@@ -1,5 +1,5 @@
-#!/bin/bash
-# changeBrightness
+#!/usr/bin/env bash
+# set-brightness
 
 # Arbitrary but unique message tag
 msgTag="mybrightness"

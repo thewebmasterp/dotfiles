@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # best-split
 
 var1=$(xwininfo -id `xdotool getwindowfocus` | grep -E '(Width)' | awk '{print $2}')

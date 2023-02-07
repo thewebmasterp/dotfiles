@@ -1,5 +1,5 @@
-#!/bin/bash
-# changeVolume
+#!/usr/bin/env bash
+# set-volume
 
 # Arbitrary but unique message tag
 msgTag="myvolume"
