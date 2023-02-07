@@ -1,0 +1,17 @@
+base
+base-devel
+efibootmgr
+git
+i3-wm
+linux
+linux-firmware
+nano
+networkmanager
+nodejs
+openssh
+pamixer
+pulseaudio
+vim
+xdotool
+xorg-server
+xorg-xwininfo
