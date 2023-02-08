@@ -1,0 +1,9 @@
+[submodule ".local/opt/mpd-configure"]
+	path = .local/opt/mpd-configure
+	url = https://gitlab.com/sonida/mpd-configure
+[submodule ".local/opt/movetocorner"]
+	path = .local/opt/movetocorner
+	url = https://github.com/SofianeHamlaoui/movetocorner
+[submodule ".local/opt/oh-my-zsh"]
+	path = .local/opt/oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh
