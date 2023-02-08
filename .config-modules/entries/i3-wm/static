@@ -270,7 +270,7 @@
  #
 
  # Invert the colors of a focused window
- bindsym --release $mod+i exec --no-startup-id ~/.bin/color-inverter focused
+ bindsym --release $mod+i exec --no-startup-id color-inverter focused
 
  # Set font for window titles and default font for the bar
  font pango:JetBrainsMono 11
