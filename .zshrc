@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.local/opt/oh-my-zsh"
+export ZSH="${HOME}/.local/opt/oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -113,6 +113,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias wget="wget --hsts-file ${XDG_CACHE_HOME}/wget-hs"
+
 alias music='tmux new-session -s $$ "tmux source-file ~/.config/ncmpcpp/tsession"'
 
 function reload_gtk_theme() {
@@ -121,4 +123,6 @@ function reload_gtk_theme() {
 	      sleep 1
 	        gsettings set org.gnome.desktop.interface gtk-theme $theme
 	}
+
+
 
