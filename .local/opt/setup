@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+echo " "
+echo "1. Updating submodules..."
+echo " "
+
+sleep 1
+git --git-dir="${HOME}/.git" --work-tree="${HOME}" submodule update --init --recursive
+
+echo " "
+echo "Updating submodules finished"
+echo " "
+
+echo " "
+echo "2. Installing essential pacman packages..."
+echo " "
+
+sleep 1
+pkglist="${XDG_CONFIG_HOME}/pkglist.txt"
+installable_packages=$(comm -12 <(pacman -Slq | sort) <(sort $pkglist))
+sudo pacman -S --needed $installable_packages
+
+echo " "
+echo "Installing essential pacman packages finished" 
+echo " "
+
+echo " "
+echo "3. Installing essential npm packages..." 
+echo " "
+
+sleep 1
+yarn --cwd $HOME install
+
+echo " "
+echo "Installing essential npm packages finished" 
+echo " "
