@@ -1,0 +1,10 @@
+[IconTheme]
+Name=Standard
+Comment=Standard theme
+Directories=300x300/devices,38x38/devices
+
+[300x300/devices]
+Size=300
+
+[38x38/devices]
+Size=38

@@ -28,7 +28,6 @@
 
   font = JetBrainsMono 11
   markup = full
-  #format = "<b>%s</b>\n%b"
   alignment = left 
   vertical_alignment = top
   show_age_threshold = 60
@@ -41,7 +40,8 @@
   icon_position = left
   min_icon_size = 52
   max_icon_size = 52
-  icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/usr/share/icons/HighContrast/16x16/status/:/home/master/.local/share/icons/Bluescreen/300x300/:/usr/share/icons/hicolor/22x22/apps/
+  enable_recursive_icon_lookup = true
+  icon_theme = Standard, hicolor
 
   sticky_history = yes
   history_length = 50
@@ -70,31 +70,12 @@
 
 [volume_brightness]
   category = volume_brightness
-  #origin = top-left
-  #format = "ha"
-  #alignment= center
-  #offset = vertical
-  #icon_position = left
   alignment = left
-  #format = "\n<b>%s</b>"   #\n%b"
-  #vertical_alignment = center
   timeout = 1
-# highlight = "#ffffff"
-#"%s"
-
-# Works good but I figured out I wont need it
-#  [battery]
-#  category = battery
-#  #new_icon
 
 [popup-log]
   category = popup-log
   timeout = 0
-
-
-#[nm-applet]
-#  desktop_entry = "nm-applet"
-#  urgency = "no"
 
 [nm-applet]
   desktop_entry = "nm-applet"

@@ -1,5 +1,5 @@
 [global]
-  icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/usr/share/icons/HighContrast/16x16/status/:/home/master/.local/share/icons/Redscreen/300x300/:/usr/share/icons/hicolor/22x22/apps/
+  icon_theme = Redscreen, hicolor
   highlight = "#ff3d3d"
 
 [urgency_low]

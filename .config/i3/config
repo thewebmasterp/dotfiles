@@ -26,7 +26,7 @@ set $color-urgent        #900000
  set $mod Mod4
 
  # Auto start a notification daemon
- exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
+ # exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
  # Auto start battery tracker
  exec --no-startup-id ~/.bin/i3-battery-popup -L 16 -l 6 -t 1m -n -m "Battery status"

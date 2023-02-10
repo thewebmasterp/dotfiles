@@ -1,0 +1,9 @@
+The icons of the themes do not use standard naming,
+all are put under /devices folder,
+and have only 32x32 and 300x300 sizes as of this moment.
+
+One day when someone comes back to improve that (me?)
+these commands would save you a search:
+
+mogrify -resize 38x38 *.png                          # Changes icons sizes of current dir
+identify -format '%wx%h' bat_100_some_icon.png       # Shows widht/height

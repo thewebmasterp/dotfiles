@@ -2,7 +2,4 @@ module-first: false
 config-modules-dir: /home/master/.config-modules
 without-preview: false
 cache:
-  i3-wm: Standard
-  alacritty-terminal: Gotham.yml
-  dunst-notification: Bluescreen
-  rofi-menu: Standard
+  dunst-notification: Redscreen

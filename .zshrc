@@ -114,7 +114,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias wget="wget --hsts-file ${XDG_CACHE_HOME}/wget-hs"
-
+alias sessionctl='systemctl --user'
 alias music='tmux new-session -s $$ "tmux source-file ~/.config/ncmpcpp/tsession"'
 
 function reload_gtk_theme() {

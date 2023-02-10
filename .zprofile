@@ -4,11 +4,14 @@ export PATH="${PATH}:${HOME}/.local/bin:${HOME}/.local/bin/helpers:${HOME}/node_
 # Set default terminal
 export TERMINAL="/usr/bin/alacritty"
 
-# Set default cahce dir
+# Set default user cahce dir
 export XDG_CACHE_HOME="${HOME}/.cache"
 
-# Set default config dir
+# Set default user config dir
 export XDG_CONFIG_HOME="${HOME}/.config"
+
+# Set default user data dir
+export XDG_DATA_HOME="${HOME}/.local/share"
 
 # Set default node REPL history file
 export NODE_REPL_HISTORY="${XDG_CACHE_HOME}/node_repl_history"
