@@ -34,3 +34,14 @@ yarn --cwd $HOME install
 echo " "
 echo "Installing essential npm packages finished" 
 echo " "
+
+echo " "
+echo "4. Generating fastest pacman mirrors..." 
+echo " "
+
+sleep 1
+reflekt
+
+echo " "
+echo "Generating fastest pacman mirrors finished" 
+echo " "

@@ -1,0 +1,38 @@
+#!/bin/bash
+# play-dunst-notification-sound
+
+ 
+RINGTONES_DIR="$XDG_DATA_HOME/ringtones"
+
+# By category
+BATTERY_LOW_SOUND_FILE="its_battery_is_dying.wav"
+
+# By urgency
+LOW_URGENCY_SOUND_FILE=""
+NORMAL_URGENCY_SOUND_FILE="drop_in_ocean.wav"
+CRITICAL_URGENCY_SOUND_FILE="just_a_little_error.wav"
+
+case $DUNST_CATEGORY in
+
+	audio_device)
+		exit 0
+		;;
+
+	bat_low)
+		play-on-pedestal "$RINGTONES_DIR/$BATTERY_LOW_SOUND_FILE"
+		exit 0
+		;;
+
+	volume_brightness)
+		exit 0
+		;;
+
+esac
+
+if [ "$DUNST_URGENCY" = "LOW" ]; then
+	play-on-pedestal "$RINGTONES_DIR/$LOW_URGENCY_SOUND_FILE"
+elif [ "$DUNST_URGENCY" = "NORMAL" ]; then
+	play-on-pedestal "$RINGTONES_DIR/$NORMAL_URGENCY_SOUND_FILE"
+elif [ "$DUNST_URGENCY" = "CRITICAL" ]; then
+	play-on-pedestal "$RINGTONES_DIR/$CRITICAL_URGENCY_SOUND_FILE"
+fi	

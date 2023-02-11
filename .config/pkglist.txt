@@ -27,6 +27,7 @@ pamixer
 picom
 pulseaudio
 python
+reflector
 ttf-jetbrains-mono
 vi
 vim

@@ -155,9 +155,6 @@
  bindsym $mod+v split v
  bindsym $mod+b exec --no-startup-id best-split
 
- # Replace a window (Still a dream)
- # bindsym $mod+r exec --no-startup-id best-split; rofi -show modi; kill
-
  # Resize focused window
  bindsym $mod+Ctrl+j resize shrink width 20 px or 20 ppt
  bindsym $mod+Ctrl+k resize grow height 20 px or 20 ppt 

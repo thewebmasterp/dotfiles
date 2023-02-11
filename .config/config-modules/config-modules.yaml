@@ -4,3 +4,4 @@ without-preview: false
 cache:
   dunst-notification: Redscreen
   i3-wm: Standard
+  i3status-statusbar: Gotham

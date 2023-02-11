@@ -57,7 +57,7 @@
   mouse_middle_click = do_action, close_current
   mouse_right_click = close_all
 
-  script = /home/master/.config/dunst/playSound  
+  script = play-dunst-notification-sound  
 
 [urgency_low]
   timeout = 10

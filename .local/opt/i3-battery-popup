@@ -1,4 +1,5 @@
-#! /bin/bash
+#!/usr/bin/env bash
+# i3-battery-popup
 
 ################################################################################
 # A script that shows a battery warning on i3wm                                #
@@ -40,6 +41,13 @@
 # - Louis-Jacob Lebel (https://github.com/lebel-louisjacob)                    #
 # - Martin Jablečník (https://github.com/Applemann)                            #
 ################################################################################
+
+# Warning from me, thewebmasterp:
+# This script was highly modified for my own needs.
+# It is made exclusively for my system, therefore is very fragile if moved
+# in a different environment.
+
+msgTag="batstat"
 
 error () {
     echo "$1" >&2
@@ -145,18 +153,31 @@ show_nagbar(){
 }
 
 show_notify(){
-    GNOME_ICON="/usr/share/icons/gnome/scalable/status/battery-low-symbolic.svg"
-    XFCE_ICON="/usr/share/icons/elementary-xfce/status/48/battery-low.png"
+    #popup-log "$2" "this was logged"
+    #GNOME_ICON="/usr/share/icons/gnome/scalable/status/battery-low-symbolic.svg"
+    #XFCE_ICON="/usr/share/icons/elementary-xfce/status/48/battery-low.png"
     # try to find nice notify icon
-    if [[ -z $NOTIFY_ICON ]]; then
-        if [[ -f $GNOME_ICON ]]; then
-            NOTIFY_ICON="${GNOME_ICON}"
-        elif [[ -f $XFCE_ICON ]]; then
-            NOTIFY_ICON="${XFCE_ICON}"
-        fi
+    #if [[ -z $NOTIFY_ICON ]]; then
+    #    if [[ -f $GNOME_ICON ]]; then
+    #        NOTIFY_ICON="${GNOME_ICON}"
+    #    elif [[ -f $XFCE_ICON ]]; then
+    #        NOTIFY_ICON="${XFCE_ICON}"
+    #    fi
+    #fi
+    
+    #Choose appropriate notify icon
+    BATTERY_LOWER_LIMIT_ICON="bat_0_discharging"
+    BATTERY_UPPER_LIMIT_ICON="bat_25_discharging"
+    BATTERY_UPPEST_LIMIT_ICON="bat_100_charging"
+    if [[ "$2" -eq $LOWER_LIMIT ]]; then
+	NOTIFY_ICON="${BATTERY_LOWER_LIMIT_ICON}"
+    elif [[ "$2" -eq $UPPER_LIMIT ]]; then
+	NOTIFY_ICON="${BATTERY_UPPER_LIMIT_ICON}"
+    elif [[ "$2" -eq 99 ]]; then
+	NOTIFY_ICON="${BATTERY_UPPEST_LIMIT_ICON}"
     fi
-    [[ -n $NOTIFY_ICON ]] && NOTIFY_OPT="-i ${NOTIFY_ICON}"
-    notify-send -u critical "${1}" ${NOTIFY_OPT}
+    NOTIFY_OPT="-i ${NOTIFY_ICON}"
+    notify-send --category "bat_low" -h string:x-dunst-stack-tag:$msgTag --urgency "critical" "${1}" ${NOTIFY_OPT}
 }
 
 play_sound(){
@@ -168,7 +189,7 @@ play_sound(){
 show_message(){
     play_sound &
     if [[ -n $USE_NOTIFY_SEND ]] && which notify-send; then
-        show_notify "$1"
+        show_notify "$1" "$2"
     elif [[ -z $DONT_USE_WISH ]] && which wish; then
         show_popup "$1"
     else
@@ -206,12 +227,19 @@ main (){
         PERC=$(get_battery_perc)
         debug "got ${PERC}%"
 
+	#added by me
+	if [ ! is_battery_discharging ]; then 
+		if [[ $PERC -gt 99 ]]; then
+			show_message "Battery fully charged!" 99
+		fi
+	fi
+
         if is_battery_discharging; then
             debug "Battery is discharging"
 
             if [[ $PERC -lt $LIMIT ]]; then
                 debug "showing warning"
-                show_message "${MESSAGE}"
+                show_message "${MESSAGE}" "$LIMIT"
 
                 if [[ -z $POPUP_CLICKED ]]; then
                     # first click; set limit lower

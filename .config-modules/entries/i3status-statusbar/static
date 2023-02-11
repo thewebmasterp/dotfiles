@@ -1,8 +1,3 @@
-general {
-	color_good = "#d3ebe9"
-	color_degraded = "#edb54b"
-	color_bad = "#c33027"
-}
 
 general {
 		output_format = "i3bar"
