@@ -1,7 +1,32 @@
 #!/usr/bin/env bash
 
+
 echo " "
-echo "1. Updating submodules..."
+echo "1. Running system update..."
+echo " "
+
+pacman -Syu
+
+echo " "
+echo "System update finished" 
+echo " "
+
+
+echo " "
+echo "2. Installing essential pacman packages..."
+echo " "
+
+sleep 1
+pkglist="${HOME}/.config/pkglist.txt"
+installable_packages=$(comm -12 <(pacman -Slq | sort) <(sort $pkglist))
+sudo pacman -S --needed $installable_packages
+
+echo " "
+echo "Installing essential pacman packages finished" 
+echo " "
+
+echo " "
+echo "3. Updating submodules..."
 echo " "
 
 sleep 1
@@ -12,20 +37,7 @@ echo "Updating submodules finished"
 echo " "
 
 echo " "
-echo "2. Installing essential pacman packages..."
-echo " "
-
-sleep 1
-pkglist="${XDG_CONFIG_HOME}/pkglist.txt"
-installable_packages=$(comm -12 <(pacman -Slq | sort) <(sort $pkglist))
-sudo pacman -S --needed $installable_packages
-
-echo " "
-echo "Installing essential pacman packages finished" 
-echo " "
-
-echo " "
-echo "3. Installing essential npm packages..." 
+echo "4. Installing essential npm packages..." 
 echo " "
 
 sleep 1
@@ -36,11 +48,11 @@ echo "Installing essential npm packages finished"
 echo " "
 
 echo " "
-echo "4. Generating fastest pacman mirrors..." 
+echo "5. Generating fastest pacman mirrors..." 
 echo " "
 
 sleep 1
-reflekt
+/bin/bash "$HOME/.local/bin/reflekt"
 
 echo " "
 echo "Generating fastest pacman mirrors finished" 
