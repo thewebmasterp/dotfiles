@@ -1,5 +1,5 @@
 ## Sample systemd service file for mpd-configure which updates
-## /etc/mpd.conf prior to starting the mpd.service.
+## mpd config prior to starting the mpd.service.
 ##
 ## This file should be copied to
 ## /usr/lib/systemd/system/mpd-configure.service
@@ -41,7 +41,7 @@ Wants=mpd.service
 Environment=CONF_MPD_MUSICDIR=%h/Music
 Environment=CONF_MPD_HOMEDIR=%h/.config/mpd
 Environment=DEBUG=1
-ExecStart=/bin/bash %h/.local/opt/mpd-configure/mpd-configure --limit usb --noprompts --nobackup --quiet --output /etc/mpd.conf
+ExecStart=/bin/bash %h/.local/opt/mpd-configure/mpd-configure --limit usb --noprompts --nobackup --quiet --output %h/.config/mpd/mpd.conf
 
 [Install]
 WantedBy=default.target
