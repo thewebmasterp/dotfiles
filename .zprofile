@@ -1,5 +1,5 @@
 # Add custom directory to path
-export PATH="${PATH}:${HOME}/.local/bin:${HOME}/.local/bin/helpers:${HOME}/node_modules/.bin"
+export PATH="${PATH}:${HOME}/.local/bin:${HOME}/node_modules/.bin"
 
 # Set default terminal
 export TERMINAL="/usr/bin/alacritty"

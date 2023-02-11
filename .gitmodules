@@ -7,3 +7,6 @@
 [submodule ".local/opt/oh-my-zsh"]
 	path = .local/opt/oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh
+[submodule "/home/zdravko/.emacs.d"]
+	path = /home/zdravko/.emacs.d
+	url = https://github.com/syl20bnr/spacemacs

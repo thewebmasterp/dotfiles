@@ -5,6 +5,7 @@ base-devel
 cmatrix
 dunst
 efibootmgr
+emacs
 feh
 git
 hicolor-icon-theme

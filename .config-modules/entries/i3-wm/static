@@ -17,9 +17,6 @@
  # Set the modifier
  set $mod Mod4
 
- # Auto start battery tracker
- # exec --no-startup-id i3-battery-popup -L 16 -l 6 -t 1m -n -m "Battery status"
-
  # Auto start nm-applet - GNOME front-end for NetworkManager
  exec --no-startup-id nm-applet
 

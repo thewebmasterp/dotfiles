@@ -1,0 +1,6 @@
+[Unit]
+Description=Sends dunst notification on low battery.
+After=dunst.service
+
+[Service]
+ExecStart=%h/.local/bin/i3-battery-popup -L 21 -l 11 -t 1m -n -m "Battery status"
