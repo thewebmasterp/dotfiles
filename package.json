@@ -1,9 +1,6 @@
 {
   "dependencies": {
     "config-modules": "^1.0.0",
-    "i3-status": "^0.1.5",
-    "i3-status-bat": "^0.2.5",
-    "i3-status-kblayout": "^0.2.2",
     "rofi-notes-org": "^1.0.6"
   }
 }

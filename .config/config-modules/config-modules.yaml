@@ -3,3 +3,4 @@ config-modules-dir: /home/master/.config-modules
 without-preview: false
 cache:
   dunst-notification: Redscreen
+  i3-wm: Standard

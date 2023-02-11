@@ -1,0 +1,36 @@
+
+
+general {
+        color_good = "#00FF00"
+        color_degraded = "#FFFF00"
+        color_bad = "#FF0000"
+        output_format = "i3bar"
+        colors = true
+        interval = 5
+}
+
+order += "battery 0"
+order += "tztime date"
+order += "tztime time"
+
+battery 0 {
+        format = "%status %percentage"
+        format_down = "No battery"
+        status_chr = "🔌 CHR"
+        status_bat = "🔋 BAT"
+        status_unk = "😶‍🌫️ UNK"
+        status_full = "⚡ FULL"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 20
+        threshold_type = "percentage"
+}
+
+tztime date {
+        format = "🗓️ %Y-%m-%d"
+}
+
+tztime time {
+        format = "🕞 %H:%M"
+}
+
+
