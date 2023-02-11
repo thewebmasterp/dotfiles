@@ -94,7 +94,6 @@ set $color-urgent        #900000
   -combi-modi 'drun,run' \
   -modi 'combi,ssh,window' \
   -show-icons \
-  -application-fallback-icon '~/.config/rofi/fallback-icon.png' \
   -kb-cancel 'Super_L' " \
 
  # Rofi assistant (emoji; clipboard; notes; themes)
@@ -162,9 +161,6 @@ set $color-urgent        #900000
  bindsym $mod+h split h
  bindsym $mod+v split v
  bindsym $mod+b exec --no-startup-id best-split
-
- # Replace a window (Still a dream)
- # bindsym $mod+r exec --no-startup-id best-split; rofi -show modi; kill
 
  # Resize focused window
  bindsym $mod+Ctrl+j resize shrink width 20 px or 20 ppt

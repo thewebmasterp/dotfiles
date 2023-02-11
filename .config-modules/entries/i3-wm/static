@@ -86,7 +86,6 @@
   -combi-modi 'drun,run' \
   -modi 'combi,ssh,window' \
   -show-icons \
-  -application-fallback-icon '~/.config/rofi/fallback-icon.png' \
   -kb-cancel 'Super_L' " \
 
  # Rofi assistant (emoji; clipboard; notes; themes)
