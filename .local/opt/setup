@@ -1,59 +1,130 @@
 #!/usr/bin/env bash
+# setup
 
+if ! command -v pacman &> /dev/null
+then
+    echo "'pacman' could not be found!"
+    echo ""
+    echo "Are you sure you're running this on Arch Linux?"
+    echo "If not, I would advice you to look through the script and try to reseble"
+    echo "the steps on your distribution."
+    exit
+fi
 
 echo " "
 echo "1. Running system update..."
 echo " "
 
-pacman -Syu
+sudo pacman -Syu || {
+    echo "System update failed!"
+    echo "Exiting..."
+    exit 1
+}
 
 echo " "
-echo "System update finished" 
-echo " "
-
-
-echo " "
-echo "2. Installing essential pacman packages..."
+echo "System update finished successfully." 
 echo " "
 
 sleep 1
-pkglist="${HOME}/.config/pkglist.txt"
-installable_packages=$(comm -12 <(pacman -Slq | sort) <(sort $pkglist))
-sudo pacman -S --needed $installable_packages
 
 echo " "
-echo "Installing essential pacman packages finished" 
+echo "2. Installation of essential pacman packages"
 echo " "
+
+sleep 1
+
+pkglist="${HOME}/.config/pkglist.txt"
+installable_packages=$(comm -12 <(pacman -Slq | sort) <(sort $pkglist))
+
+echo "Packages to be installed:"
+
+sleep 1
+
+echo "$installable_packages"
+
+echo " "
+printf 'Do you proceed (y/n)? '
+old_stty_cfg=$(stty -g)
+stty raw -echo ; answer=$(head -c 1) ; stty $old_stty_cfg # Careful playing with stty
+if [ "$answer" != "${answer#[Yy]}" ];then
+    
+    echo "\n"
+    echo "Installing packages..."
+    sleep 1
+    sudo pacman -S --needed $installable_packages || {
+        echo "Installing packages failed!"
+        echo "Exiting..."
+        exit 1
+    }
+    echo " "
+    echo "Installation of essential pacman packages finished successfully." 
+    echo " "
+
+else
+    echo "Exiting..."
+    exit 1
+fi
+
+sleep 1
 
 echo " "
 echo "3. Updating submodules..."
 echo " "
 
 sleep 1
-git --git-dir="${HOME}/.git" --work-tree="${HOME}" submodule update --init --recursive
+git --git-dir="${HOME}/.git" --work-tree="${HOME}" submodule update --init --recursive || {
+    echo "Updating submodules failed!"
+    echo "Exiting..."
+    exit 1
+}
 
 echo " "
 echo "Updating submodules finished"
 echo " "
+
+sleep 1
 
 echo " "
 echo "4. Installing essential npm packages..." 
 echo " "
 
 sleep 1
-yarn --cwd $HOME install
+yarn --cwd $HOME install || {
+    echo "Installing packages failed!"
+    echo "Exiting..."
+    exit 1
+}
 
 echo " "
-echo "Installing essential npm packages finished" 
+echo "Installing essential npm packages finished successfully." 
 echo " "
+
+sleep 1
 
 echo " "
 echo "5. Generating fastest pacman mirrors..." 
 echo " "
 
 sleep 1
-/bin/bash "$HOME/.local/bin/reflekt"
+/bin/bash "$HOME/.local/bin/reflekt" || {
+  echo "Generating mirrors failed!"
+  echo "Skipping..."
+  sleep 2
+}
 
-echo " "
-echo "Generating fastest pacman mirrors finished" 
-echo " "
+sleep 1
+
+if [ -z "$ZSH_VERSION" ]; then
+    echo " "
+    echo "6. Changing default user shell to /usr/bin/zsh..." 
+    echo " "
+    sleep 1
+    chsh -s /usr/bin/zsh || {
+      echo "Changing shell failed!"
+      echo "Exiting..."
+      exit 1
+    }
+    echo " "
+    echo "Default user shell changed successfully" 
+    echo " "
+else

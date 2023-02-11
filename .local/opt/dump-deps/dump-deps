@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+# dump-deps
+
+# Determine the dir where script is defined
+SOURCE=${BASH_SOURCE[0]}
+while [ -L "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+  DIR=$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )
+  SOURCE=$(readlink "$SOURCE")
+  [[ $SOURCE != /* ]] && SOURCE=$DIR/$SOURCE # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+done
+DIR=$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )
+
+pkglist="${XDG_CONFIG_HOME}/pkglist.txt"
+pkgignoreList="${DIR}/pkgignore.txt"
+pkglistContent=$(cat $pkglist | sort)
+newPkglistContent=$(pacman -Qqe | sort)
+
+# Ignore the contents of he pkgignore.txt file
+ignoredPkglistContent=$(grep -v -x -f ${pkgignoreList} <<< ${newPkglistContent}) || {
+  echo " "
+  echo "Hint: "
+  echo "If this command failed because it couldn't find pkgignore.txt"
+  echo "This means that you should create one in ${DIR} and specify packages"
+  echo "you don't want to include in $pkglist"
+  exit
+}
+
+# Packages that only exist in the old package list
+onlyOld=$(comm -23 <(echo "$pkglistContent" ) <(echo "$ignoredPkglistContent"))
+onlyOldLength=$(echo "$onlyOld" | sed '/^\s*$/d' | wc -l)
+
+# Packages that only exist in the new package list:
+onlyNew=$(comm -23 <(echo "$ignoredPkglistContent" ) <(echo "$pkglistContent"))
+onlyNewLength=$(echo "$onlyNew" | sed '/^\s*$/d' | wc -l)
+
+echo " "
+echo "Removed packages:     (${onlyOldLength})"
+echo "$onlyOld"
+echo " "
+echo "Added packages:       (${onlyNewLength})"
+echo "$onlyNew"
+echo " "
+
+printf 'Should I dump the new packages setup (y/n)? '
+old_stty_cfg=$(stty -g)
+stty raw -echo ; answer=$(head -c 1) ; stty $old_stty_cfg # Careful playing with stty
+if [ "$answer" != "${answer#[Yy]}" ];then
+    
+    echo "\n"
+    echo "Dumping new packages setup to '$pkglist' ..."
+    sleep 1
+    echo "$ignoredPkglistContent" > $pkglist
+    echo "Packages setup dumped."
+
+else
+    echo "Exiting..."
+    exit
+fi
