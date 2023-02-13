@@ -92,7 +92,7 @@
  bindsym $mod+c exec "rofi -config '~/.config/rofi/config.rasi' \
   -theme-str '#element { children: [element-text]; }' \
   -show 'emoji' \
-  -modi 'emoji:/usr/bin/rofimoji,clipboard:~/.bin/clipboard.js,notes:rofi-notes-org,themes:~/.bin/themes.js' \
+  -modi 'emoji:rofimoji,notes:rofi-notes-org,wallpaper:wallpaper' \
   -kb-cancel 'Super_L' " \
 
  # Change focus

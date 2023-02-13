@@ -1,0 +1,3 @@
+; -*- mode: org;-*-
+* See rofi-notes-org for more info
+* Hit $Mod + c, navigate to the "notes" tab and type in something. Hit Enter and it should appear in this file!

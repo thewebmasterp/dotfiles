@@ -1,0 +1,13 @@
+#!/bin/bash
+# wallpaper
+
+wallpapers_dir="$XDG_DATA_HOME/wallpapers"
+
+# TODO: Save wallpaper on restart
+
+if [ ! -z "$1" ]
+then
+	/usr/bin/feh --bg-fill "$wallpapers_dir/$1"
+	exit 0
+fi
+ls "$wallpapers_dir"
