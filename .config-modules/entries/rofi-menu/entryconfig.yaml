@@ -1,5 +1,5 @@
 # File where the resulting static + chosen module will be exported to
-export-to: "/home/master/.config/rofi/config.rasi"
+export-to: "~/.config/rofi/config.rasi"
 
 # If set to true, the module will come before the static
 module-first: true
