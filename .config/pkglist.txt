@@ -24,10 +24,13 @@ picom
 pulseaudio
 python
 reflector
+rofi
+rofimoji
 ttf-jetbrains-mono
 vi
 vim
 wget
+xdg-user-dirs
 xdotool
 xorg-bdftopcf
 xorg-docs

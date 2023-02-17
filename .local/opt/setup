@@ -127,4 +127,17 @@ if [ -z "$ZSH_VERSION" ]; then
     echo " "
     echo "Default user shell changed successfully" 
     echo " "
-else
+    sleep 1
+fi
+
+echo " "
+echo "7. Running xdg-user-dirs-update to create a full suite of localized default user directories"
+echo " " 
+xdg-user-dirs-update || {
+  echo "xdg-user-dirs-update failed!"
+  echo "Exiting..."
+  exit 1
+}
+echo " "
+echo "Suite of localized default user directories created successfully."
+echo " "
