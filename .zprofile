@@ -17,4 +17,4 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 export NODE_REPL_HISTORY="${XDG_CACHE_HOME}/node_repl_history"
 
 # Override qt theme with the one set by Kvantum
-QT_STYLE_OVERRIDE=kvantum
+export QT_STYLE_OVERRIDE=kvantum
