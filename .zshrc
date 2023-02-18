@@ -116,7 +116,7 @@ source $ZSH/oh-my-zsh.sh
 alias wget="wget --hsts-file ${XDG_CACHE_HOME}/wget-hs"
 alias sessionctl='systemctl --user'
 alias music='tmux new-session -s $$ "tmux source-file ~/.config/ncmpcpp/tsession"'
-alias firefox="firefox -p"
+alias firefox="firefox -P"
 
 function reload_gtk_theme() {
 	  theme=$(gsettings get org.gnome.desktop.interface gtk-theme)
