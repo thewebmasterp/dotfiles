@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Note: In order for this script to work as of 18-02-2023 you need to replace the default picom package with picom-ibhagwan-git from AUR
+
 # === Verify `compton --dbus` status ===
 
 if [ -z "`dbus-send --session --dest=org.freedesktop.DBus --type=method_call --print-reply /org/freedesktop/DBus org.freedesktop.DBus.ListNames | grep compton`" ]; then
