@@ -2,12 +2,19 @@
 # wallpaper
 
 wallpapers_dir="$XDG_DATA_HOME/wallpapers"
-
-# TODO: Save wallpaper on restart
+symlink_path="$XDG_CACHE_HOME/wallpaper.jpg"
 
 if [ ! -z "$1" ]
 then
-	/usr/bin/feh --bg-fill "$wallpapers_dir/$1"
+	wallpaper_path="$wallpapers_dir/$1"
+
+	# Remember the choice across reboots
+	# (i3wm will apply symlink_path as a default background on startup)
+	ln -s "$wallpaper_path" "$symlink_path"
+
+	# Update the current background
+	/usr/bin/feh --bg-fill "$wallpaper_path"
+	
 	exit 0
 fi
 ls "$wallpapers_dir"

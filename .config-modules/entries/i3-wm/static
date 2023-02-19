@@ -23,6 +23,9 @@
  # Auto start the compositing window manager (compositor)
  exec --no-startup-id picom --dbus --config ~/.config/picom/picom.conf
 
+ # Set chosen (by the wallpaper script) background
+ exec --no-startup-id feh --bg-fill ~/.cache/wallpaper.jpg
+
  # Auto start clipster (Clipboard manager)
  # exec --no-startup-id clipster -d
 
