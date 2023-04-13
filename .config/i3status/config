@@ -13,6 +13,7 @@ general {
 order += "battery 0"
 order += "tztime date"
 order += "tztime time"
+order += "read_file whoami"
 
 battery 0 {
 		format = "%status %percentage"
@@ -32,4 +33,8 @@ tztime date {
 
 tztime time {
 		format = "🕞 %H:%M"
+}
+
+read_file whoami {
+		path = "~/.whoami"
 }

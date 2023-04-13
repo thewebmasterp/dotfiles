@@ -125,5 +125,8 @@ function reload_gtk_theme() {
 	        gsettings set org.gnome.desktop.interface gtk-theme $theme
 	}
 
+# i3status uses this file to read the current user from
+echo $USER > .whoami
+
 
 
