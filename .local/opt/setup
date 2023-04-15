@@ -43,7 +43,7 @@ sleep 1
 echo "$installable_packages"
 
 echo " "
-printf 'Do you proceed (y/n)? '
+printf 'Do you proceed (y/N)? '
 old_stty_cfg=$(stty -g)
 stty raw -echo ; answer=$(head -c 1) ; stty $old_stty_cfg # Careful playing with stty
 if [ "$answer" != "${answer#[Yy]}" ];then
@@ -61,6 +61,7 @@ if [ "$answer" != "${answer#[Yy]}" ];then
     echo " "
 
 else
+    echo "\n"
     echo "Exiting..."
     exit 1
 fi
