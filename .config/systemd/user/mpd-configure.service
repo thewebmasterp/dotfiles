@@ -40,8 +40,9 @@ Wants=mpd.service
 [Service]
 Environment=CONF_MPD_MUSICDIR=%h/Music
 Environment=CONF_MPD_HOMEDIR=%h/.config/mpd
-Environment=DEBUG=1
-ExecStart=/bin/bash %h/.local/bin/mpd-configure --limit usb --noprompts --nobackup --quiet --output %h/.config/mpd/mpd.conf
+Environment=CONF_MPD_CONFFILE=%h/.config/mpd/mpd.conf
+Environment=DISABLE_PROMPTS=true
+ExecStart=/bin/bash %h/.local/bin/mpd-configure --limit usb --quiet
 
 [Install]
 WantedBy=default.target

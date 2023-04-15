@@ -10,10 +10,12 @@ git
 hicolor-icon-theme
 i3status
 i3-wm
+kvantum
 libnotify
 linux
 linux-firmware
 man-db
+mpd
 nano
 networkmanager
 network-manager-applet
