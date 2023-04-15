@@ -42,6 +42,7 @@ Environment=CONF_MPD_MUSICDIR=%h/Music
 Environment=CONF_MPD_HOMEDIR=%h/.config/mpd
 Environment=CONF_MPD_CONFFILE=%h/.config/mpd/mpd.conf
 Environment=DISABLE_PROMPTS=true
+Environment=CONF_MPD_NETWORK_PORT=6600
 ExecStart=/bin/bash %h/.local/bin/mpd-configure --limit usb --quiet
 
 [Install]
