@@ -33,7 +33,8 @@ echo " "
 
 sleep 1
 
-pkglist="${HOME}/.config/pkglist.txt"
+USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
+pkglist="${USER_HOME}/.config/pkglist.txt"
 installable_packages=$(comm -12 <(pacman -Slq | sort) <(sort $pkglist))
 
 echo "Packages to be installed:"
