@@ -1,1 +1,4 @@
-../opt/mpd-configure/mpd-configure
+#!/usr/bin/env bash
+
+cd "${HOME}/.local/opt/mpd-configure"
+./mpd-configure

@@ -9,6 +9,7 @@ order += "battery 0"
 order += "tztime date"
 order += "tztime time"
 order += "read_file whoami"
+order += "read_file empty"
 
 battery 0 {
 		format = "%status %percentage"
@@ -31,5 +32,10 @@ tztime time {
 }
 
 read_file whoami {
+		format = "💁‍♂️ %content"
 		path = "~/.whoami"
+}
+
+read_file empty {
+		path = "/var/empty"
 }
