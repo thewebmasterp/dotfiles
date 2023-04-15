@@ -41,18 +41,19 @@ echo "Added packages:       (${onlyNewLength})"
 echo "$onlyNew"
 echo " "
 
-printf 'Should I dump the new packages setup (y/n)? '
+printf "Should I dump the new packages setup in '$pkglist' (y/N)?"
 old_stty_cfg=$(stty -g)
 stty raw -echo ; answer=$(head -c 1) ; stty $old_stty_cfg # Careful playing with stty
 if [ "$answer" != "${answer#[Yy]}" ];then
     
     echo "\n"
-    echo "Dumping new packages setup to '$pkglist' ..."
+    echo "Dumping new packages setup in '$pkglist' ..."
     sleep 1
     echo "$ignoredPkglistContent" > $pkglist
     echo "Packages setup dumped."
 
 else
+    echo "\n"
     echo "Exiting..."
     exit
 fi
