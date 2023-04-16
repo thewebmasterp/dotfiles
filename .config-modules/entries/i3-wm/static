@@ -339,6 +339,7 @@
  bindsym XF86AudioRaiseVolume exec --no-startup-id set-volume +5%
  bindsym XF86AudioLowerVolume exec --no-startup-id set-volume -5%
  bindsym XF86AudioMute exec --no-startup-id set-volume sink-mute
+ #bindsym XF86AudioPlay exec
  # bindsym XF86AudioMicMute exec --no-startup-id set-volume source-mute
  #
 

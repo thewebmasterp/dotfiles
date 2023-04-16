@@ -2,6 +2,7 @@ alacritty
 alsa-utils
 base
 base-devel
+dbus-x11
 dunst
 efibootmgr
 emacs
@@ -15,7 +16,9 @@ libnotify
 linux
 linux-firmware
 man-db
+mpc
 mpd
+mpd-mpris
 nano
 networkmanager
 network-manager-applet
@@ -23,6 +26,7 @@ nodejs
 noto-fonts-emoji
 pamixer
 picom
+playerctl
 pulseaudio
 python
 reflector
