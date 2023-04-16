@@ -347,8 +347,7 @@ set $color-urgent        #900000
  bindsym XF86AudioRaiseVolume exec --no-startup-id set-volume +5%
  bindsym XF86AudioLowerVolume exec --no-startup-id set-volume -5%
  bindsym XF86AudioMute exec --no-startup-id set-volume sink-mute
- bindsym XF86AudioPlayPause exec notify-send "playPause"
- #bindsym XF86AudioPause exec notify-send "pause"
+ bindsym XF86AudioPlay exec --no-startup-id play-pause
  # bindsym XF86AudioMicMute exec --no-startup-id set-volume source-mute
  #
 

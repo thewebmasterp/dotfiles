@@ -1,2 +1,20 @@
 #!/usr/bin/env bash
+# play-pause
 
+# Arbitrary but unique message tag
+msgTag="myplaypause"
+
+# Get the current status of the player
+status=$(playerctl status)
+metadata=$(playerctl metadata --format "{{artist}}: {{title}}")
+
+# Toggle play/pause based on the current status
+if [ "$status" = "Playing" ]; then
+    playerctl pause
+    notify-send -i media-playback-start --urgency "normal" -c "play_pause" -h string:x-dunst-stack-tag:$msgTag "Paused" "$metadata"
+elif [ "$status" = "Paused" ]; then
+    playerctl play
+    notify-send -i media-playback-pause --urgency "normal" -c "play_pause" -h string:x-dunst-stack-tag:$msgTag "Playing" "$metadata"
+else
+    notify-send "$status"
+fi
