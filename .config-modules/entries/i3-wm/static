@@ -87,7 +87,7 @@
  bindsym $mod+d exec "rofi -config '~/.config/rofi/config.rasi' \
   -show 'combi' \
   -combi-modi 'drun,run' \
-  -modi 'combi,ssh,window' \
+  -modi 'combi,ssh,openvpn:rofi-vpn,window' \
   -show-icons \
   -kb-cancel 'Super_L' " \
 

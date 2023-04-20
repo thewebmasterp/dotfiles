@@ -22,6 +22,7 @@ mpd-mpris
 nano
 networkmanager
 network-manager-applet
+networkmanager-openvpn
 nodejs
 noto-fonts-emoji
 pamixer
