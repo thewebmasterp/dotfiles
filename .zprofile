@@ -18,3 +18,6 @@ export NODE_REPL_HISTORY="${XDG_CACHE_HOME}/node_repl_history"
 
 # Override qt theme with the one set by Kvantum
 export QT_STYLE_OVERRIDE=kvantum
+
+# i3status uses this file to read the current user from
+echo $USER > .whoami
