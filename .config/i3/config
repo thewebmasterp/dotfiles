@@ -22,6 +22,12 @@ set $color-urgent        #900000
  # Init
  #
 
+ # Set commands path
+ set $color-inverter ~/.local/bin/lib/color-inverter
+ set $movetocorner ~/.local/bin/lib/movetocorner
+ set $best-split ~/.local/bin/lib/best-split
+ set $wallpaper ~/.local/bin/lib/wallpaper
+
  # Set the modifier
  set $mod Mod4
 
@@ -92,19 +98,21 @@ set $color-urgent        #900000
  bindsym $mod+Shift+Ctrl+Right move workspace to output right
 
  # Rofi program launcher (combi from run and drun; ssh; window)
- bindsym $mod+d exec "rofi -config '~/.config/rofi/config.rasi' \
-  -show 'combi' \
-  -combi-modi 'drun,run' \
-  -modi 'combi,ssh,openvpn:rofi-vpn,window' \
-  -show-icons \
-  -kb-cancel 'Super_L' " \
+ bindsym $mod+d exec show-rofi primary
+ # "rofi -config '~/.config/rofi/config.rasi' \
+ # -show 'combi' \
+ # -combi-modi 'drun,run' \
+ # -modi 'combi,ssh,openvpn:rofi-vpn,window' \
+ # -show-icons \
+ # -kb-cancel 'Super_L' " \
 
  # Rofi assistant (emoji; clipboard; notes; themes)
- bindsym $mod+c exec "rofi -config '~/.config/rofi/config.rasi' \
-  -theme-str '#element { children: [element-text]; }' \
-  -show 'emoji' \
-  -modi 'emoji:rofimoji,notes:rofi-notes-org,wallpaper:wallpaper' \
-  -kb-cancel 'Super_L' " \
+ bindsym $mod+c exec show-rofi secondary
+ # "rofi -config '~/.config/rofi/config.rasi' \
+ # -theme-str '#element { children: [element-text]; }' \
+ # -show 'emoji' \
+ # -modi emoji:rofimoji,notes:rofi-notes-org,wallpaper:$wallpaper \
+ # -kb-cancel 'Super_L' " \
 
  # Change focus
  bindsym $mod+j focus left
@@ -145,15 +153,15 @@ set $color-urgent        #900000
  bindsym $mod+Shift+Right move right
 
  # Move focused container to a side (TODO: Add no-monitor support)
- bindsym $mod+KP_End   exec --no-startup-id movetocorner 1
- bindsym $mod+KP_Down  exec --no-startup-id movetocorner 2
- bindsym $mod+KP_Next  exec --no-startup-id movetocorner 3
- bindsym $mod+KP_Left  exec --no-startup-id movetocorner 4
- bindsym $mod+KP_Begin exec --no-startup-id movetocorner 5
- bindsym $mod+KP_Right exec --no-startup-id movetocorner 6
- bindsym $mod+KP_Home  exec --no-startup-id movetocorner 7 
- bindsym $mod+KP_Up    exec --no-startup-id movetocorner 8
- bindsym $mod+KP_Prior exec --no-startup-id movetocorner 9
+ bindsym $mod+KP_End   exec --no-startup-id $movetocorner 1
+ bindsym $mod+KP_Down  exec --no-startup-id $movetocorner 2
+ bindsym $mod+KP_Next  exec --no-startup-id $movetocorner 3
+ bindsym $mod+KP_Left  exec --no-startup-id $movetocorner 4
+ bindsym $mod+KP_Begin exec --no-startup-id $movetocorner 5
+ bindsym $mod+KP_Right exec --no-startup-id $movetocorner 6
+ bindsym $mod+KP_Home  exec --no-startup-id $movetocorner 7 
+ bindsym $mod+KP_Up    exec --no-startup-id $movetocorner 8
+ bindsym $mod+KP_Prior exec --no-startup-id $movetocorner 9
 
  # Change container layout
  bindsym $mod+s layout stacking
@@ -163,7 +171,7 @@ set $color-urgent        #900000
  # Split 
  bindsym $mod+h split h
  bindsym $mod+v split v
- bindsym $mod+b exec --no-startup-id best-split
+ bindsym $mod+b exec --no-startup-id $best-split
 
  # Resize focused window
  bindsym $mod+Ctrl+j resize shrink width 20 px or 20 ppt
@@ -271,7 +279,7 @@ set $color-urgent        #900000
  #
 
  # Invert the colors of a focused window
- bindsym --release $mod+i exec --no-startup-id color-inverter focused
+ bindsym --release $mod+i exec --no-startup-id $color-inverter focused
 
  # Set font for window titles and default font for the bar
  font pango:JetBrainsMono 11
