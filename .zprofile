@@ -16,6 +16,9 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 # Set default node REPL history file
 export NODE_REPL_HISTORY="${XDG_CACHE_HOME}/node_repl_history"
 
+# Required by ssh-agent user service
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+
 # Override qt theme with the one set by Kvantum
 export QT_STYLE_OVERRIDE=kvantum
 
