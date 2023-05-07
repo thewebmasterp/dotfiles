@@ -125,4 +125,5 @@ function reload_gtk_theme() {
 	        gsettings set org.gnome.desktop.interface gtk-theme $theme
 	}
 
-
+# Custom commands for my ease
+alias hs="history | cut -c 8- | grep"
