@@ -26,10 +26,12 @@ set $color-urgent        #900000
  set $color-inverter ~/.local/bin/lib/color-inverter
  set $movetocorner ~/.local/bin/lib/movetocorner
  set $best-split ~/.local/bin/lib/best-split
- set $wallpaper ~/.local/bin/lib/wallpaper
 
  # Set the modifier
  set $mod Mod4
+
+ # Triggering same workspace will switch to the previous
+ workspace_auto_back_and_forth yes
 
  # Auto start nm-applet - GNOME front-end for NetworkManager
  exec --no-startup-id nm-applet
@@ -39,6 +41,9 @@ set $color-urgent        #900000
 
  # Set chosen (by the wallpaper script) background
  exec --no-startup-id feh --bg-fill ~/.cache/wallpaper.jpg
+
+ # Auto start KeePassXC password manager
+ exec --no-startup-id i3-msg 'workspace auth; exec keepassxc'
 
  # Auto start clipster (Clipboard manager)
  # exec --no-startup-id clipster -d
@@ -78,7 +83,7 @@ set $color-urgent        #900000
  set $ws8 "8"
  set $ws9 "9"
  set $ws10 "10"
- set $scratch "show"
+ set $wsAuth "auth"
 
  # Switch to a workspace
  bindsym $mod+1 workspace number $ws1
@@ -91,7 +96,7 @@ set $color-urgent        #900000
  bindsym $mod+8 workspace number $ws8
  bindsym $mod+9 workspace number $ws9
  bindsym $mod+0 workspace number $ws10
- bindsym $mod+grave scratchpad show
+ bindsym $mod+p workspace $wsAuth 
 
  # Move workspace to monitor (TODO: Add no-monitor support)
  bindsym $mod+Shift+Ctrl+Left move workspace to output left
@@ -99,20 +104,9 @@ set $color-urgent        #900000
 
  # Rofi program launcher (combi from run and drun; ssh; window)
  bindsym $mod+d exec show-rofi primary
- # "rofi -config '~/.config/rofi/config.rasi' \
- # -show 'combi' \
- # -combi-modi 'drun,run' \
- # -modi 'combi,ssh,openvpn:rofi-vpn,window' \
- # -show-icons \
- # -kb-cancel 'Super_L' " \
 
  # Rofi assistant (emoji; clipboard; notes; themes)
  bindsym $mod+c exec show-rofi secondary
- # "rofi -config '~/.config/rofi/config.rasi' \
- # -theme-str '#element { children: [element-text]; }' \
- # -show 'emoji' \
- # -modi emoji:rofimoji,notes:rofi-notes-org,wallpaper:$wallpaper \
- # -kb-cancel 'Super_L' " \
 
  # Change focus
  bindsym $mod+j focus left
@@ -335,7 +329,7 @@ set $color-urgent        #900000
  for_window [window_type="dialog"] border pixel 5
  for_window [instance="float" class="Alacritty"] floating enable
  for_window [class="kdeconnect.daemon"] fullscreen disable; floating enable; resize set width 1920 height 1080; move absolute position center
-
+ for_window [class="Nextcloud"] border pixel 0
 
 
  #

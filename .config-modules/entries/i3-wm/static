@@ -22,6 +22,9 @@
  # Set the modifier
  set $mod Mod4
 
+ # Triggering same workspace will switch to the previous
+ workspace_auto_back_and_forth yes
+
  # Auto start nm-applet - GNOME front-end for NetworkManager
  exec --no-startup-id nm-applet
 
