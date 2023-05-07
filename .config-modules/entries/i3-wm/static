@@ -31,6 +31,9 @@
  # Set chosen (by the wallpaper script) background
  exec --no-startup-id feh --bg-fill ~/.cache/wallpaper.jpg
 
+ # Auto start KeePassXC password manager
+ exec --no-startup-id i3-msg 'workspace auth; exec keepassxc'
+
  # Auto start clipster (Clipboard manager)
  # exec --no-startup-id clipster -d
 
@@ -69,7 +72,7 @@
  set $ws8 "8"
  set $ws9 "9"
  set $ws10 "10"
- set $scratch "show"
+ set $wsAuth "auth"
 
  # Switch to a workspace
  bindsym $mod+1 workspace number $ws1
@@ -82,7 +85,7 @@
  bindsym $mod+8 workspace number $ws8
  bindsym $mod+9 workspace number $ws9
  bindsym $mod+0 workspace number $ws10
- bindsym $mod+grave scratchpad show
+ bindsym $mod+p workspace $wsAuth 
 
  # Move workspace to monitor (TODO: Add no-monitor support)
  bindsym $mod+Shift+Ctrl+Left move workspace to output left
