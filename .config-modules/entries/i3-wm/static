@@ -35,7 +35,7 @@
  exec --no-startup-id feh --bg-fill ~/.cache/wallpaper.jpg
 
  # Auto start KeePassXC password manager
- exec --no-startup-id i3-msg 'workspace auth; exec keepassxc'
+ exec --no-startup-id keepassxc
 
  # Auto start clipster (Clipboard manager)
  # exec --no-startup-id clipster -d
@@ -76,6 +76,9 @@
  set $ws9 "9"
  set $ws10 "10"
  set $wsAuth "auth"
+
+ # default workspace
+ exec --no-startup-id i3-msg workspace $wsAuth;
 
  # Switch to a workspace
  bindsym $mod+1 workspace number $ws1
@@ -127,6 +130,7 @@
  bindsym $mod+Shift+8 move container to workspace number $ws8
  bindsym $mod+Shift+9 move container to workspace number $ws9
  bindsym $mod+Shift+0 move container to workspace number $ws10
+ bindsym $mod+Shift+p move container to workspace $wsAuth
 
  # Move focused container within the current workspace
  bindsym $mod+Shift+j move left
@@ -322,6 +326,8 @@
  for_window [instance="float" class="Alacritty"] floating enable
  for_window [class="kdeconnect.daemon"] fullscreen disable; floating enable; resize set width 1920 height 1080; move absolute position center
  for_window [class="Nextcloud"] border pixel 0
+ for_window [class="(KeePassXC|keepassxc)" window_type="(?!dialog)"] move container to workspace $wsAuth
+
 
 
  #
