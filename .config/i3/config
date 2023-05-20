@@ -334,7 +334,8 @@ set $color-urgent        #900000
  for_window [instance="float" class="Alacritty"] floating enable
  for_window [class="kdeconnect.daemon"] fullscreen disable; floating enable; resize set width 1920 height 1080; move absolute position center
  for_window [class="Nextcloud"] border pixel 0
- for_window [class="(KeePassXC|keepassxc)" window_type="(?!dialog)"] move container to workspace $wsAuth
+ # for_window [class="(KeePassXC|keepassxc)"] move container to workspace $wsAuth
+ assign [class="(KeePassXC|keepassxc)"] $wsAuth
 
 
 
