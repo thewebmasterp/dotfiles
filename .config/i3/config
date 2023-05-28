@@ -33,6 +33,9 @@ set $color-urgent        #900000
  # Triggering same workspace will switch to the previous
  workspace_auto_back_and_forth yes
 
+ # Auto start flameshot - Screenshot utility
+ exec --no-startup-id flameshot
+
  # Auto start nm-applet - GNOME front-end for NetworkManager
  exec --no-startup-id nm-applet
 
@@ -61,7 +64,7 @@ set $color-urgent        #900000
  bindsym $mod+Return exec --no-startup-id alacritty
 
  # Open a new floating terminal window
- bindsym $mod+Shift+Return exec alacritty --class float
+ bindsym $mod+Shift+Return exec --no-startup-id "alacritty --class Alacritty,float"
 
 
 
@@ -84,9 +87,6 @@ set $color-urgent        #900000
  set $ws9 "9"
  set $ws10 "10"
  set $wsAuth "auth"
-
- # default workspace
- exec --no-startup-id i3-msg workspace $wsAuth;
 
  # Switch to a workspace
  bindsym $mod+1 workspace number $ws1
@@ -277,7 +277,7 @@ set $color-urgent        #900000
  #
 
  # Invert the colors of a focused window
- bindsym --release $mod+i exec --no-startup-id $color-inverter focused
+ bindsym $mod+i exec --no-startup-id $color-inverter focused
 
  # Set font for window titles and default font for the bar
  font pango:JetBrainsMono 11
@@ -328,14 +328,14 @@ set $color-urgent        #900000
  bindsym $mod+g gaps inner current set 0; gaps outer current set 0;
  bindsym $mod+Shift+g gaps inner current set 10; gaps outer current set 10;
 
- # Per application
+ # Criteria specific
  # Note: Get the properties of a window with xprop (append [property] or "| grep")
  for_window [window_type="dialog"] border pixel 5
  for_window [instance="float" class="Alacritty"] floating enable
  for_window [class="kdeconnect.daemon"] fullscreen disable; floating enable; resize set width 1920 height 1080; move absolute position center
  for_window [class="Nextcloud"] border pixel 0
- # for_window [class="(KeePassXC|keepassxc)"] move container to workspace $wsAuth
- assign [class="(KeePassXC|keepassxc)"] $wsAuth
+ assign [class="(KeePassXC|keepassxc)" window_type="^(?!dialog).*$"] $wsAuth
+ exec --no-startup-id sh -c "sleep 1 && i3-msg '[window_type=\"dialog\"]' move container to workspace number 1"
 
 
 
@@ -374,74 +374,67 @@ set $color-urgent        #900000
  # Touchpad toggle
  bindcode 75 exec touchpad-toggle
 
+
+
  #
  # Unclassified
  #
 
-#Note: get these values with xprop (append [property] or "| grep")
+ # This is a scratch where I leave notes or configs I have used or may need in the future
 
-# for_window [window_type="dialog"] border pixel 5
+ #clipboard (greenclip)
+ #exec --no-startup-id greenclip daemon>/dev/null
+ #bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
+ # Start clipster daemon
+ # exec --no-startup-id clipster -d
 
-# yfor_window [instance="float" class="Alacritty"] floating enable
+ # Reload monitor
+ # exec --no-startup-id multihead-reload
 
+ # Scratchpad
+ # Note: Next Time make it so that there's alt+1,2,3... Each showing 1 single window opened by default. Should be the best approach
 
-#clipboard (greenclip; old)
-#exec --no-startup-id greenclip daemon>/dev/null
-#bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+ # All of these work!
+ #exec_always --no-startup-id anki
+ #exec_always --no-startup-id firefox -new-window https://translate.google.com -P 'default' --class translator
+ #for_window [class="Anki"] move scratchpad
+ #for_window [class="translator"] move scratchpad
+ #for_window [class="Anki"] move position 40px 65px, resize set 915px 975px
+ #for_window [class="translator"] move position 970px 65px, resize set 915px 975px
+ #for_window [class="^(Anki|translator)$"] move scratchpad
 
-# Start clipster daemon
-# exec --no-startup-id clipster -d
+ #exec_always --no-startup-id alacritty --class music -e tmux new-session -s $$ "sleep 1; tmux source-file ~/.config/ncmpcpp/tsession"
+ #for_window [instance="music" class="Alacritty"] move scratchpad, move position 40px 65px, resize set 1840px 975px
 
-# Reload monitor
-# exec --no-startup-id multihead-reload
+ #bindsym Mod1+o [class="^(Anki|translator)$"] scratchpad show
+ #bindsym Mod1+m [instance="music" class="Alacritty"] scratchpad show
+ #bindsym Mod1+p move scratchpad
 
-# Scratchpad
-# Note: Next Time make it so that there's alt+1,2,3... Each showing 1 single window opened by default. Should be the best approach
-
-# All of these work!
-#exec_always --no-startup-id anki
-#exec_always --no-startup-id firefox -new-window https://translate.google.com -P 'default' --class translator
-#for_window [class="Anki"] move scratchpad
-#for_window [class="translator"] move scratchpad
-#for_window [class="Anki"] move position 40px 65px, resize set 915px 975px
-#for_window [class="translator"] move position 970px 65px, resize set 915px 975px
-#for_window [class="^(Anki|translator)$"] move scratchpad
-
-#exec_always --no-startup-id alacritty --class music -e tmux new-session -s $$ "sleep 1; tmux source-file ~/.config/ncmpcpp/tsession"
-#for_window [instance="music" class="Alacritty"] move scratchpad, move position 40px 65px, resize set 1840px 975px
-
-#bindsym Mod1+o [class="^(Anki|translator)$"] scratchpad show
-#bindsym Mod1+m [instance="music" class="Alacritty"] scratchpad show
-#bindsym Mod1+p move scratchpad
-
-# End Scratchpad
+ # End Scratchpad
 
 
-# shortcut to selection widget (primary)
-# bindsym $mod+c exec clipster -sp #this launches the default gtk copy-paste chooser. I prefer rofi, so:
-# Fuck clippy.py. I re-created it so that it can be used as a rofi modi (using js)
-# bindsym $mod+c exec --no-startup-id ~/.bin/clippy
+ # shortcut to selection widget (primary)
+ # bindsym $mod+c exec clipster -sp #this launches the default gtk copy-paste chooser. I prefer rofi, so:
+ # Leave clippy.py. I re-created it so that it can be used as a rofi modi (using js)
+ # bindsym $mod+c exec --no-startup-id ~/.bin/clippy
 
-# Emoji and clipboard menus
-# bindsym $mod+c exec "rofi -config '~/.config/rofi/config.rasi' \
-#-theme-str '#element { children: [element-text]; }' \
-#-show 'emoji' \
-#-modi 'emoji:/usr/bin/rofimoji,clipboard:~/.bin/clipboard.js,notes:rofi-notes-org,themes:~/.bin/themes.js' \
-#-kb-cancel 'Super_L' "
+ # Emoji and clipboard menus
+ # bindsym $mod+c exec "rofi -config '~/.config/rofi/config.rasi' \
+ #-theme-str '#element { children: [element-text]; }' \
+ #-show 'emoji' \
+ #-modi 'emoji:/usr/bin/rofimoji,clipboard:~/.bin/clipboard.js,notes:rofi-notes-org,themes:~/.bin/themes.js' \
+ #-kb-cancel 'Super_L' "
 
-# bindsym $mod+d exec "rofi -config '~/.config/rofi/config.rasi' \
-#-show 'combi' \
-#-combi-modi 'drun,run' \
-#-modi 'combi,ssh,window' \
-#-show-icons \
-#-application-fallback-icon '~/.config/rofi/fallback-icon.png' \
-#-kb-cancel 'Super_L' "
+ # bindsym $mod+d exec "rofi -config '~/.config/rofi/config.rasi' \
+ #-show 'combi' \
+ #-combi-modi 'drun,run' \
+ #-modi 'combi,ssh,window' \
+ #-show-icons \
+ #-application-fallback-icon '~/.config/rofi/fallback-icon.png' \
+ #-kb-cancel 'Super_L' "
 
-
-
-
- # TODO: Implement scratchpad, holding productivity and commonly used tools 
- #for_window [title="scratchpad"] move scratchpad 
+ # TODO: Implement scratchpad, holding productivity and commonly used tools
+ #for_window [title="scratchpad"] move scratchpad
  #bindsym $mod+i exec alacritty --title scratchpad -e ranger
  #bindsym $mod+minus scratchpad show
