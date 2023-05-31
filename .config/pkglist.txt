@@ -6,11 +6,14 @@ dbus-x11
 dunst
 efibootmgr
 emacs
+expect
 feh
+flameshot
 git
 hicolor-icon-theme
 i3status
 i3-wm
+keepassxc
 kvantum
 libnotify
 linux

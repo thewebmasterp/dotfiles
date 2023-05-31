@@ -1,0 +1,31 @@
+#!/usr/bin/expect
+# open-terminal-and-type
+
+# Source:
+# https://askubuntu.com/a/16836
+# Example usage:
+# % alacritty --command open-terminal-and-type "ls -la"
+
+# trap sigwinch and pass it to the child we spawned
+# this allows the terminal window to be resized
+trap {
+ set rows [stty rows]
+ set cols [stty columns]
+ stty rows $rows columns $cols < $spawn_out(slave,name)
+} WINCH
+
+set arg1 [lindex $argv 0]
+
+# Get a Zsh shell
+spawn -noecho zsh
+
+# If you can't see your text in the terminal change this string to match some primary prompt substring
+expect "~/"
+
+# Type something
+send $arg1
+
+# Hand over control to the user
+interact
+
+exit
