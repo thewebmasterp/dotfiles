@@ -20,7 +20,7 @@ set arg1 [lindex $argv 0]
 spawn -noecho zsh
 
 # If you can't see your text in the terminal change this string to match some primary prompt substring
-expect "~/"
+expect "~"
 
 # Type something
 send $arg1
