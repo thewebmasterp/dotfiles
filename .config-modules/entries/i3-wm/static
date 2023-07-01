@@ -40,6 +40,9 @@
  # Auto start KeePassXC password manager
  exec --no-startup-id keepassxc
 
+ # Auto start Thunderbird system tray icon (which should also start Thunderbird itself)
+ exec --no-startup-id birdtray
+
  # Auto start clipster (Clipboard manager)
  # exec --no-startup-id clipster -d
 
@@ -328,6 +331,7 @@
  for_window [class="Nextcloud"] border pixel 0
  assign [class="(KeePassXC|keepassxc)" window_type="^(?!dialog).*$"] $wsAuth
  exec --no-startup-id sh -c "sleep 1 && i3-msg '[window_type=\"dialog\"]' move container to workspace number 1"
+ for_window [title=""]
 
 
 

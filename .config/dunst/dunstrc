@@ -57,7 +57,7 @@
   mouse_middle_click = do_action, close_current
   mouse_right_click = close_all
 
-  script = ~/.local/opt/play-dunst-notification-sound
+  script = play-dunst-notification-sound  
 
 [urgency_low]
   timeout = 10
@@ -82,27 +82,27 @@
   urgency = "normal"
 
 [global]
-  icon_theme = Thewebmasterp, hicolor
-  highlight = "#FFE987"
+  icon_theme = Standard, hicolor
+  highlight = "#2E9EF4"
 
 [urgency_low]
-  background = "#001d7570"
-  foreground = "#f0f4ff"
-  frame_color = "#00a600"
+  background = "#292D2E70"
+  foreground = "#FFFFFF"
+  frame_color = "#285577"
 
 [urgency_normal]
-  background = "#00a60070"
-  foreground = "#f0f4ff"
-  frame_color = "#FFE987"
+  background = "#28557770"
+  foreground = "#FFFFFF"
+  frame_color = "#2E9EF4"
 
 
 [urgency_critical]
-  background = "#FF104170"
-  foreground = "#f0f4ff"
-  frame_color = "#FF1041"
+  background = "#90000070"
+  foreground = "#FFFFFF"
+  frame_color = "#900000"
 
 [normal]
   msg_urgency = "normal"
-  background = "#00a60070"
-  foreground = "#f0f4ff"
-  frame_color = "#FFE987"
+  background = "#28557770"
+  foreground = "#FFFFFF"
+  frame_color = "#2E9EF4"

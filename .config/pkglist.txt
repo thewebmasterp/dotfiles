@@ -2,6 +2,7 @@ alacritty
 alsa-utils
 base
 base-devel
+birdtray
 dbus-x11
 dunst
 efibootmgr
@@ -36,6 +37,7 @@ python
 reflector
 rofi
 rofimoji
+thunderbird
 ttf-jetbrains-mono
 vi
 vim
