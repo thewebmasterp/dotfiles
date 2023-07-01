@@ -48,6 +48,9 @@ set $color-urgent        #900000
  # Auto start KeePassXC password manager
  exec --no-startup-id keepassxc
 
+ # Auto start Thunderbird system tray icon (which should also start Thunderbird itself)
+ exec --no-startup-id birdtray
+
  # Auto start clipster (Clipboard manager)
  # exec --no-startup-id clipster -d
 
@@ -86,6 +89,7 @@ set $color-urgent        #900000
  set $ws8 "8"
  set $ws9 "9"
  set $ws10 "10"
+ set $wsMail "mail"
  set $wsAuth "auth"
 
  # Switch to a workspace
@@ -99,7 +103,8 @@ set $color-urgent        #900000
  bindsym $mod+8 workspace number $ws8
  bindsym $mod+9 workspace number $ws9
  bindsym $mod+0 workspace number $ws10
- bindsym $mod+p workspace $wsAuth 
+ bindsym $mod+m workspace $wsMail
+ bindsym $mod+p workspace $wsAuth
 
  # Move workspace to monitor (TODO: Add no-monitor support)
  bindsym $mod+Shift+Ctrl+Left move workspace to output left
@@ -138,6 +143,7 @@ set $color-urgent        #900000
  bindsym $mod+Shift+8 move container to workspace number $ws8
  bindsym $mod+Shift+9 move container to workspace number $ws9
  bindsym $mod+Shift+0 move container to workspace number $ws10
+ bindsym $mod+Shift+m move container to workspace $wsMail
  bindsym $mod+Shift+p move container to workspace $wsAuth
 
  # Move focused container within the current workspace
@@ -268,7 +274,7 @@ set $color-urgent        #900000
  }
 
  # Enter "keyboard mouse" mode
- bindsym $mod+m mode "keyboard mouse"
+ bindsym $mod+t mode "keyboard mouse"
 
 
 
@@ -336,6 +342,7 @@ set $color-urgent        #900000
  for_window [class="Nextcloud"] border pixel 0
  assign [class="(KeePassXC|keepassxc)" window_type="^(?!dialog).*$"] $wsAuth
  exec --no-startup-id sh -c "sleep 1 && i3-msg '[window_type=\"dialog\"]' move container to workspace number 1"
+ assign [class="thunderbird"] $wsMail
 
 
 
