@@ -341,6 +341,7 @@ set $color-urgent        #900000
  # Note: Get the properties of a window with xprop (append [property] or "| grep")
  for_window [window_type="dialog"] border pixel 5
  for_window [instance="float" class="Alacritty"] floating enable
+ for_window [class="fakecam"] sticky enable
  for_window [class="kdeconnect.daemon"] fullscreen disable; floating enable; resize set width 1920 height 1080; move absolute position center
  for_window [class="Nextcloud"] border pixel 0
  assign [class="(KeePassXC|keepassxc)" window_type="^(?!dialog).*$"] $wsAuth
