@@ -1,6 +1,6 @@
 [Desktop Entry]
 Version=1.0
-Name=Test
+Name=Fakecam
 Comment=Launches a window with fakecam output
 Exec=ffplay /dev/video2
 Icon=utilities-terminal
