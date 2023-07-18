@@ -10,3 +10,6 @@
 [submodule ".emacs.d"]
 	path = .emacs.d
 	url = https://github.com/syl20bnr/spacemacs
+[submodule ".local/opt/Linux-Fake-Background-Webcam"]
+	path = .local/opt/Linux-Fake-Background-Webcam
+	url = https://github.com/fangfufu/Linux-Fake-Background-Webcam.git

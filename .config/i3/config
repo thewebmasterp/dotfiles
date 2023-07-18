@@ -190,6 +190,9 @@ set $color-urgent        #900000
  # Toggle between tiling / floating mode
  bindsym $mod+Shift+space floating toggle
 
+ # Make a window sticky (will show on top of every workspace)
+ bindsym $mod+Shift+s sticky toggle
+
  # Enter fullscreen mode for the focused container
  bindsym $mod+f fullscreen toggle
 
