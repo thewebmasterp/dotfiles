@@ -336,7 +336,7 @@
  for_window [class="ffplay"] floating enable sticky enable
  for_window [class="kdeconnect.daemon"] fullscreen disable; floating enable; resize set width 1920 height 1080; move absolute position center
  for_window [class="Nextcloud"] border pixel 0
- assign [class="(KeePassXC|keepassxc)" window_type="^(?!dialog).*$"] $wsAuth
+ assign [class="(KeePassXC|keepassxc)" window_type="normal"] $wsAuth
  exec --no-startup-id sh -c "sleep 1 && i3-msg '[window_type=\"dialog\"]' move container to workspace number 1"
  assign [class="thunderbird"] $wsMail
 
