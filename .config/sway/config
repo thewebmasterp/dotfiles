@@ -217,7 +217,7 @@
 
 
 #
-# MediaKeys
+# Media Keys
 #
 	bindsym --locked XF86AudioRaiseVolume exec volumectl -ubp up
 	bindsym --locked XF86AudioLowerVolume exec volumectl -up down

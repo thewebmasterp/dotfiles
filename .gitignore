@@ -1,3 +1,4 @@
+# gitignore-shared
 # Blacklist files/folders in same directory as the .gitignore file
 *
 
@@ -10,3 +11,5 @@
 !.config/
 !.config/sway/
 !.config/sway/config
+!.config/foot/
+!.config/foot/foot.ini
