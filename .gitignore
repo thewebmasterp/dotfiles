@@ -11,5 +11,29 @@
 !.config/
 !.config/sway/
 !.config/sway/config
+!.config/waybar/
+!.config/waybar/colors.css
+# !.config/waybar/config.jsonc #coming soon!
+!.config/waybar/style.css
+!.config/swaylock/
+!.config/swaylock/config
+!.config/mako/
+!.config/mako/config
 !.config/foot/
 !.config/foot/foot.ini
+!.config/rofi/
+!.config/rofi/config.rasi
+!.config/chromium-flags.conf
+!.config/code-flags.conf
+!.config/gtk-3.0/
+!.config/gtk-3.0/settings.ini
+!.config/swappy/
+!.config/swappy/config
+!.config/user-dirs.dirs
+!.config/user-dirs.locale
+
+# .config/systemd dir
+!.config/systemd/
+!.config/systemd/user/
+!.config/systemd/user/sway-session.target
+!.config/systemd/user/nm-applet.service
