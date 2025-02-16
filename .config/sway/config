@@ -1,0 +1,259 @@
+# -*- mode: i3wm-config -*-
+# vim: filetype=swayconfig
+
+
+#
+# Constants
+#
+	# Logo key. Use Mod1 for Alt
+	set $mod Mod4
+
+	# Workspace names
+	set $ws1 "1"
+	set $ws2 "2"
+	set $ws3 "3"
+	set $ws4 "4"
+	set $ws5 "5"
+	set $ws6 "6"
+	set $ws7 "7"
+	set $ws8 "8"
+	set $ws9 "9"
+	set $ws10 "10"
+	set $wsMail "mail"
+	set $wsAuth "auth"
+
+
+#
+# Init
+#
+	# Initialize systemd
+	exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
+	exec swaymsg -t subscribe '["shutdown"]' && systemctl --user stop sway-session.target
+	exec_always systemctl --user restart sway-session.target
+
+	# Restore wallpaper
+	exec waypaper --restore
+
+	# Media controls notification daemon
+	exec avizo-service
+
+	# Idle configuration
+	exec sway-idle
+
+
+#
+# Basic Keybindings
+#
+	# Start a terminal
+	bindsym $mod+Return exec foot --app-id "foot"
+
+	# Start a floating terminal
+	bindsym $mod+Shift+Return exec foot --app-id "floating.foot"
+
+	# Kill focused window
+	bindsym $mod+Shift+q kill
+
+	# Reload config
+	bindsym $mod+Shift+c reload
+
+	# Start launcher
+	bindsym $mod+d exec show-rofi primary
+
+	# Start secondary launcher
+	bindsym $mod+t exec show-rofi secondary
+
+	# Take screenshot selection and store it in clipboard
+	bindsym Print exec grim -g "$(slurp -d)" - | wl-copy -t image/png && notify-send "Screenshot captured to clipboard"
+
+	# Take screenshot selection and store it on disk
+	bindsym Shift+Print exec grim -g "$(slurp -d)" "$(xdg-user-dir PICTURES)/Screenshots/$(date +'%d-%m-%Y_%H%M%S_screenshot.png')" && notify-send "Screenshot captured in fs"
+
+	# Take screenshot selection and annotate it
+	bindsym Ctrl+Shift+Print exec grim -g "$(slurp -d)" - | swappy -f -
+
+	# Take screenshot of a window and store it in clipboard
+	bindsym $mod+Print exec grim -g "$(slurp-sway-win)" - | wl-copy -t image/png && notify-send "Screenshot captured to clipboard"
+
+	# Take screenshot of a window and store it on disk
+	bindsym $mod+Shift+Print exec grim -g "$(slurp-sway-win)" "$(xdg-user-dir PICTURES)/Screenshots/$(date +'%d-%m-%Y_%H%M%S_screenshot.png')" && notify-send "Screenshot captured in fs"
+
+	# Take screenshot of a window and annotate it
+	bindsym $mod+Ctrl+Shift+Print exec grim -g "$(slurp-sway-win)" - | swappy -f -
+
+	# Lock session
+	bindsym $mod+z exec swaylock -f --fade-in 0
+
+
+#
+# Layout/Navigation
+#
+	# Drag floating windows around
+	floating_modifier $mod
+
+	# Focus on parent container
+	bindsym $mod+a focus parent
+
+	# Focus tiling/floating windows
+	bindsym $mod+space focus mode_toggle
+
+	# Toggle between tiling/floating mode
+	bindsym $mod+Shift+space floating toggle
+
+	# Toggle focused window fullscreen mode
+	bindsym $mod+f fullscreen toggle
+
+	# Change window layout
+	bindsym $mod+s layout stacking
+	bindsym $mod+w layout tabbed
+	bindsym $mod+e layout toggle split
+
+	# Split window
+	bindsym $mod+h splith
+	bindsym $mod+v splitv
+
+	# Switch to workspace
+	bindsym $mod+1 workspace $ws1
+	bindsym $mod+2 workspace $ws2
+	bindsym $mod+3 workspace $ws3
+	bindsym $mod+4 workspace $ws4
+	bindsym $mod+5 workspace $ws5
+	bindsym $mod+6 workspace $ws6
+	bindsym $mod+7 workspace $ws7
+	bindsym $mod+8 workspace $ws8
+	bindsym $mod+9 workspace $ws9
+	bindsym $mod+0 workspace $ws10
+	bindsym $mod+m workspace $wsMail
+	bindsym $mod+p workspace $wsAuth
+
+	# Move focused container to workspace
+	bindsym $mod+Shift+1 move container to workspace $ws1
+	bindsym $mod+Shift+2 move container to workspace $ws2
+	bindsym $mod+Shift+3 move container to workspace $ws3
+	bindsym $mod+Shift+4 move container to workspace $ws4
+	bindsym $mod+Shift+5 move container to workspace $ws5
+	bindsym $mod+Shift+6 move container to workspace $ws6
+	bindsym $mod+Shift+7 move container to workspace $ws7
+	bindsym $mod+Shift+8 move container to workspace $ws8
+	bindsym $mod+Shift+9 move container to workspace $ws9
+	bindsym $mod+Shift+0 move container to workspace $ws10
+	bindsym $mod+Shift+m move container to workspace $wsMail
+	bindsym $mod+Shift+p move container to workspace $wsAuth
+
+	# Change focus between containers
+	bindsym $mod+Left focus left
+	bindsym $mod+Down focus down
+	bindsym $mod+Up focus up
+	bindsym $mod+Right focus right
+
+	# Move focused container
+	bindsym $mod+Shift+Left move left
+	bindsym $mod+Shift+Down move down
+	bindsym $mod+Shift+Up move up
+	bindsym $mod+Shift+Right move right
+
+	# Resize focused container
+	bindsym $mod+Ctrl+Left resize grow width 13 px or 13 ppt
+	bindsym $mod+Ctrl+Down resize shrink height 13 px or 13 ppt
+	bindsym $mod+Ctrl+Up resize grow height 13 px or 13 ppt
+	bindsym $mod+Ctrl+Right resize shrink width 13 px or 13 ppt
+
+
+#
+# Eyecandy 
+#
+	font pango: MonaspiceKr Nerd Font 14
+
+	# Dracula
+	# class						border		bground		text		indicator	child_border
+	client.focused				#8BE9FD		#8BE9FD		#F8F8F2		#ff92df		#8BE9FD
+	client.focused_inactive		#44475A		#44475A		#F8F8F2		#44475A		#44475A
+	client.unfocused			#44475A		#282A36		#BFBFBF		#282A36		#282A36
+	client.urgent				#44475A		#FF5555		#F8F8F2		#FF5555		#FF5555
+	client.placeholder			#282A36		#282A36		#F8F8F2		#282A36		#282A36
+	client.background			#F8F8F2
+
+	# Window corner radius in px
+	corner_radius 10
+
+	# Window background blur
+	blur enable
+	blur_xray disable
+	blur_passes 2
+	blur_radius 5
+
+	# Window shadows
+	shadows on
+	shadows_on_csd off
+	shadow_blur_radius 20
+	shadow_color #282A367F
+
+	# Inactive window fade amount. 0.0 = no dimming, 1.0 = fully dimmed
+	default_dim_inactive 0.0
+	dim_inactive_colors.unfocused #282A36FF
+	dim_inactive_colors.urgent #FF5555
+
+	# Move minimized windows into Scratchpad (enable|disable)
+	scratchpad_minimize disable
+
+	# Gaps
+	gaps inner 6
+	gaps outer 3
+	smart_gaps off
+
+	# Titlebars
+	default_border pixel 3
+	default_floating_border pixel 1
+	hide_edge_borders none
+	titlebar_border_thickness 0
+
+
+#
+# Status Bar
+#
+	bar {
+		position top
+		swaybar_command waybar
+	}
+
+
+#
+# MediaKeys
+#
+	bindsym --locked XF86AudioRaiseVolume exec volumectl -ubp up
+	bindsym --locked XF86AudioLowerVolume exec volumectl -up down
+	bindsym --locked XF86AudioMute exec volumectl toggle-mute
+	bindsym XF86AudioMicMute exec volumectl -m toggle-mute
+    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+
+
+#
+# Modes
+#
+	bindsym  $mod+Control+l exec sway-lock-utils lock
+
+	set $mode_system "System (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown"
+	mode $mode_system {
+		bindsym e exec sway-lock-utils logout, mode "default"
+		bindsym s exec sway-lock-utils suspend, mode "default"
+		bindsym h exec sway-lock-utils hibernate, mode "default"
+		bindsym r exec sway-lock-utils reboot, mode "default"
+		bindsym Shift+s exec sway-lock-utils shutdown, mode "default"
+
+		# back to normal: Enter or Escape
+		bindsym Return mode "default"
+		bindsym Escape mode "default"
+	}
+
+	bindsym $mod+Control+q mode $mode_system
+
+
+#
+# Window Rules
+#
+	for_window [app_id="floating.*"] floating enable
+
+#
+# Include device specific / overriding / private configurations
+#
+include ./config.d/*

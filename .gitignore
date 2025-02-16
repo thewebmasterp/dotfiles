@@ -1,0 +1,12 @@
+# Blacklist files/folders in same directory as the .gitignore file
+*
+
+## Whitelist
+
+# Git files
+!.gitignore
+
+# .config dir
+!.config/
+!.config/sway/
+!.config/sway/config
