@@ -1,0 +1,16 @@
+[Unit]
+Description=File synchronisation desktop utility
+Documentation=man:nextcloud(1)
+After=network-online.target
+Wants=network-online.target systemd-networkd-wait-online.service
+PartOf=sway-session.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash %h/.local/lib/systemd/nextcloud-client-startup.sh
+Restart=on-failure
+RestartSec=5s
+LimitNOFILE=65535:65535
+
+[Install]
+WantedBy=sway-session.target

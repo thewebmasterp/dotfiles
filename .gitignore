@@ -4,16 +4,21 @@
 
 ## Whitelist
 
-# Git files
+# Git
 !.gitignore
 
-# .config dir
+# ~
+!.zshrc
+!.zprofile
 !.config/
+!.local/
+
+# .config/
 !.config/sway/
 !.config/sway/config
 !.config/waybar/
 !.config/waybar/colors.css
-# !.config/waybar/config.jsonc #coming soon!
+!.config/waybar/config.jsonc
 !.config/waybar/style.css
 !.config/swaylock/
 !.config/swaylock/config
@@ -23,6 +28,8 @@
 !.config/foot/foot.ini
 !.config/rofi/
 !.config/rofi/config.rasi
+!.config/avizo/
+!.config/avizo/config.ini
 !.config/chromium-flags.conf
 !.config/code-flags.conf
 !.config/gtk-3.0/
@@ -32,8 +39,27 @@
 !.config/user-dirs.dirs
 !.config/user-dirs.locale
 
-# .config/systemd dir
+# .config/systemd/
 !.config/systemd/
 !.config/systemd/user/
 !.config/systemd/user/sway-session.target
 !.config/systemd/user/nm-applet.service
+!.config/systemd/user/nextcloud-applet.service
+
+# .local/lib/
+!.local/lib/
+!.local/lib/waybar/
+!.local/lib/waybar/btrfs-status.sh
+!.local/lib/waybar/darkman-status.sh
+!.local/lib/waybar/wttrbar-wrapper.sh
+!.local/lib/sway/
+!.local/lib/sway/show-rofi.sh
+!.local/lib/sway/displays-configuration.sh
+!.local/lib/sway/slurp-sway-win.sh
+!.local/lib/sway/sway-lock-utils.sh
+!.local/lib/systemd/
+!.local/lib/systemd/nextcloud-client-startup.sh
+
+# .local/bin/
+!.local/bin/
+!.local/bin/swm

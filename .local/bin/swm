@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# swm
+
+export XDG_CURRENT_DESKTOP=sway
+
+exec sway

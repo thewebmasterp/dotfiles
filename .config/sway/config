@@ -22,6 +22,12 @@
 	set $wsMail "mail"
 	set $wsAuth "auth"
 
+	# Custom scripts
+	set $swayIdle ~/.local/lib/sway/sway-idle.sh
+	set $showRofi ~/.local/lib/sway/show-rofi.sh
+	set $slurpSwayWin ~/.local/lib/sway/slurp-sway-win.sh
+	set $swayLockUtils ~/.local/lib/sway/sway-lock-utils.sh
+
 
 #
 # Init
@@ -38,7 +44,7 @@
 	exec avizo-service
 
 	# Idle configuration
-	exec sway-idle
+	exec $swayIdle
 
 
 #
@@ -57,10 +63,10 @@
 	bindsym $mod+Shift+c reload
 
 	# Start launcher
-	bindsym $mod+d exec show-rofi primary
+	bindsym $mod+d exec $showRofi primary
 
 	# Start secondary launcher
-	bindsym $mod+t exec show-rofi secondary
+	bindsym $mod+t exec $showRofi secondary
 
 	# Take screenshot selection and store it in clipboard
 	bindsym Print exec grim -g "$(slurp -d)" - | wl-copy -t image/png && notify-send "Screenshot captured to clipboard"
@@ -72,13 +78,13 @@
 	bindsym Ctrl+Shift+Print exec grim -g "$(slurp -d)" - | swappy -f -
 
 	# Take screenshot of a window and store it in clipboard
-	bindsym $mod+Print exec grim -g "$(slurp-sway-win)" - | wl-copy -t image/png && notify-send "Screenshot captured to clipboard"
+	bindsym $mod+Print exec grim -g "$($slurpSwayWin)" - | wl-copy -t image/png && notify-send "Screenshot captured to clipboard"
 
 	# Take screenshot of a window and store it on disk
-	bindsym $mod+Shift+Print exec grim -g "$(slurp-sway-win)" "$(xdg-user-dir PICTURES)/Screenshots/$(date +'%d-%m-%Y_%H%M%S_screenshot.png')" && notify-send "Screenshot captured in fs"
+	bindsym $mod+Shift+Print exec grim -g "$($slurpSwayWin)" "$(xdg-user-dir PICTURES)/Screenshots/$(date +'%d-%m-%Y_%H%M%S_screenshot.png')" && notify-send "Screenshot captured in fs"
 
 	# Take screenshot of a window and annotate it
-	bindsym $mod+Ctrl+Shift+Print exec grim -g "$(slurp-sway-win)" - | swappy -f -
+	bindsym $mod+Ctrl+Shift+Print exec grim -g "$($slurpSwayWin)" - | swappy -f -
 
 	# Lock session
 	bindsym $mod+z exec swaylock -f --fade-in 0
@@ -230,15 +236,15 @@
 #
 # Modes
 #
-	bindsym  $mod+Control+l exec sway-lock-utils lock
+	bindsym  $mod+Control+l exec $swayLockUtils lock
 
 	set $mode_system "System (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown"
 	mode $mode_system {
-		bindsym e exec sway-lock-utils logout, mode "default"
-		bindsym s exec sway-lock-utils suspend, mode "default"
-		bindsym h exec sway-lock-utils hibernate, mode "default"
-		bindsym r exec sway-lock-utils reboot, mode "default"
-		bindsym Shift+s exec sway-lock-utils shutdown, mode "default"
+		bindsym e exec $swayLockUtils logout, mode "default"
+		bindsym s exec $swayLockUtils suspend, mode "default"
+		bindsym h exec $swayLockUtils hibernate, mode "default"
+		bindsym r exec $swayLockUtils reboot, mode "default"
+		bindsym Shift+s exec $swayLockUtils shutdown, mode "default"
 
 		# back to normal: Enter or Escape
 		bindsym Return mode "default"
