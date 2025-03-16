@@ -56,6 +56,7 @@
 !.local/lib/sway/show-rofi.sh
 !.local/lib/sway/displays-configuration.sh
 !.local/lib/sway/slurp-sway-win.sh
+!.local/lib/sway/sway-idle.sh
 !.local/lib/sway/sway-lock-utils.sh
 !.local/lib/systemd/
 !.local/lib/systemd/nextcloud-client-startup.sh

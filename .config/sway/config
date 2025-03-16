@@ -258,6 +258,7 @@
 # Window Rules
 #
 	for_window [app_id="floating.*"] floating enable
+	for_window [app_id="waypaper"] floating enable
 
 #
 # Include device specific / overriding / private configurations
