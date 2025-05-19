@@ -41,6 +41,7 @@ alias adog="git log --all --decorate --oneline --graph"
 alias histctx="grep -n '' ~/.histfile | fzf --delimiter : --preview 'bat --style=numbers --color=always --highlight-line {1} ~/.histfile' --preview-window +{1}-/2"
 alias gitp="git-private"
 alias gits="git-shared"
+alias dblogin="az account get-access-token --resource-type oss-rdbms --output tsv --query accessToken"
 
 # Env Exports
 # https://zsh.sourceforge.io/Doc/Release/User-Contributions.html#index-match_002dwords_002dby_002dstyle
