@@ -81,6 +81,7 @@ button:hover {
 #language,
 #keyboard-state,
 #custom-weather,
+#battery,
 #clock {
     padding: 0 10px;
     margin: 5px 1px;
@@ -174,6 +175,10 @@ button:hover {
 }
 
 #custom-weather {
+    background-color: @green;
+}
+
+#battery {
     background-color: @green;
 }
 

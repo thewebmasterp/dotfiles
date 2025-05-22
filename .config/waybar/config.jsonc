@@ -13,9 +13,9 @@
         "sway/window"
     ],
     "modules-right": [
-		"custom/darkman",
+	"custom/darkman",
         "idle_inhibitor",
-		"custom/btrfs-status",
+	"custom/btrfs-status",
         "temperature",
         "cpu",
         "memory",
@@ -24,6 +24,7 @@
         "sway/language",
         "keyboard-state",
         "custom/weather",
+	"battery",
         "clock"
     ],
     "sway/workspaces": {
@@ -137,6 +138,15 @@
         "interval": 1800,
         "exec": "~/.local/lib/waybar/wttrbar-wrapper.sh",
         "return-type": "json"
+    },
+    "battery": {
+	"interval": 3,
+	"states": {
+		"warning": 30,
+		"critical": 15
+	},
+	"format": "{capacity}% {icon}",
+	"max-length": 35
     },
     "clock": {
         "interval": 60,
