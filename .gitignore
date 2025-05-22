@@ -45,6 +45,8 @@
 !.config/systemd/user/sway-session.target
 !.config/systemd/user/nm-applet.service
 !.config/systemd/user/nextcloud-applet.service
+!.config/systemd/user/default.target.wants/
+!.config/systemd/user/default.target.wants/xdg-user-dirs-update.service
 
 # .local/lib/
 !.local/lib/
