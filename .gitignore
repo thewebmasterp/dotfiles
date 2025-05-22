@@ -47,6 +47,11 @@
 !.config/systemd/user/nextcloud-applet.service
 !.config/systemd/user/default.target.wants/
 !.config/systemd/user/default.target.wants/xdg-user-dirs-update.service
+!.config/systemd/user/default.target.wants/pipewire.service
+!.config/systemd/user/default.target.wants/pipewire-pulse.service
+!.config/systemd/user/default.target.wants/mpris-proxy.service
+!.config/systemd/user/default.target.wants/mpd.service
+!.config/systemd/user/default.target.wants/darkman.service
 
 # .local/lib/
 !.local/lib/
