@@ -102,8 +102,8 @@ ZSH_THEME_GIT_PROMPT_TAG="%{$fg_bold[white]%}"
 # Customizing the prompt
 # https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
 # Either show hostname in the prompt "[tom@v330:~]" or not [tom:~]:
-PROMPT='%B%F{magenta}[%n:%f%F{blue}%(4~|../|)%3~%f%b$(gitprompt)%B%F{magenta}]%f%b ' # without hostname
-# PROMPT='%B%F{magenta}[%n@%m:%f%F{blue}%(4~|../|)%3~%f%b$(gitprompt)%B%F{magenta}]%f%b ' # with hostname
+# PROMPT='%B%F{magenta}[%n:%f%F{blue}%(4~|../|)%3~%f%b$(gitprompt)%B%F{magenta}]%f%b ' # without hostname
+PROMPT='%B%F{magenta}[%n@%m:%f%F{blue}%(4~|../|)%3~%f%b$(gitprompt)%B%F{magenta}]%f%b ' # with hostname
 RPROMPT='%B%F{red}%(0?||Exit code: %?)%f%b'
 
 # CTRL+ARROW_RIGHT   - partially accept suggestion up to the point that the cursor moves to
