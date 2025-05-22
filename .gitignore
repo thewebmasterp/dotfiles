@@ -12,6 +12,7 @@
 !.zprofile
 !.config/
 !.local/
+!fonts.conf
 
 # .config/
 !.config/sway/
