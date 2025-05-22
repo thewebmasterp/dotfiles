@@ -71,3 +71,12 @@
 # .local/bin/
 !.local/bin/
 !.local/bin/swm
+
+# .local/share/
+!.local/share/
+!.local/share/dark-mode.d/
+!.local/share/dark-mode.d/desktop-notification.sh
+!.local/share/dark-mode.d/gtk3-theme.sh
+!.local/share/light-mode.d/
+!.local/share/light-mode.d/desktop-notification.sh
+!.local/share/light-mode.d/gtk3-theme.sh
