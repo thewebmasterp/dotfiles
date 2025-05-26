@@ -53,6 +53,8 @@
 !.config/systemd/user/default.target.wants/mpris-proxy.service
 !.config/systemd/user/default.target.wants/mpd.service
 !.config/systemd/user/default.target.wants/darkman.service
+!.config/systemd/user/sway-session.target.wants/
+!.config/systemd/user/sway-session.target.wants/nm-applet.service
 
 # .local/lib/
 !.local/lib/
