@@ -9,13 +9,10 @@
         "sway/mode",
         "mpris"
     ],
-    "modules-center": [
-        "sway/window"
-    ],
     "modules-right": [
-	"custom/darkman",
+	    "custom/darkman",
         "idle_inhibitor",
-	"custom/btrfs-status",
+	    "custom/btrfs-status",
         "temperature",
         "cpu",
         "memory",
@@ -24,7 +21,7 @@
         "sway/language",
         "keyboard-state",
         "custom/weather",
-	"battery",
+        "battery",
         "clock"
     ],
     "sway/workspaces": {
