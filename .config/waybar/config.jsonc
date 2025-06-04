@@ -147,7 +147,7 @@
     },
     "clock": {
         "interval": 60,
-        "format": "{:%a %d-%m-%Y %H:%M }",
+        "format": "{:%H:%M %a %d-%m-%Y }",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode"          : "year",
