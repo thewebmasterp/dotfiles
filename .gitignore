@@ -74,6 +74,7 @@
 # .local/bin/
 !.local/bin/
 !.local/bin/swm
+!.local/bin/wsudo
 
 # .local/share/
 !.local/share/
