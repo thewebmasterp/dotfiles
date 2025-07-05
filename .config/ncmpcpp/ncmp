@@ -1,0 +1,19 @@
+#!/bin/bash
+# ncmp
+
+
+tmux -u new-session -d "ncmpcpp --config='~/.config/ncmpcpp/catalog.conf'"
+##tmux split-window -v "clear && bash ~/.config/ncmpcpp/cover.sh" && tmux send-keys PageDown
+tmux -u split-pane -v -p 5 cava
+tmux select-pane -t 0
+tmux split-window -h -p 0 "clear && bash ~/.config/ncmpcpp/cover.sh" && tmux send-keys PageDown
+
+
+tmux -u attach-session \; select-pane -t 0
+
+
+
+
+
+
+

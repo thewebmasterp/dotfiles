@@ -3,7 +3,7 @@
 
 #small script to enable root access to x-windows system
 xhost +SI:localuser:root
-sudo $1
+sudo XCURSOR_SIZE=$XCURSOR_SIZE XCURSOR_THEME=$XCURSOR_THEME DISPLAY=$DISPLAY $1
 #disable root access after application terminates
 xhost -SI:localuser:root
 #print access status to allow verification that root access was removed

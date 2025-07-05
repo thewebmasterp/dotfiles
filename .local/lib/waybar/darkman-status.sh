@@ -1,5 +1,5 @@
 #/usr/bin/env bash
-# darkman-status
+# darkman-status.sh
 
 class="light"
 tooltip="Light Mode to scare the bugs"

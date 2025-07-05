@@ -1,4 +1,4 @@
 #/usr/bin/env bash
-# wttrbar-wrapper
+# wttrbar-wrapper.sh
 
 eval wttrbar "$WTTRBAR_FLAGS"

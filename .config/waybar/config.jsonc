@@ -73,6 +73,7 @@
 		"interval": 10,
 		"tooltip": true,
 		"return-type": "json",
+		"on-click": "~/.local/lib/waybar/toggle-btrfs-assistant.sh",
 		"exec": "~/.local/lib/waybar/btrfs-status.sh"
 	},
     "temperature": {

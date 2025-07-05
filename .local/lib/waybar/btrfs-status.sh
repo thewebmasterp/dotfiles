@@ -1,5 +1,5 @@
 #/usr/bin/env bash
-# btrfs-status
+# btrfs-status.sh
 
 # Define the base path
 BASE_PATH="/sys/fs/btrfs/${BTRFS_ROOT_FS_UUID}/devinfo"

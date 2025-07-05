@@ -7,6 +7,7 @@ PartOf=sway-session.target
 
 [Service]
 Type=simple
+ExecStartPre=/bin/sleep 3
 ExecStart=/bin/bash %h/.local/lib/systemd/nextcloud-client-startup.sh
 Restart=on-failure
 RestartSec=5s

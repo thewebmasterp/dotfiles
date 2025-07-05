@@ -19,8 +19,8 @@
 	set $ws8 "8"
 	set $ws9 "9"
 	set $ws10 "10"
-	set $wsMail "mail"
-	set $wsAuth "auth"
+	set $wsMail "📧"
+	set $wsAuth "🎵"
 
 	# Custom scripts
 	set $swayIdle ~/.local/lib/sway/sway-idle.sh
@@ -33,7 +33,7 @@
 # Init
 #
 	# Initialize systemd
-	exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
+	exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME SSH_AUTH_SOCK
 	exec swaymsg -t subscribe '["shutdown"]' && systemctl --user stop sway-session.target
 	exec_always systemctl --user restart sway-session.target
 
@@ -45,6 +45,15 @@
 
 	# Idle configuration
 	exec $swayIdle
+
+
+#
+# Status Bar
+#
+	bar {
+		position top
+		swaybar_command waybar
+	}
 
 
 #
@@ -214,15 +223,6 @@
 
 
 #
-# Status Bar
-#
-	bar {
-		position top
-		swaybar_command waybar
-	}
-
-
-#
 # Media Keys
 #
 	bindsym --locked XF86AudioRaiseVolume exec volumectl -ubp up
@@ -259,6 +259,24 @@
 #
 	for_window [app_id="floating.*"] floating enable
 	for_window [app_id="waypaper"] floating enable
+	for_window [class="Btrfs Assistant"] \
+		floating enable, \
+		resize set 800 600, \
+		move position 2000 0
+	for_window [app_id="com.nextcloud.desktopclient.nextcloud"] \
+		floating enable, \
+		resize set 600 800, \
+		move position 130 0
+ 	for_window [app_id="nm-connection-editor"] \
+		floating enable, \
+		resize set 600 800, \
+		move position 160 0
+	for_window [app_id="blueman-manager"] \
+		floating enable, \
+		resize set 600 800, \
+		move position 190 0
+
+
 
 #
 # Include device specific / overriding / private configurations

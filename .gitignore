@@ -37,6 +37,10 @@
 !.config/gtk-3.0/settings.ini
 !.config/swappy/
 !.config/swappy/config
+!.config/ncmpcpp/
+!.config/ncmpcpp/*
+!.config/cava/
+!.config/cava/config
 !.config/user-dirs.dirs
 !.config/user-dirs.locale
 
