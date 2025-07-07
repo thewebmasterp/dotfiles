@@ -17,6 +17,7 @@
         "cpu",
         "memory",
         "custom/updates",
+		"bluetooth",
         "network",
         "sway/language",
         "keyboard-state",
@@ -107,6 +108,16 @@
         },
         "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
     },
+	"bluetooth": {
+		"format": " {status}",
+		"format-connected": " {device_alias}",
+		"format-connected-battery": " {device_alias} {device_battery_percentage}%",
+		"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+		"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+		"on-click": "~/.local/lib/waybar/toggle-bluetui.sh"
+	},
     "network": {
         "interval": 60,
         "interface-ethernet": "enp1s*",
@@ -116,7 +127,9 @@
         "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "tooltip-format-wifi": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "(No IP) ",
-        "format-disconnected": "Disconnected "
+        "format-disconnected": "Disconnected ",
+		"on-click-right": "~/.local/lib/waybar/toggle-netscanner.sh",
+		"on-click": "~/.local/lib/waybar/toggle-nmtui.sh"
     },
     "sway/language": {
         "format": "{short} ",

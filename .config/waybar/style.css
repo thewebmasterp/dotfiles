@@ -77,6 +77,7 @@ button:hover {
 #cpu,
 #memory,
 #custom-updates,
+#bluetooth,
 #network,
 #language,
 #keyboard-state,
@@ -130,12 +131,11 @@ button:hover {
 }
 
 #idle_inhibitor {
-    background-color: @background;
-    color: @foreground;
+    background-color: @comment;
 }
 
 #idle_inhibitor.activated {
-    background-color: @foreground;
+    background-color: @cyan;
     color: @background;
 }
 
@@ -149,6 +149,13 @@ button:hover {
 
 #custom-updates.has-updates {
 	background-color: @orange;
+}
+
+#bluetooth.off {
+	background-color: @comment;
+}
+#bluetooth.discoverable {
+	animation: purple-flicker 1s infinite;
 }
 
 #network.disconnected {
@@ -186,4 +193,10 @@ button:hover {
     background-color: @green;
     margin-right: 4px;
     padding-left: 4px;
+}
+
+@keyframes purple-flicker {
+  0% { background-color: @cyan; }
+  90% { background-color: @purple; }
+  100% { background-color: @cyan; }
 }

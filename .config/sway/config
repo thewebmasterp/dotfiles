@@ -259,23 +259,6 @@
 #
 	for_window [app_id="floating.*"] floating enable
 	for_window [app_id="waypaper"] floating enable
-	for_window [class="Btrfs Assistant"] \
-		floating enable, \
-		resize set 800 600, \
-		move position 2000 0
-	for_window [app_id="com.nextcloud.desktopclient.nextcloud"] \
-		floating enable, \
-		resize set 600 800, \
-		move position 130 0
- 	for_window [app_id="nm-connection-editor"] \
-		floating enable, \
-		resize set 600 800, \
-		move position 160 0
-	for_window [app_id="blueman-manager"] \
-		floating enable, \
-		resize set 600 800, \
-		move position 190 0
-
 
 
 #

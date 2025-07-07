@@ -1,6 +1,8 @@
 
 COVER="/tmp/album_cover.png"
 TEMP_COVER="/tmp/temp_album_cover.png"
+IMG_SIZE="750x750"
+IMG_OFFSET=11
 
 get_terminal_size() {
   local size
@@ -14,11 +16,8 @@ resize_cover_image() {
   size=$(get_terminal_size)
   IFS=',' read -r width height <<< "$size"
 
-  local max_width=$((width * 10 * 2))   
-  local max_height=$((height * 20 * 2)) 
-
   if [ -f "$COVER" ]; then
-    magick "$COVER" -resize "650x650" "$TEMP_COVER"
+    magick "$COVER" -resize "$IMG_SIZE" "$TEMP_COVER"
 
 	sleep 1
 
@@ -42,7 +41,7 @@ function add_cover {
 
   if [ -f "$TEMP_COVER" ]; then
     # kitty +kitten icat "$TEMP_COVER" || echo "Failed to display cover image."
-	printf "\033[12;23H"
+	printf "\033[${IMG_OFFSET};$((IMG_OFFSET*2))H"
 	img2sixel "$TEMP_COVER"
   else
     echo "Temporary cover image does not exist: $TEMP_COVER"

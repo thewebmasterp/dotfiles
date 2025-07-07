@@ -39,10 +39,14 @@
 !.config/swappy/config
 !.config/ncmpcpp/
 !.config/ncmpcpp/*
+.config/ncmpcpp/error.log
 !.config/cava/
 !.config/cava/config
 !.config/user-dirs.dirs
 !.config/user-dirs.locale
+!.config/autostart/
+!.config/autostart/blueman.desktop
+!.config/autostart/nm-applet.desktop
 
 # .config/systemd/
 !.config/systemd/
@@ -64,8 +68,12 @@
 !.local/lib/
 !.local/lib/waybar/
 !.local/lib/waybar/btrfs-status.sh
+!.local/lib/waybar/toggle-btrfs-assistant.sh
 !.local/lib/waybar/darkman-status.sh
 !.local/lib/waybar/wttrbar-wrapper.sh
+!.local/lib/waybar/toggle-bluetui.sh
+!.local/lib/waybar/toggle-nmtui.sh
+!.local/lib/waybar/toggle-netscanner.sh
 !.local/lib/sway/
 !.local/lib/sway/show-rofi.sh
 !.local/lib/sway/displays-configuration.sh
