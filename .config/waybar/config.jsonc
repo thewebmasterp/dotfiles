@@ -135,54 +135,55 @@
         "format": "{short} ",
         "tooltip-format": "{long}"
     },
-    "keyboard-state": {
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "custom/weather": {
-        "format": "{}°",
-        "tooltip": true,
-        "interval": 1800,
-        "exec": "~/.local/lib/waybar/wttrbar-wrapper.sh",
-        "return-type": "json"
-    },
-    "battery": {
-	"interval": 3,
-	"states": {
-		"warning": 30,
-		"critical": 15
+	"keyboard-state": {
+		"capslock": true,
+		"format": "{name} {icon}",
+		"format-icons": {
+			"locked": "",
+			"unlocked": ""
+		}
 	},
-	"format": "{capacity}% {icon}",
-	"max-length": 35
-    },
-    "clock": {
-        "interval": 60,
-        "format": "{:%H:%M %a %d-%m-%Y }",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "mode"          : "year",
-            "mode-mon-col"  : 3,
-            "weeks-pos"     : "right",
-            "on-scroll"     : 1,
-            "on-click-right": "mode",
-            "format": {
-                "months":     "<span color='#ff79c6'><b>{}</b></span>",
-                "days":       "<span color='#f8f8f2'><b>{}</b></span>",
-                "weeks":      "<span color='#50fa7d'>W{}</span>",
-                "weekdays":   "<span color='#ffb86c'><b>{}</b></span>",
-                "today":      "<span color='#f1fa8c'><b><u>{}</u></b></span>"
+	"custom/weather": {
+		"format": "{}°",
+		"tooltip": true,
+		"interval": 1800,
+		"exec": "~/.local/lib/waybar/wttrbar-wrapper.sh",
+		"return-type": "json"
+	},
+	"battery": {
+		"interval": 3,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{capacity}% {icon}",
+		"max-length": 35
+	},
+	"clock": {
+		"interval": 60,
+		"format": "{:%H:%M %a %d-%m-%Y }",
+		"locale": "en_GB.UTF-8",
+		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+		"calendar": {
+			"mode":				"year",
+			"mode-mon-col":		3,
+			"weeks-pos":		"right",
+			"on-scroll":		1,
+			"on-click-right":	"mode",
+			"format": {
+				"months":     "<span color='#ff79c6'><b>{}</b></span>",
+				"days":       "<span color='#f8f8f2'><b>{}</b></span>",
+				"weeks":      "<span color='#50fa7d'>W{}</span>",
+				"weekdays":   "<span color='#ffb86c'><b>{}</b></span>",
+				"today":      "<span color='#f1fa8c'><b><u>{}</u></b></span>"
             }
         },
-        "actions":  {
-            "on-click-right": "mode",
-            "on-click-forward": "tz_up",
-            "on-click-backward": "tz_down",
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
+		"actions":  {
+			"on-click-right": "mode",
+			"on-click-forward": "tz_up",
+			"on-click-backward": "tz_down",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down"
         }
     }
 }

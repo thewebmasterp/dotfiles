@@ -86,6 +86,7 @@
 # .local/bin/
 !.local/bin/
 !.local/bin/swm
+!.local/bin/ncmp
 !.local/bin/wsudo
 
 # .local/share/
