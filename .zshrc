@@ -39,9 +39,13 @@ alias ls="lsd -Al --group-directories-first"
 alias glog="git log --all --decorate --graph --abbrev-commit --format='%C(bold yellow)%h%d%C(reset) - %C(white)%s%C(reset)%n          %C(bold blue)%ar (%ai)%C(reset) %C(bold dim green)%an%C(reset)'"
 alias adog="git log --all --decorate --oneline --graph"
 alias histctx="grep -n '' ~/.histfile | fzf --delimiter : --preview 'bat --style=numbers --color=always --highlight-line {1} ~/.histfile' --preview-window +{1}-/2"
+alias qr='qrencode -m 2 -t utf8 <<< "$1"'
 alias gitp="git-private"
 alias gits="git-shared"
-alias dblogin="az account get-access-token --resource-type oss-rdbms --output tsv --query accessToken"
+alias tlh="cd ~/Projects/TLHGroup/canopy-dev"
+alias claude-w='CLAUDE_CONFIG_DIR=~/.claude-work claude'
+alias claude-p='CLAUDE_CONFIG_DIR=~/.claude-personal claude'
+
 
 # Env Exports
 # https://zsh.sourceforge.io/Doc/Release/User-Contributions.html#index-match_002dwords_002dby_002dstyle
@@ -53,7 +57,6 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 # fzf default find command (can also use ag (silver surfer), rg (ripgrep), etc.)
 export FZF_DEFAULT_COMMAND='find . \! \( -type d -path ./.git -prune \) \! -type d \! -name '\''*.tags'\'' -printf '\''%P\n'\'
-export LC_ALL=C.UTF-8
 
 # https://github.com/mgunyho/tere
 tere() {
