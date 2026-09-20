@@ -20,6 +20,8 @@
 !.config/waybar/
 !.config/waybar/colors.css
 !.config/waybar/config.jsonc
+!.config/waybar/config-DP-6.jsonc
+!.config/waybar/config-DP-4.jsonc
 !.config/waybar/style.css
 !.config/swaylock/
 !.config/swaylock/config
@@ -27,6 +29,8 @@
 !.config/mako/config
 !.config/foot/
 !.config/foot/foot.ini
+!.config/tmux/
+!.config/tmux/tmux.conf
 !.config/rofi/
 !.config/rofi/config.rasi
 !.config/avizo/
@@ -37,11 +41,15 @@
 !.config/gtk-3.0/settings.ini
 !.config/swappy/
 !.config/swappy/config
-!.config/ncmpcpp/
-!.config/ncmpcpp/*
-.config/ncmpcpp/error.log
 !.config/cava/
 !.config/cava/config
+!.config/nvim/
+!.config/nvim/init.lua
+!.config/nvim/lazy-lock.json
+!.config/nvim/lua/
+!.config/nvim/lua/options.lua
+!.config/nvim/lua/keymaps.lua
+!.config/nvim/lua/plugins.lua
 !.config/user-dirs.dirs
 !.config/user-dirs.locale
 !.config/autostart/
@@ -53,13 +61,11 @@
 !.config/systemd/user/
 !.config/systemd/user/sway-session.target
 !.config/systemd/user/nm-applet.service
-!.config/systemd/user/nextcloud-applet.service
 !.config/systemd/user/default.target.wants/
 !.config/systemd/user/default.target.wants/xdg-user-dirs-update.service
 !.config/systemd/user/default.target.wants/pipewire.service
 !.config/systemd/user/default.target.wants/pipewire-pulse.service
 !.config/systemd/user/default.target.wants/mpris-proxy.service
-!.config/systemd/user/default.target.wants/mpd.service
 !.config/systemd/user/default.target.wants/darkman.service
 !.config/systemd/user/sway-session.target.wants/
 !.config/systemd/user/sway-session.target.wants/nm-applet.service
@@ -71,6 +77,7 @@
 !.local/lib/waybar/toggle-btrfs-assistant.sh
 !.local/lib/waybar/darkman-status.sh
 !.local/lib/waybar/wttrbar-wrapper.sh
+!.local/lib/waybar/chronometer.sh
 !.local/lib/waybar/toggle-bluetui.sh
 !.local/lib/waybar/toggle-nmtui.sh
 !.local/lib/waybar/toggle-netscanner.sh
@@ -81,12 +88,10 @@
 !.local/lib/sway/sway-idle.sh
 !.local/lib/sway/sway-lock-utils.sh
 !.local/lib/systemd/
-!.local/lib/systemd/nextcloud-client-startup.sh
 
 # .local/bin/
 !.local/bin/
 !.local/bin/swm
-!.local/bin/ncmp
 !.local/bin/wsudo
 
 # .local/share/
