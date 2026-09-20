@@ -63,6 +63,7 @@ require("lazy").setup({
       spec = {
         { "<leader>f", group = "find" },
         { "<leader>o", group = "opencode" },
+        { "<leader>a", group = "agents" },
       },
     },
   },

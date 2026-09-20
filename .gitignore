@@ -51,6 +51,7 @@
 !.config/nvim/lua/keymaps.lua
 !.config/nvim/lua/plugins.lua
 !.config/nvim/lua/theme.lua
+!.config/nvim/lua/agents.lua
 !.config/user-dirs.dirs
 !.config/user-dirs.locale
 !.config/autostart/

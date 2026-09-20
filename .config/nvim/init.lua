@@ -11,6 +11,7 @@ vim.g.maplocalleader = " "
 require("options")
 require("keymaps")
 require("plugins")
+require("agents")
 
 -- darkman -> Catppuccin hot reload (see lua/theme.lua).
 require("theme").start_server()
