@@ -11,12 +11,25 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 
-  -- Colorscheme
+  -- Colorscheme: Catppuccin, following darkman (see lua/theme.lua).
+  -- flavour = "auto" reads vim.o.background at load time only (no live
+  -- autocmd inside the plugin), so theme.lua sets it explicitly before every
+  -- (re)load - both at startup and when darkman calls back in remotely.
+  -- auto_integrations (on by default) detects installed plugins itself, so
+  -- there's no hand-maintained integrations list to keep in sync here.
   {
-    "folke/tokyonight.nvim",
+    "catppuccin/nvim",
+    name = "catppuccin",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme("tokyonight-night")
+      require("catppuccin").setup({
+        flavour = "auto",
+        background = {
+          light = "frappe", -- Frappe, not Latte, matches the rest of this setup
+          dark = "mocha",
+        },
+      })
+      require("theme").sync()
     end,
   },
 
