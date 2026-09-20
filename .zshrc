@@ -45,6 +45,7 @@ alias gits="git-shared"
 alias tlh="cd ~/Projects/TLHGroup/canopy-dev"
 alias claude-w='CLAUDE_CONFIG_DIR=~/.claude-work claude'
 alias claude-p='CLAUDE_CONFIG_DIR=~/.claude-personal claude'
+alias oc='opencode --port' # always expose the API so Neovim (opencode.nvim) can find it
 
 
 # Env Exports
