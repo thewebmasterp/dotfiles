@@ -123,20 +123,29 @@ require("lazy").setup({
   },
 
   -- opencode integration
+  --
+  -- opencode.nvim is a CLIENT only: it connects to whatever `opencode --port`
+  -- process(es) it finds running on the machine (discovered via pgrep+lsof,
+  -- no fixed port needed) and never manages their window itself. Run
+  -- `opencode --port` yourself in a normal WM terminal whenever you want a
+  -- session - sway/foot handle its placement entirely, same as any other
+  -- app. Nothing runs until you start it; nothing lingers after you close it.
   {
     "nickjvandyke/opencode.nvim",
     version = "*",
-    dependencies = { "folke/snacks.nvim" },
     config = function()
       ---@type opencode.Opts
       vim.g.opencode_opts = {
-        -- Starts `opencode --port` in a snacks terminal on the right when
-        -- no running opencode server is found.
         server = {
+          -- Fallback ONLY: runs if you invoke ask()/select()/etc. and no
+          -- opencode server is found yet. Spawns a real, WM-managed `foot`
+          -- window (detached - Neovim doesn't track or own it) instead of
+          -- the plugin's default embedded-terminal behavior. If you'd
+          -- rather start it yourself, just open a terminal the normal way
+          -- and run `opencode --port`.
           start = function()
-            require("snacks.terminal").open("opencode --port", {
-              win = { position = "right", enter = false },
-            })
+            vim.fn.jobstart({ "foot", "-e", "opencode", "--port" }, { detach = true })
+            vim.notify("opencode: starting in a new window...", vim.log.levels.INFO)
           end,
         },
       }
@@ -150,10 +159,6 @@ require("lazy").setup({
         { desc = "Send range to opencode", expr = true })
       map("n", "goo", function() return require("opencode").operator("@this ") .. "_" end,
         { desc = "Send line to opencode", expr = true })
-      map({ "n", "t" }, "<leader>ot", function()
-        require("snacks.terminal").toggle("opencode --port",
-          { win = { position = "right", enter = false } })
-      end, { desc = "Toggle opencode terminal" })
       map("n", "<leader>ou", function() require("opencode").command("session.half.page.up") end,
         { desc = "opencode scroll up" })
       map("n", "<leader>od", function() require("opencode").command("session.half.page.down") end,
