@@ -32,26 +32,3 @@ map("n", "N", "Nzzzv")
 
 -- Diagnostics
 map("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic under cursor" })
-
--- Terminal mode: no built-in way to paste a register AS INPUT into the
--- running program (a plain "p" would just edit the buffer text, not type
--- into the pty). This is Neovim's own documented fix — see :h terminal-input.
--- Usage: in a terminal (e.g. an opencode agent), <C-r> then a register name
--- (e.g. "a) types that register's contents into the process, same as if
--- you'd typed it. Pairs with normal yanking: v...y or "ay in Terminal-Normal
--- mode (<C-\><C-n> to get there).
-map("t", "<C-r>", function()
-  return [[<C-\><C-n>"]] .. vim.fn.nr2char(vim.fn.getchar()) .. "pi"
-end, { expr = true, desc = "Terminal: paste register as input" })
-
--- Extend window navigation (Normal-mode mapping above) into Insert and
--- Terminal-mode too, so you can hop between windows - e.g. between several
--- opencode agent terminals - without first dropping to Normal mode.
--- <C-\><C-n> is a documented "hard escape" that works from both Insert and
--- Terminal-mode (:h i_CTRL-\_CTRL-N, :h CTRL-\_CTRL-N).
-for _, mode in ipairs({ "i", "t" }) do
-  map(mode, "<C-Left>",  "<C-\\><C-n><C-w>h", { desc = "Focus window left" })
-  map(mode, "<C-Down>",  "<C-\\><C-n><C-w>j", { desc = "Focus window down" })
-  map(mode, "<C-Up>",    "<C-\\><C-n><C-w>k", { desc = "Focus window up" })
-  map(mode, "<C-Right>", "<C-\\><C-n><C-w>l", { desc = "Focus window right" })
-end
