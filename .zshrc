@@ -42,10 +42,17 @@ alias histctx="grep -n '' ~/.histfile | fzf --delimiter : --preview 'bat --style
 alias qr='qrencode -m 2 -t utf8 <<< "$1"'
 alias gitp="git-private"
 alias gits="git-shared"
-alias tlh="cd ~/Projects/TLHGroup/canopy-dev"
 alias claude-w='CLAUDE_CONFIG_DIR=~/.claude-work claude'
 alias claude-p='CLAUDE_CONFIG_DIR=~/.claude-personal claude'
 alias oc='opencode --port' # always expose the API so Neovim (opencode.nvim) can find it
+
+# Private/machine-specific shell additions (tracked in the private repo only,
+# e.g. work project aliases) live in ~/.zshrc.d/*.zsh
+if [ -d "$HOME/.zshrc.d" ]; then
+	for script in "$HOME"/.zshrc.d/*.zsh; do
+		[ -f "$script" ] && source "$script"
+	done
+fi
 
 
 # Env Exports
@@ -58,6 +65,40 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 # fzf default find command (can also use ag (silver surfer), rg (ripgrep), etc.)
 export FZF_DEFAULT_COMMAND='find . \! \( -type d -path ./.git -prune \) \! -type d \! -name '\''*.tags'\'' -printf '\''%P\n'\'
+
+# nmtui/whiptail/dialog etc. (anything using libnewt) -> Catppuccin.
+# NEWT_COLORS only maps ROLE NAMES to a fixed 16-name S-Lang colour
+# vocabulary (black/red/green/brown/blue/magenta/cyan/lightgray + bright
+# variants); the actual RGB per name comes from the terminal's own ANSI
+# palette (already Catppuccin in foot.ini), so this hot-reloads for free
+# with foot's Mocha<->Frappe switching - nmtui launches fresh every run,
+# same as swaylock. "blue" is used as the one active/selected accent,
+# consistent with the accent colour used everywhere else in this setup.
+export NEWT_COLORS='
+root=gray,black
+border=blue,black
+window=lightgray,black
+shadow=black,black
+title=blue,black
+button=black,lightgray
+actbutton=black,blue
+checkbox=lightgray,black
+actcheckbox=black,blue
+entry=lightgray,black
+disentry=gray,black
+label=lightgray,black
+listbox=lightgray,black
+actlistbox=black,blue
+sellistbox=lightgray,black
+actsellistbox=black,blue
+textbox=lightgray,black
+acttextbox=black,blue
+helpline=lightgray,black
+roottext=lightgray,black
+emptyscale=black,black
+fullscale=blue,blue
+compactbutton=black,lightgray
+'
 
 # https://github.com/mgunyho/tere
 tere() {

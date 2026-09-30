@@ -1,13 +1,7 @@
-* {  
-  COLOR-URGENT: #ff5555;
-  COLOR-WHITE: #f8f8f2;
-  COLOR-FOCUSED-LIGHT: #8BE9FD;
-  COLOR-FOCUSED-DARK:  #6272A4;
-  COLOR-BACKGROUND: #282a36;
-  COLOR-BLACK: #282A36;
-  COLOR-BLACK-LIGHT: #44475A;
-  COLOR-BLACK-LIGHTER: #6272A4;
-}
+/* Managed by darkman (dark-mode.d/light-mode.d/rofi.sh) - never edit this
+ * line directly; it points at an untracked state file that darkman
+ * rewrites to @import colors-mocha.rasi or colors-frappe.rasi. */
+@import "~/.local/state/theme/rofi.rasi"
 
 window {
   children: [mainbox];

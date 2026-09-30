@@ -3,12 +3,13 @@
 
 SCRIPT_DIR=$(dirname $(readlink -f "${BASH_SOURCE[0]}" 2>/dev/null||echo $0))  # https://stackoverflow.com/a/34208365/
 displaysConfiguration=$SCRIPT_DIR/displays-configuration.sh
+clipboardModi=$SCRIPT_DIR/cliphist-rofi.sh
 
 if [ "$1" == "primary" ]; then
  rofi -config "~/.config/rofi/config.rasi" \
   -show "combi" \
   -combi-modi "drun,run" \
-  -modi "combi,ssh,displays:${displaysConfiguration}" \
+  -modi "combi,clipboard:${clipboardModi},ssh,displays:${displaysConfiguration}" \
   -show-icons \
   -kb-cancel "Super_L" \
   -monitor -1

@@ -94,28 +94,29 @@ channels = mono
 gradient = 1
 
 
-gradient_color_1 = '#3b3c59'
-gradient_color_2 = '#4b4464'
-gradient_color_3 = '#4b4464'
-gradient_color_4 = '#6d5276'
-gradient_color_5 = '#7f597e'
-gradient_color_6 = '#926184'
-gradient_color_7 = '#a4688a'
-gradient_color_8 = '#b6708e'
-gradient_color_9 = '#c87990'
-gradient_color_10 = '#d98292'
+# Catppuccin Mocha (surface -> lavender -> mauve -> pink -> rosewater -> maroon)
+gradient_color_1 = '#585b70'
+gradient_color_2 = '#6c7086'
+gradient_color_3 = '#7f849c'
+gradient_color_4 = '#9399b2'
+gradient_color_5 = '#b4befe'
+gradient_color_6 = '#cba6f7'
+gradient_color_7 = '#f5c2e7'
+gradient_color_8 = '#f2cdcd'
+gradient_color_9 = '#f5e0dc'
+gradient_color_10 = '#eba0ac'
 
 
-#3b3c59
-#4b4464
-#4b4464
-#6d5276
-#7f597e
-#926184
-#a4688a
-#b6708e
-#c87990
-#d98292
+#585b70
+#6c7086
+#7f849c
+#9399b2
+#b4befe
+#cba6f7
+#f5c2e7
+#f2cdcd
+#f5e0dc
+#eba0ac
 
 
 [smoothing]

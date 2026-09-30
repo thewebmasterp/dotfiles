@@ -50,10 +50,13 @@
 #
 # Status Bar
 #
-	bar {
-		position top
-		swaybar_command waybar
-	}
+	# Per-monitor waybars are launched from config.d/waybar-config, which
+	# runs one waybar instance per output with its own config file.
+	# (The default single bar block below is disabled in favour of that.)
+	#	bar {
+	#		position top
+	#		swaybar_command waybar
+	#	}
 
 
 #
@@ -96,7 +99,7 @@
 	bindsym $mod+Ctrl+Shift+Print exec grim -g "$($slurpSwayWin)" - | swappy -f -
 
 	# Lock session
-	bindsym $mod+z exec swaylock -f --fade-in 0
+	bindsym $mod+z exec $swayLockUtils lock --fade-in 0
 
 
 #
@@ -178,14 +181,10 @@
 #
 	font pango: MonaspiceKr Nerd Font 14
 
-	# Dracula
-	# class						border		bground		text		indicator	child_border
-	client.focused				#8BE9FD		#8BE9FD		#F8F8F2		#ff92df		#8BE9FD
-	client.focused_inactive		#44475A		#44475A		#F8F8F2		#44475A		#44475A
-	client.unfocused			#44475A		#282A36		#BFBFBF		#282A36		#282A36
-	client.urgent				#44475A		#FF5555		#F8F8F2		#FF5555		#FF5555
-	client.placeholder			#282A36		#282A36		#F8F8F2		#282A36		#282A36
-	client.background			#F8F8F2
+	# Managed by darkman (dark-mode.d/light-mode.d/sway.sh) - never edit this
+	# line directly; it points at an untracked state file that darkman
+	# rewrites with `include` pointing at theme-mocha or theme-frappe.
+	include ~/.local/state/theme/sway
 
 	# Window corner radius in px
 	corner_radius 10
@@ -200,12 +199,12 @@
 	shadows on
 	shadows_on_csd off
 	shadow_blur_radius 20
-	shadow_color #282A367F
+	shadow_color #1E1E2E7F
 
 	# Inactive window fade amount. 0.0 = no dimming, 1.0 = fully dimmed
 	default_dim_inactive 0.0
-	dim_inactive_colors.unfocused #282A36FF
-	dim_inactive_colors.urgent #FF5555
+	dim_inactive_colors.unfocused #1E1E2EFF
+	dim_inactive_colors.urgent #F38BA8
 
 	# Move minimized windows into Scratchpad (enable|disable)
 	scratchpad_minimize disable

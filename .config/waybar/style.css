@@ -1,4 +1,7 @@
-@import url("./colors.css");
+/* Managed by darkman (dark-mode.d/light-mode.d/waybar.sh) - never edit
+   this line directly; it points at an untracked state file that darkman
+   rewrites to @import colors.css (Mocha) or colors-frappe.css (Frappe). */
+@import url("../../.local/state/theme/waybar-colors.css");
 
 * {
     border: none;
@@ -70,6 +73,7 @@ button:hover {
 #tray,
 #mode,
 #mpris,
+#custom-water,
 #custom-darkman,
 #idle_inhibitor,
 #custom-btrfs-status,
@@ -83,6 +87,7 @@ button:hover {
 #keyboard-state,
 #custom-weather,
 #battery,
+#custom-chronometer,
 #clock {
     padding: 0 10px;
     margin: 5px 1px;
@@ -120,6 +125,10 @@ button:hover {
 #mpris {
     background-color: @background;
     color: @foreground;
+}
+
+#custom-water.low {
+	background-color: @orange;
 }
 
 #custom-darkman.light {
@@ -193,6 +202,13 @@ button:hover {
     background-color: @green;
     margin-right: 4px;
     padding-left: 4px;
+}
+
+/* Chronometers share the #custom-chronometer id (blue by default, from the
+   group rule above). A running timer turns green to stand out; paused stays
+   blue. */
+#custom-chronometer.running {
+    background-color: @red;
 }
 
 @keyframes purple-flicker {

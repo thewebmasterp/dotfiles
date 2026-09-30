@@ -10,6 +10,7 @@
         "mpris"
     ],
     "modules-right": [
+	    "custom/water",
 	    "custom/darkman",
         "idle_inhibitor",
 	    "custom/btrfs-status",
@@ -53,6 +54,16 @@
         },
         "ignored-players": ["cmus"]
     },
+	"custom/water": {
+		"format": "🥛 {}",
+		"interval": 60,
+		"return-type": "json",
+		"exec": "~/.local/lib/waybar/water.sh",
+		"on-click": "~/.local/lib/waybar/water.sh inc",
+		"on-click-right": "~/.local/lib/waybar/water.sh dec",
+		"exec-on-event": true,
+		"tooltip": false
+	},
 	"custom/darkman": {
 		"format": "{icon}",
 		"interval": 3,
@@ -171,11 +182,11 @@
 			"on-scroll":		1,
 			"on-click-right":	"mode",
 			"format": {
-				"months":     "<span color='#ff79c6'><b>{}</b></span>",
-				"days":       "<span color='#f8f8f2'><b>{}</b></span>",
-				"weeks":      "<span color='#50fa7d'>W{}</span>",
-				"weekdays":   "<span color='#ffb86c'><b>{}</b></span>",
-				"today":      "<span color='#f1fa8c'><b><u>{}</u></b></span>"
+				"months":     "<span color='#f5c2e7'><b>{}</b></span>",
+				"days":       "<span color='#cdd6f4'><b>{}</b></span>",
+				"weeks":      "<span color='#a6e3a1'>W{}</span>",
+				"weekdays":   "<span color='#fab387'><b>{}</b></span>",
+				"today":      "<span color='#f9e2af'><b><u>{}</u></b></span>"
             }
         },
 		"actions":  {

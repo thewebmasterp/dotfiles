@@ -1,0 +1,12 @@
+[Unit]
+Description=Bluetooth management applet
+Documentation=man:blueman-applet(1)
+PartOf=sway-session.target
+After=sway-session.target
+
+[Service]
+ExecStart=/usr/bin/blueman-applet
+Restart=on-abort
+
+[Install]
+WantedBy=sway-session.target

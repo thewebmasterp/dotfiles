@@ -7,12 +7,16 @@ format=%s\n%b
 sort=-time
 layer=overlay
 anchor=top-right
-background-color=#282A36
+
+# Managed by darkman (dark-mode.d/light-mode.d/mako.sh) - never edit this
+# line directly; it points at an untracked state file that darkman
+# rewrites to include colors-mocha or colors-frappe.
+include=~/.local/state/theme/mako
+
 width=400
 margin=3
 padding=0,5,10
 border-size=3
-border-color=#8BE9FD
 border-radius=10
 icons=0
 max-icon-size=64
@@ -20,5 +24,4 @@ default-timeout=5000
 ignore-timeout=1
 
 [urgency=high]
-border-color=#FF5555
 default-timeout=0
