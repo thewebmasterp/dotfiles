@@ -1,0 +1,17 @@
+# -*- mode: i3wm-config -*-
+# vim: filetype=swayconfig
+
+
+#
+# Clipboard history (cliphist)
+#
+# Purely local: watches the Wayland clipboard and stores every copy into a
+# local DB (~/.cache/cliphist/db). No network, no server — works regardless
+# of whether any sync/cloud service is up.
+#
+# The picker is exposed as a "clipboard" tab in the primary rofi launcher
+# (see ~/.local/lib/sway/show-rofi.sh), not as a keybinding.
+#
+	# Store text and images as they are copied.
+	exec wl-paste --type text --watch cliphist store
+	exec wl-paste --type image --watch cliphist store

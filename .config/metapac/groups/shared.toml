@@ -1,0 +1,100 @@
+# shared.toml - packages required by the configs tracked in the shared repo.
+# Rule: a package belongs here iff a gits-tracked config or script references
+# it (or it is a hard prerequisite for one that does, e.g. fonts and themes).
+# Repo and AUR packages are mixed; yay resolves both.
+
+[arch]
+packages = [
+	# Build prerequisites for the AUR packages in this list
+	"base-devel",
+	"yay",
+	"metapac",
+
+	# Window manager / session
+	"swayfx",              # AUR - sway/config uses swayfx-only options (blur, corner_radius, shadows)
+	"swaybg",
+	"swayidle",
+	"swaylock-effects",    # AUR - swaylock/config uses effect-blur/effect-vignette/grace
+	"kanshi",              # displays-configuration.sh
+	"waybar",
+	"waybar-module-pacman-updates-git", # AUR - waybar custom/updates
+	"wttrbar",             # AUR - waybar custom/weather
+	"waypaper",            # AUR - sway exec waypaper --restore
+	"avizo",               # AUR - avizo-service, volumectl, lightctl
+	"light",               # backlight backend used by avizo's lightctl
+	"mako",
+	"rofi",
+	"foot",
+	"grim",
+	"slurp",
+	"swappy",
+	"wl-clipboard",
+	"cliphist",            # clipboard-config + cliphist-rofi.sh
+	"libnotify",           # notify-send
+	"xdg-user-dirs",       # xdg-user-dir in sway/swappy configs
+	"darkman",             # the whole {dark,light}-mode.d theming system
+	"dex",                 # autostart .desktop dispatcher
+	"jq",                  # slurp-sway-win.sh, sway-lock-utils.sh, btrfs-status.sh
+	"xorg-xhost",          # wsudo
+	"xorg-xwayland",
+	"psmisc",              # killall in sway-idle.sh
+	"xdg-desktop-portal",
+	"xdg-desktop-portal-gtk",
+	"xdg-desktop-portal-wlr",
+
+	# Applets / bar click-through tools
+	"networkmanager",      # nmtui via toggle-nmtui.sh
+	"network-manager-applet",
+	"blueman",
+	"bluetui",             # toggle-bluetui.sh
+	"netscanner",          # toggle-netscanner.sh
+	"bluez-utils",         # mpris-proxy user service
+	"htop",                # waybar cpu/memory on-click
+	"btrfs-assistant",     # toggle-btrfs-assistant.sh
+
+	# Audio
+	"pipewire-pulse",
+	"pipewire-alsa",
+
+	# Apps with tracked configs
+	"chromium",            # chromium-flags.conf
+	"visual-studio-code-bin", # AUR - code-flags.conf
+	"neovim",              # nvim config
+	"vim",                 # $EDITOR in .zshrc
+	"git",
+	"tmux",
+
+	# Shell + CLI referenced in .zshrc
+	"zsh",
+	"zsh-autosuggestions",
+	"zsh-syntax-highlighting",
+	"zsh-completions",
+	"zsh-you-should-use",  # AUR
+	"git-prompt.zsh",      # AUR
+	"fzf",
+	"bat",                 # histctx alias
+	"lsd",                 # ls alias
+	"fd",
+	"ripgrep",             # nvim snacks.picker grep
+	"tere",
+	"qrencode",            # qr alias
+	"nvm",
+
+	# Fonts referenced by configs
+	"otf-monaspace-nerd",  # MonaspiceKr/MonaspiceAr Nerd Font
+	"ttf-jetbrains-mono-nerd",
+	"ttf-nerd-fonts-symbols",
+	"otf-font-awesome",
+	"inter-font",          # swaylock font
+	"noto-fonts",          # qt5ct/qt6ct general font
+	"noto-fonts-emoji",
+
+	# Theming (darkman hooks target these)
+	"catppuccin-gtk-theme-mocha",  # AUR - gtk3-theme.sh
+	"catppuccin-gtk-theme-frappe", # AUR - gtk3-theme.sh
+	"catppuccin-qt5ct-git",        # AUR - qt-theme.sh palettes
+	"qt5ct",
+	"qt6ct",
+	"qt5-wayland",
+	"qt6-wayland",
+]

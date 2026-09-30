@@ -1,0 +1,13 @@
+# -*- mode: i3wm-config -*-
+# vim: filetype=swayconfig
+
+
+#
+# Waybar launcher (machine-agnostic)
+#
+	# Overrides the default single-bar block in the main config.
+	#
+	# The launcher starts the generic single bar by default; if the
+	# untracked machine-local ~/.config/waybar/local-bars.conf exists,
+	# it launches one bar per config listed there instead.
+	exec_always ~/.local/lib/waybar/launch-waybar.sh

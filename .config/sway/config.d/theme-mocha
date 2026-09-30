@@ -1,0 +1,10 @@
+# Catppuccin Mocha theme for sway
+# Loaded by darkman dark-mode.d/sway.sh
+
+# class						border		bground		text		indicator	child_border
+client.focused				#89B4FA		#89B4FA		#1E1E2E		#F5C2E7		#89B4FA
+client.focused_inactive		#45475A		#45475A		#CDD6F4		#45475A		#45475A
+client.unfocused			#45475A		#1E1E2E		#A6ADC8		#1E1E2E		#1E1E2E
+client.urgent				#45475A		#F38BA8		#1E1E2E		#F38BA8		#F38BA8
+client.placeholder			#1E1E2E		#1E1E2E		#CDD6F4		#1E1E2E		#1E1E2E
+client.background			#CDD6F4

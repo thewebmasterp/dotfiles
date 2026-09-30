@@ -1,0 +1,12 @@
+/* Catppuccin Frappe colors for rofi
+ * Included via ~/.local/state/theme/rofi.rasi (managed by darkman) */
+* {
+  COLOR-URGENT: #e78284;
+  COLOR-WHITE: #c6d0f5;
+  COLOR-FOCUSED-LIGHT: #8caaee;
+  COLOR-FOCUSED-DARK:  #626880;
+  COLOR-BACKGROUND: #303446;
+  COLOR-BLACK: #303446;
+  COLOR-BLACK-LIGHT: #51576d;
+  COLOR-BLACK-LIGHTER: #626880;
+}

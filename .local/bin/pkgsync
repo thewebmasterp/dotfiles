@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# pkgsync - bring this machine in sync with the tracked package lists.
+#
+# Order matters on Arch: pull the latest group files first, then do a full
+# repo upgrade BEFORE installing anything new (installing packages onto a
+# stale system is a partial upgrade, which Arch does not support), then let
+# metapac install whatever the group files list that is missing here.
+#
+#   pkgsync         repo upgrade + install missing packages
+#   pkgsync --aur   same, plus upgrade outdated AUR packages afterwards
+#
+# Nothing is ever removed. To see packages installed here but absent from
+# every group file: `metapac unmanaged`.
+
+set -e
+
+cd "$HOME"
+
+# Pull latest configs + package lists (private repo may not exist everywhere)
+command -v git-shared >/dev/null && git-shared pull
+command -v git-private >/dev/null && [ -d "$HOME/.local/share/gitReposDirs/.gitprivate" ] && git-private pull
+
+# Full repo upgrade first - never install new packages on a stale system.
+# If this fails with "installing X breaks dependency ... required by Y",
+# an AUR package (Y) is linked against an old library and must be rebuilt
+# in the same transaction; `yay -Syu` handles that.
+sudo pacman -Syu || {
+	echo "pkgsync: repo upgrade blocked, likely by an AUR package pinning an old library." >&2
+	echo "pkgsync: run 'yay -Syu' to rebuild the blocking AUR package alongside the upgrade." >&2
+	exit 1
+}
+
+# Install everything the group files list that is missing (repo + AUR)
+metapac sync
+
+# Optionally also upgrade AUR packages (can involve long builds)
+if [ "$1" = "--aur" ]; then
+	yay -Sua
+fi

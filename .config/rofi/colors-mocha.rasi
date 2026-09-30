@@ -1,0 +1,12 @@
+/* Catppuccin Mocha colors for rofi
+ * Included via ~/.local/state/theme/rofi.rasi (managed by darkman) */
+* {
+  COLOR-URGENT: #f38ba8;
+  COLOR-WHITE: #cdd6f4;
+  COLOR-FOCUSED-LIGHT: #89b4fa;
+  COLOR-FOCUSED-DARK:  #585b70;
+  COLOR-BACKGROUND: #1e1e2e;
+  COLOR-BLACK: #1e1e2e;
+  COLOR-BLACK-LIGHT: #45475a;
+  COLOR-BLACK-LIGHTER: #585b70;
+}

@@ -1,0 +1,10 @@
+# Catppuccin Frappe theme for sway
+# Loaded by darkman light-mode.d/sway.sh
+
+# class						border		bground		text		indicator	child_border
+client.focused				#8CAAEE		#8CAAEE		#303446		#F4B8E4		#8CAAEE
+client.focused_inactive		#51576D		#51576D		#C6D0F5		#51576D		#51576D
+client.unfocused			#51576D		#303446		#A5ADCE		#303446		#303446
+client.urgent				#51576D		#E78284		#303446		#E78284		#E78284
+client.placeholder			#303446		#303446		#C6D0F5		#303446		#303446
+client.background			#C6D0F5

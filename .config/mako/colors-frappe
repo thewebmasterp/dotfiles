@@ -1,0 +1,9 @@
+# Catppuccin Frappe colors for mako
+# Included via ~/.local/state/theme/mako (managed by darkman)
+
+background-color=#303446
+text-color=#C6D0F5
+border-color=#8CAAEE
+
+[urgency=high]
+border-color=#E78284

@@ -1,0 +1,12 @@
+# metapac config (https://github.com/ripytide/metapac)
+# Group files live in ~/.config/metapac/groups/:
+#   shared.toml  - tracked by gits: everything the shared configs depend on
+#   private.toml - tracked by gitp: personal/infra packages synced between my machines
+#   local.toml   - untracked: machine-exclusive packages (hardware drivers etc.)
+# All .toml files in groups/ are merged. `metapac sync` installs what's
+# missing; nothing is ever removed unless `metapac clean` is run explicitly.
+
+enabled_backends = ["arch"]
+
+[arch]
+package_manager = "yay"

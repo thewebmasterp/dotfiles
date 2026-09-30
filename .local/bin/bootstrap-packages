@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# bootstrap-packages - first-time package setup on a fresh machine that has
+# this repo checked out. Installs yay (AUR helper) and metapac (declarative
+# package manager), then installs everything the group files in
+# ~/.config/metapac/groups/ list. Safe to re-run.
+
+set -e
+
+sudo pacman -S --needed --noconfirm base-devel git
+
+if ! command -v yay >/dev/null; then
+	tmp=$(mktemp -d)
+	trap 'rm -rf "$tmp"' EXIT
+	git clone https://aur.archlinux.org/yay.git "$tmp/yay"
+	(cd "$tmp/yay" && makepkg -si --noconfirm)
+fi
+
+command -v metapac >/dev/null || yay -S --needed --noconfirm metapac
+
+metapac sync

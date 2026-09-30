@@ -1,0 +1,9 @@
+# Catppuccin Mocha colors for mako
+# Included via ~/.local/state/theme/mako (managed by darkman)
+
+background-color=#1E1E2E
+text-color=#CDD6F4
+border-color=#89B4FA
+
+[urgency=high]
+border-color=#F38BA8

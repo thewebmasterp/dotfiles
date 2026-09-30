@@ -1,0 +1,13 @@
+/* Catppuccin Frappe */
+@define-color background-darker rgba(42, 44, 64, 230);
+@define-color background #303446;
+@define-color selection #51576d;
+@define-color foreground #c6d0f5;
+@define-color comment #8891b8;
+@define-color cyan #85c1dc;
+@define-color green #a6d189;
+@define-color orange #f4a261;
+@define-color pink #f4b8e4;
+@define-color purple #ca9ee6;
+@define-color red #e78284;
+@define-color yellow #e5c890;
