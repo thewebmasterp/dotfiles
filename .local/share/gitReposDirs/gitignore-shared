@@ -4,10 +4,9 @@
 
 ## Whitelist
 
-# Git
-!.gitignore
-
 # ~
+!README.md
+!LICENSE
 !.zshrc
 !.zprofile
 !.config/
@@ -49,6 +48,8 @@
 !.config/metapac/config.toml
 !.config/metapac/groups/
 !.config/metapac/groups/shared.toml
+!.config/mise/
+!.config/mise/config.toml
 !.config/rofi/
 !.config/rofi/config.rasi
 !.config/rofi/colors-mocha.rasi
@@ -116,6 +117,8 @@
 
 # .local/bin/
 !.local/bin/
+!.local/bin/git-shared
+!.local/bin/git-private
 !.local/bin/swm
 !.local/bin/wsudo
 !.local/bin/pkgsync
@@ -123,6 +126,13 @@
 
 # .local/share/
 !.local/share/
+# Repo machinery: ONLY the shared gitignore source is public.
+# Never whitelist gitignore-private, README-private.md, or wildcards here.
+!.local/share/gitReposDirs/
+!.local/share/gitReposDirs/gitignore-shared
+# README screenshots
+!.local/share/dotfiles-assets/
+!.local/share/dotfiles-assets/*
 !.local/share/dark-mode.d/
 !.local/share/dark-mode.d/desktop-notification.sh
 !.local/share/dark-mode.d/gtk3-theme.sh

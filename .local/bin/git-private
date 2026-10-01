@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# git-private — git for the private dotfiles repo (work tree = $HOME).
+# Ignore rules come straight from the whitelist source via core.excludesFile;
+# no ~/.gitignore is ever created. Works from any directory.
+
+DIR="$HOME/.local/share/gitReposDirs"
+
+exec /usr/bin/git --git-dir="$DIR/.gitprivate" --work-tree="$HOME" \
+	-c core.excludesFile="$DIR/gitignore-private" "$@"
