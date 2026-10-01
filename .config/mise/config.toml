@@ -3,3 +3,9 @@ idiomatic_version_file_enable_tools = ["node"]
 
 [tools]
 node = "22"
+# Global node CLIs, declaratively managed by mise (npm backend).
+# Add a line here + `mise install` instead of ad-hoc `npm i -g`.
+"npm:pm2" = "latest"
+"npm:pnpm" = "latest"
+"npm:yarn" = "latest"
+"npm:@qwen-code/qwen-code" = "latest"
