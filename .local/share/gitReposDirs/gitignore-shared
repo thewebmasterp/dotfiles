@@ -78,9 +78,15 @@
 !.config/autostart/blueman.desktop
 !.config/autostart/nm-applet.desktop
 
+# .config/user-tmpfiles.d/ (systemd-tmpfiles creates ~/.local/state/theme for the darkman hooks)
+!.config/user-tmpfiles.d/
+!.config/user-tmpfiles.d/theme-state.conf
+
 # .config/systemd/
 !.config/systemd/
 !.config/systemd/user/
+!.config/systemd/user/basic.target.wants/
+!.config/systemd/user/basic.target.wants/systemd-tmpfiles-setup.service
 !.config/systemd/user/sway-session.target
 !.config/systemd/user/nm-applet.service
 !.config/systemd/user/blueman-applet.service
