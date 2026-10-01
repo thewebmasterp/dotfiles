@@ -18,7 +18,7 @@ elif [ "$1" == "secondary" ]; then
  rofi -config "~/.config/rofi/config.rasi" \
   -theme-str "#element { children: [element-text]; }" \
   -show "notes" \
-  -modi "notes:$HOME/node_modules/.bin/rofi-notes-org" \
+  -modi "notes:$HOME/.local/share/mise/shims/rofi-notes-org" \
   -kb-cancel "Super_L" \
   -monitor -1
 

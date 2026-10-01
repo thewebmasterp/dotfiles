@@ -11,3 +11,5 @@ node = "22"
 pnpm = "latest"
 "npm:yarn" = "latest"
 "npm:@qwen-code/qwen-code" = "latest"
+# rofi notes modi (show-rofi.sh); low-download niche package, explicitly approved
+"npm:rofi-notes-org" = { version = "latest", allow_low_downloads = true }
