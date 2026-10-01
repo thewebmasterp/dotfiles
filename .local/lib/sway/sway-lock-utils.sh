@@ -12,7 +12,10 @@ lock() {
     # shellcheck disable=SC1090
     [ -r "$colorScript" ] && source "$colorScript" && colorFlags=("${SWAYLOCK_COLOR_FLAGS[@]}")
 
-    pidof swaylock || swaylock -f -s fill -c 000000 "${colorFlags[@]}" "$@" &
+    # No '&': swaylock -f daemonizes only AFTER the lock is established, so
+    # callers (lock-blank, before-sleep) can rely on input being captured
+    # the moment this returns.
+    pidof swaylock || swaylock -f -s fill -c 000000 "${colorFlags[@]}" "$@"
 }
 
 swayDpms() {
@@ -44,6 +47,11 @@ case "$1" in
         ;;
     blank)
         swayDpms off
+        ;;
+    lock-blank)
+        # Lock first, blank after: the screen must never look locked (dark)
+        # without actually being locked.
+        lock && swayDpms off
         ;;
     unblank)
         swayDpms on
