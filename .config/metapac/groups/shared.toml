@@ -60,7 +60,7 @@ packages = [
 	"chromium",            # chromium-flags.conf
 	"visual-studio-code-bin", # AUR - code-flags.conf
 	"neovim",              # nvim config
-	"vim",                 # $EDITOR in .zshrc
+	"vim",                 # $EDITOR/$VISUAL in .zprofile
 	"git",
 	"tmux",
 
@@ -70,6 +70,7 @@ packages = [
 	"zsh-syntax-highlighting",
 	"zsh-completions",
 	"zsh-you-should-use",  # AUR
+	"zsh-history-substring-search", # arrow-key substring search in .zshrc
 	"git-prompt.zsh",      # AUR
 	"fzf",
 	"bat",                 # histctx alias
@@ -78,7 +79,8 @@ packages = [
 	"ripgrep",             # nvim snacks.picker grep
 	"tere",
 	"qrencode",            # qr alias
-	"nvm",
+	"mise",                # runtime version manager (replaced nvm); .config/mise/config.toml
+	"zoxide",              # frecency cd (z/zi) in .zshrc
 
 	# Fonts referenced by configs
 	"otf-monaspace-nerd",  # MonaspiceKr/MonaspiceAr Nerd Font

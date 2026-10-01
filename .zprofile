@@ -6,11 +6,10 @@ export PATH="${HOME}/.local/bin:${PATH}:${HOME}/node_modules/.bin"
 # Set default terminal
 export TERMINAL="/usr/bin/foot"
 
-# Set wttrbar flags
-# WTTRBAR_FLAGS="--location Sofia"
-
-# Set btrfs fs uuid for use in btrfs-status waybar module
-# BTRFS_ROOT_FS_UUID="c91f3789-2009-44af-91e0-a74d3d1c68dd"
+# Default editor (sudoedit, git, anything honouring EDITOR/VISUAL).
+# vim for quick edits; nvim is the IDE setup (see .config/nvim/).
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # Execute and source the environment exported from all scripts in $RUN_ALL_IN_DIR.
 # Each script is guarded individually: a failing script must never abort the

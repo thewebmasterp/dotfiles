@@ -10,12 +10,20 @@ zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p
 zstyle :compinstall filename '/home/thewebmasterp/.zshrc'
 
 autoload -Uz compinit
-compinit
+# Full compinit rescans/audits all completion files; only do that if the dump
+# is older than 24h, otherwise trust the cached ~/.zcompdump (-C).
+if [[ -n ~/.zcompdump(#qN.mh-24) ]]; then
+	compinit -C
+else
+	compinit
+fi
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=100000
-SAVEHIST=10000
+# HISTSIZE (in-memory) is kept larger than SAVEHIST (on-disk) so
+# HIST_EXPIRE_DUPS_FIRST has room to drop dupes before unique events.
+HISTSIZE=120000
+SAVEHIST=100000
 setopt autocd
 bindkey -e
 # End of lines configured by zsh-newuser-install
@@ -38,33 +46,31 @@ alias rd="rmdir"
 alias ls="lsd -Al --group-directories-first"
 alias glog="git log --all --decorate --graph --abbrev-commit --format='%C(bold yellow)%h%d%C(reset) - %C(white)%s%C(reset)%n          %C(bold blue)%ar (%ai)%C(reset) %C(bold dim green)%an%C(reset)'"
 alias adog="git log --all --decorate --oneline --graph"
-alias histctx="grep -n '' ~/.histfile | fzf --delimiter : --preview 'bat --style=numbers --color=always --highlight-line {1} ~/.histfile' --preview-window +{1}-/2"
-alias qr='qrencode -m 2 -t utf8 <<< "$1"'
+# Browse history in fzf with surrounding context in the preview.
+# The sed strips the ": <epoch>:<duration>;" prefix that EXTENDED_HISTORY writes.
+histctx() {
+	local clean='s/^: [0-9]+:[0-9]+;//'
+	sed -E $clean ~/.histfile | grep -n '' | fzf --delimiter : \
+		--preview "sed -E '$clean' ~/.histfile | bat --style=numbers --color=always --file-name histfile --highlight-line {1}" \
+		--preview-window '+{1}-/2'
+}
+qr() { qrencode -m 2 -t utf8 <<< "$*" }
 alias gitp="git-private"
 alias gits="git-shared"
 alias claude-w='CLAUDE_CONFIG_DIR=~/.claude-work claude'
 alias claude-p='CLAUDE_CONFIG_DIR=~/.claude-personal claude'
 alias oc='opencode --port' # always expose the API so Neovim (opencode.nvim) can find it
 
-# Private/machine-specific shell additions (tracked in the private repo only,
-# e.g. work project aliases) live in ~/.zshrc.d/*.zsh
-if [ -d "$HOME/.zshrc.d" ]; then
-	for script in "$HOME"/.zshrc.d/*.zsh; do
-		[ -f "$script" ] && source "$script"
-	done
-fi
-
-
 # Env Exports
 # https://zsh.sourceforge.io/Doc/Release/User-Contributions.html#index-match_002dwords_002dby_002dstyle
 # Define how to match "words"; default mode is "normal" (alphanumerical + WORDCHARS)
 # Default WORDCHARS are *?_-.[]~=/&;!#$%^(){}<>
 export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
-# Set the default editor for sudoedit or sudo -e
-export VISUAL=vim
-export EDITOR="$VISUAL"
-# fzf default find command (can also use ag (silver surfer), rg (ripgrep), etc.)
-export FZF_DEFAULT_COMMAND='find . \! \( -type d -path ./.git -prune \) \! -type d \! -name '\''*.tags'\'' -printf '\''%P\n'\'
+# VISUAL/EDITOR are exported from ~/.zprofile
+# fzf default find command: fd is fast and respects .gitignore
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND='fd --type d --hidden --exclude .git'
 
 # nmtui/whiptail/dialog etc. (anything using libnewt) -> Catppuccin.
 # NEWT_COLORS only maps ROLE NAMES to a fixed 16-name S-Lang colour
@@ -130,9 +136,14 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
 # When writing out the history file, older commands that duplicate newer ones are omitted.
 setopt HIST_SAVE_NO_DUPS
-# This option works like APPEND_HISTORY except that new history lines are added to the $HISTFILE
-# incrementally (as soon as they are entered), rather than waiting until the shell exits.
-setopt INC_APPEND_HISTORY
+# Save each command's timestamp and duration in the history file (": <epoch>:<duration>;cmd").
+# View with `history -if` (or -iD for durations).
+setopt EXTENDED_HISTORY
+# Like INC_APPEND_HISTORY (write each command to $HISTFILE as soon as it is entered), but also
+# import commands typed in other running shells, so history is shared live between terminals.
+setopt SHARE_HISTORY
+# Allow comments ("cmd  # note to self") on the interactive command line.
+setopt INTERACTIVE_COMMENTS
 
 # zsh-you-should-use plugin
 source /usr/share/zsh/plugins/zsh-you-should-use/zsh-you-should-use.plugin.zsh
@@ -157,43 +168,34 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # CTRL+T - paste the selected files and directories onto the command-line
 # CTRL+R - paste the selected command from history onto the command-line
 # ALT+C  - cd into the selected directory
-source /usr/share/fzf/key-bindings.zsh
 # Type ** and hit tab (eg. with the cd command; works with directories, files, process IDs, hostnames, environment variables)
-source /usr/share/fzf/completion.zsh
+source <(fzf --zsh)
 
-# Sift through history for previous commands matching everything up to current cursor position.
-# Moves the cursor to the end of line after each match.
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search # ARROW_UP
-bindkey "^[[B" down-line-or-beginning-search # ARROW_DOWN
-# -> This only works for prefixes. If you want to match any substring in the history
-#    then https://github.com/zsh-users/zsh-history-substring-search might be interesting
+# mise (https://mise.jdx.dev) - runtime/tool version manager, replaces nvm.
+# Reads .nvmrc/.node-version (idiomatic_version_file_enable_tools=["node"]) and
+# mise.toml; auto-switches versions on cd. Global default: `mise use -g node@22`.
+eval "$(mise activate zsh)"
 
-source /usr/share/nvm/init-nvm.sh
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
+# zoxide (https://github.com/ajeetdsouza/zoxide) - frecency-based cd.
+# `z foo` jumps to the best-matching visited dir, `zi foo` picks interactively via fzf.
+eval "$(zoxide init zsh)"
 
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+# Private/machine-specific shell additions (tracked in the private repo only,
+# e.g. work project aliases) live in ~/.zshrc.d/*.zsh. Sourced late so they can
+# also override plugin settings above.
+if [ -d "$HOME/.zshrc.d" ]; then
+	for script in "$HOME"/.zshrc.d/*.zsh; do
+		[ -f "$script" ] && source "$script"
+	done
+fi
 
 # Must go last (see https://github.com/zsh-users/zsh-syntax-highlighting#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Sift through history for previous commands matching the typed substring (anywhere
+# in the line, not just as prefix). Must be sourced after zsh-syntax-highlighting.
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1 # skip duplicate matches while cycling
+bindkey "^[[A" history-substring-search-up # ARROW_UP
+bindkey "^[[B" history-substring-search-down # ARROW_DOWN
 
