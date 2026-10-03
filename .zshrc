@@ -57,8 +57,6 @@ histctx() {
 qr() { qrencode -m 2 -t utf8 <<< "$*" }
 alias gitp="git-private"
 alias gits="git-shared"
-alias claude-w='CLAUDE_CONFIG_DIR=~/.claude-work claude'
-alias claude-p='CLAUDE_CONFIG_DIR=~/.claude-personal claude'
 alias oc='opencode --port' # always expose the API so Neovim (opencode.nvim) can find it
 
 # Env Exports
