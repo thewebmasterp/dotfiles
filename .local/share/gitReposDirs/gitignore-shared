@@ -48,6 +48,8 @@
 !.config/metapac/config.toml
 !.config/metapac/groups/
 !.config/metapac/groups/shared.toml
+!.config/presenterm/
+!.config/presenterm/config.yaml
 !.config/mise/
 !.config/mise/config.toml
 !.config/rofi/

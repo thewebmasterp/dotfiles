@@ -1,0 +1,21 @@
+defaults:
+  # Built-in themes: dark, light, terminal-dark, terminal-light, tokyonight-storm,
+  # catppuccin-{latte,frappe,macchiato,mocha}, gruvbox-dark, and more.
+  # Run `presenterm --list-themes` (in a real terminal) to see all of them.
+  theme: catppuccin-macchiato
+  # foot supports sixel, "auto" will pick it up. Force "sixel" if detection fails.
+  image_protocol: auto
+
+options:
+  # Treat a markdown thematic break (---) as a slide separator, so you don't
+  # have to write <!-- end_slide --> everywhere. Plays nicely with Obsidian.
+  end_slide_shorthand: true
+  # A new H1/H2 heading implicitly starts a new slide.
+  # OFF: with end_slide_shorthand above, `---` is the single way a slide ends.
+  # Leaving both on double-terminates (`Title\n===` ends a slide AND the `---`
+  # does too), which renders an empty slide in between. Consequence: every
+  # slide needs its own `---`; a title alone no longer starts one.
+  implicit_slide_ends: false
+  # Don't error out on unknown front matter keys (e.g. Obsidian properties
+  # like tags/aliases living in the same front matter block).
+  strict_front_matter_parsing: false
