@@ -63,6 +63,7 @@ packages = [
 	"vim",                 # $EDITOR/$VISUAL in .zprofile
 	"git",
 	"tmux",
+	"presenterm",          # presenterm/config.yaml
 
 	# Shell + CLI referenced in .zshrc
 	"zsh",
