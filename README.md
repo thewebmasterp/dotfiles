@@ -29,6 +29,7 @@ An Arch Linux + [SwayFX](https://github.com/WillPower3309/swayfx) desktop, Catpp
 | [`.config/nvim/`](.config/nvim/) | Neovim: `init.lua` + `lua/{options,keymaps,plugins,theme}.lua` |
 | [`.zshrc`](.zshrc), [`.zprofile`](.zprofile) | Shell; both source `*.d/` dirs for private/machine-local snippets |
 | [`.config/metapac/`](.config/metapac/) | Declarative package groups |
+| [`.claude/skills/system-upgrade/`](.claude/skills/system-upgrade/SKILL.md) | Claude Code skill that runs the full upgrade: Arch news, AUR diff review, `metapac update-all`, .pacnew merges, breakage fixes, and pinned packages (`IgnorePkg`) that each record why they are pinned and when to lift the pin |
 | [`.local/bin/`](.local/bin/) | `swm` (Sway launcher), `wsudo` (GUI-as-root), `pkgsync`, `bootstrap-packages`, the `git-shared`/`git-private` repo wrappers |
 
 ## How the repo works
