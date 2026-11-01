@@ -50,6 +50,8 @@
 !.config/qt5ct/qt5ct.conf
 !.config/qt6ct/
 !.config/qt6ct/qt6ct.conf
+!.config/waypaper/
+!.config/waypaper/config.ini
 !.config/metapac/
 !.config/metapac/config.toml
 !.config/metapac/groups/
@@ -127,6 +129,7 @@
 !.local/lib/sway/slurp-sway-win.sh
 !.local/lib/sway/sway-idle.sh
 !.local/lib/sway/sway-lock-utils.sh
+!.local/lib/sway/mirror-output.sh
 !.local/lib/systemd/
 
 # .local/bin/

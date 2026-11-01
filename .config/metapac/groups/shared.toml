@@ -20,6 +20,8 @@ packages = [
 	"waybar-module-pacman-updates-git", # AUR - waybar custom/updates
 	"wttrbar",             # AUR - waybar custom/weather
 	"waypaper",            # AUR - sway exec waypaper --restore
+	"mpvpaper",            # waypaper/config.ini uses backend = mpvpaper
+	"socat",               # waypaper needs it to switch/mute/pause the mpvpaper backend
 	"avizo",               # AUR - avizo-service, volumectl, lightctl
 	"light",               # backlight backend used by avizo's lightctl
 	"mako",
