@@ -57,7 +57,6 @@ histctx() {
 qr() { qrencode -m 2 -t utf8 <<< "$*" }
 alias gitp="git-private"
 alias gits="git-shared"
-alias oc='opencode --port' # always expose the API so Neovim (opencode.nvim) can find it
 
 # Env Exports
 # https://zsh.sourceforge.io/Doc/Release/User-Contributions.html#index-match_002dwords_002dby_002dstyle

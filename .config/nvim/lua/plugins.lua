@@ -40,10 +40,10 @@ require("lazy").setup({
     lazy = false,
     ---@type snacks.Config
     opts = {
-      input = { enabled = true },     -- nicer prompt UI (used by opencode ask)
+      input = { enabled = true },     -- nicer prompt UI
       picker = { enabled = true },    -- fuzzy finder
       explorer = { enabled = true },  -- file tree
-      terminal = { enabled = true },  -- embedded terminal (hosts opencode)
+      terminal = { enabled = true },  -- embedded terminal
     },
     keys = {
       { "<leader>ff", function() Snacks.picker.files() end,      desc = "Find files" },
@@ -62,7 +62,7 @@ require("lazy").setup({
     opts = {
       spec = {
         { "<leader>f", group = "find" },
-        { "<leader>o", group = "opencode" },
+        { "<leader>a", group = "claude" },
       },
     },
   },
@@ -122,51 +122,43 @@ require("lazy").setup({
     },
   },
 
-  -- opencode integration
+  -- Claude Code integration
   --
-  -- opencode.nvim is a CLIENT only: it connects to whatever `opencode --port`
-  -- process(es) it finds running on the machine (discovered via pgrep+lsof,
-  -- no fixed port needed) and never manages their window itself. Run
-  -- `opencode --port` yourself in a normal WM terminal whenever you want a
-  -- session - sway/foot handle its placement entirely, same as any other
-  -- app. Nothing runs until you start it; nothing lingers after you close it.
+  -- claudecode.nvim speaks the same IDE protocol as the official VS Code
+  -- extension: Neovim runs a tiny WebSocket server, Claude connects to it and
+  -- gets the current selection/buffers, opens diffs in Neovim, etc. Claude
+  -- itself runs OUTSIDE Neovim in a real, WM-managed `foot` window (external
+  -- provider) - sway handles placement like any other app; nothing is embedded.
+  -- `foot` inherits Neovim's environment, so `CLAUDE_CONFIG_DIR=... nvim`
+  -- picks the Claude profile for the whole editor session (default: ~/.claude).
   {
-    "nickjvandyke/opencode.nvim",
-    version = "*",
-    config = function()
-      ---@type opencode.Opts
-      vim.g.opencode_opts = {
-        server = {
-          -- Fallback ONLY: runs if you invoke ask()/select()/etc. and no
-          -- opencode server is found yet. Spawns a real, WM-managed `foot`
-          -- window (detached - Neovim doesn't track or own it) instead of
-          -- the plugin's default embedded-terminal behavior. If you'd
-          -- rather start it yourself, just open a terminal the normal way
-          -- and run `opencode --port`.
-          start = function()
-            vim.fn.jobstart({ "foot", "-e", "opencode", "--port" }, { detach = true })
-            vim.notify("opencode: starting in a new window...", vim.log.levels.INFO)
-          end,
+    "coder/claudecode.nvim",
+    dependencies = { "folke/snacks.nvim" },
+    opts = {
+      terminal = {
+        provider = "external",
+        provider_opts = {
+          external_terminal_cmd = "foot -e %s", -- %s = the claude command
         },
-      }
-
-      local map = vim.keymap.set
-      map({ "n", "x" }, "<leader>oa", function() require("opencode").ask("@this: ") end,
-        { desc = "Ask opencode about this" })
-      map({ "n", "x" }, "<leader>os", function() require("opencode").select() end,
-        { desc = "Select opencode prompt/command" })
-      map({ "n", "x" }, "go", function() return require("opencode").operator("@this ") end,
-        { desc = "Send range to opencode", expr = true })
-      map("n", "goo", function() return require("opencode").operator("@this ") .. "_" end,
-        { desc = "Send line to opencode", expr = true })
-      map("n", "<leader>ou", function() require("opencode").command("session.half.page.up") end,
-        { desc = "opencode scroll up" })
-      map("n", "<leader>od", function() require("opencode").command("session.half.page.down") end,
-        { desc = "opencode scroll down" })
-      map("n", "<leader>on", function() require("opencode").command("session.new") end,
-        { desc = "opencode new session" })
-      map("n", "<leader>oi", function() require("opencode").command("session.interrupt") end,
-        { desc = "opencode interrupt" })
-    end,
+      },
+    },
+    cmd = {
+      "ClaudeCode", "ClaudeCodeFocus", "ClaudeCodeSelectModel", "ClaudeCodeAdd",
+      "ClaudeCodeSend", "ClaudeCodeTreeAdd", "ClaudeCodeStatus", "ClaudeCodeStart",
+      "ClaudeCodeStop", "ClaudeCodeOpen", "ClaudeCodeClose", "ClaudeCodeDiffAccept",
+      "ClaudeCodeDiffDeny", "ClaudeCodeCloseAllDiffs",
+    },
+    keys = {
+      { "<leader>ac", "<cmd>ClaudeCode<cr>",             desc = "Launch Claude (foot window)" },
+      { "<leader>ar", "<cmd>ClaudeCode --resume<cr>",    desc = "Resume a Claude session" },
+      { "<leader>aC", "<cmd>ClaudeCode --continue<cr>",  desc = "Continue last Claude session" },
+      { "<leader>ab", "<cmd>ClaudeCodeAdd %<cr>",        desc = "Add current buffer to Claude" },
+      { "<leader>as", "<cmd>ClaudeCodeSend<cr>", mode = "v", desc = "Send selection to Claude" },
+      { "<leader>as", "<cmd>ClaudeCodeTreeAdd<cr>",     desc = "Add file to Claude",
+        ft = { "snacks_picker_list", "oil", "netrw" } },
+      { "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>",   desc = "Accept Claude diff" },
+      { "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>",     desc = "Deny Claude diff" },
+      { "<leader>ax", "<cmd>ClaudeCodeStop<cr>",         desc = "Stop Claude IDE server" },
+    },
   },
 })

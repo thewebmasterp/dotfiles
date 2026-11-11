@@ -13,11 +13,11 @@
 !.local/
 !fonts.conf
 
-# .claude/ (only the public system-upgrade skill)
-!.claude/
-!.claude/skills/
-!.claude/skills/system-upgrade/
-!.claude/skills/system-upgrade/SKILL.md
+# .claude-personal/ (Claude Code personal profile; only the public system-upgrade skill)
+!.claude-personal/
+!.claude-personal/skills/
+!.claude-personal/skills/system-upgrade/
+!.claude-personal/skills/system-upgrade/SKILL.md
 
 # .config/
 !.config/sway/
