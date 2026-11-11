@@ -61,7 +61,6 @@ packages = [
 	# Apps with tracked configs
 	"chromium",            # chromium-flags.conf
 	"visual-studio-code-bin", # AUR - code-flags.conf
-	"neovim",              # nvim config
 	"vim",                 # $EDITOR/$VISUAL in .zprofile
 	"git",
 	"tmux",
@@ -79,7 +78,7 @@ packages = [
 	"bat",                 # histctx alias
 	"lsd",                 # ls alias
 	"fd",
-	"ripgrep",             # nvim snacks.picker grep
+	"ripgrep",             # rg
 	"tere",
 	"qrencode",            # qr alias
 	"mise",                # runtime version manager (replaced nvm); .config/mise/config.toml

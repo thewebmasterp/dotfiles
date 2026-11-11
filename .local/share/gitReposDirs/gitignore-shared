@@ -74,14 +74,6 @@
 !.config/swappy/config
 !.config/cava/
 !.config/cava/config
-!.config/nvim/
-!.config/nvim/init.lua
-!.config/nvim/lazy-lock.json
-!.config/nvim/lua/
-!.config/nvim/lua/options.lua
-!.config/nvim/lua/keymaps.lua
-!.config/nvim/lua/plugins.lua
-!.config/nvim/lua/theme.lua
 !.config/user-dirs.dirs
 !.config/user-dirs.locale
 !.config/autostart/
@@ -155,7 +147,6 @@
 !.local/share/dark-mode.d/gtk3-theme.sh
 !.local/share/dark-mode.d/foot.sh
 !.local/share/dark-mode.d/mako.sh
-!.local/share/dark-mode.d/nvim.sh
 !.local/share/dark-mode.d/qt-theme.sh
 !.local/share/dark-mode.d/rofi.sh
 !.local/share/dark-mode.d/sway.sh
@@ -167,7 +158,6 @@
 !.local/share/light-mode.d/gtk3-theme.sh
 !.local/share/light-mode.d/foot.sh
 !.local/share/light-mode.d/mako.sh
-!.local/share/light-mode.d/nvim.sh
 !.local/share/light-mode.d/qt-theme.sh
 !.local/share/light-mode.d/rofi.sh
 !.local/share/light-mode.d/sway.sh
