@@ -1,0 +1,33 @@
+# 
+# aerc base styleset — structural attributes only (bold/reverse/default).
+# No colors here; colors are layered on top by the "current" styleset
+# (see stylesets-dirs/styleset-name in aerc.conf), which darkman swaps
+# between catppuccin-mocha-colors and catppuccin-frappe-colors.
+#
+
+*.default=true
+
+title.reverse=true
+header.bold=true
+
+*error.bold=true
+
+statusline*.default=true
+statusline_default.reverse=true
+statusline_error.reverse=true
+
+msglist_unread.bold=true
+
+msglist_deleted.selected.reverse=toggle
+
+completion_pill.reverse=true
+
+tab.reverse=true
+border.reverse = true
+
+selector_focused.reverse=true
+selector_chooser.bold=true
+
+# User styles for templates (see dirlist-left in aerc.conf).
+[user]
+system.bold=true

@@ -158,3 +158,10 @@
 !.local/share/light-mode.d/swaylock.sh
 !.local/share/light-mode.d/tmux.sh
 !.local/share/light-mode.d/waybar.sh
+!.config/aerc/
+!.config/aerc/aerc.conf
+!.config/aerc/binds.conf
+!.config/aerc/mail-sync
+!.config/aerc/stylesets/
+!.config/aerc/stylesets/base
+!.config/aerc/stylesets/catppuccin-mocha-colors

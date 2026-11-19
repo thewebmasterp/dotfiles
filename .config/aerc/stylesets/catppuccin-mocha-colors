@@ -1,0 +1,46 @@
+# 
+# aerc Catppuccin Mocha colors — layered on top of the "base" styleset
+# (see stylesets-dirs/styleset-name in aerc.conf). Colors only; no
+# structural (bold/reverse/default) attributes here.
+#
+# default.bg is intentionally UNSET (not "default.bg=#1e1e2e"): leaving
+# the base canvas background unset means aerc paints no explicit color
+# there, so foot's terminal transparency/alpha shows through uniformly
+# instead of a solid opaque rectangle behind all text.
+
+header.fg=#89b4fa
+
+error.fg=#f38ba8
+warning.fg=#f9e2af
+success.fg=#a6e3a1
+
+statusline_error.fg=#f38ba8
+statusline_default.fg=#1e1e2e
+statusline_default.bg=#cba6f7
+
+dirlist_default.selected.fg=#cdd6f4
+dirlist_default.selected.bg=#45475a
+dirlist_recent.selected.fg=#45475a
+dirlist_recent.selected.bg=#cdd6f4
+dirlist_unread.fg=#a6e3a1
+dirlist_unread.selected.fg=#a6e3a1
+dirlist_unread.selected.bg=#45475a
+
+msglist_default.selected.fg=#45475a
+msglist_default.selected.bg=#cdd6f4
+msglist_unread.fg=#a6e3a1
+msglist_unread.selected.bg=#45475a
+msglist_read.selected.fg=#cdd6f4
+msglist_read.selected.bg=#45475a
+msglist_marked.fg=#f9e2af
+msglist_marked.selected.fg=#f9e2af
+msglist_marked.selected.bg=#45475a
+msglist_deleted.fg=#f38ba8
+msglist_result.fg=#89b4fa
+msglist_result.selected.bg=#45475a
+
+tab.bg=#cba6f7
+tab.fg=#1e1e2e
+tab.selected.bg=#1e1e2e
+tab.selected.fg=#cba6f7
+border.fg=#1e1e2e
